@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nadhemni_2020
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
         }
