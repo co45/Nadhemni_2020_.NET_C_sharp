@@ -84,7 +84,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Nadhemni_2020.Properties.Resources.Sans_titre_12;
+            this.pictureBox5.Image = global::Nadhemni_2020.Properties.Resources.Sans_titre_121;
             this.pictureBox5.Location = new System.Drawing.Point(152, 52);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(150, 150);
@@ -196,7 +196,7 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // Main
+            // Main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,7 +205,7 @@
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Main";
+            this.Name = "Main_form";
             this.Text = "Form1";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();

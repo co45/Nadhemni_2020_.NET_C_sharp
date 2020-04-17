@@ -17,11 +17,6 @@ namespace Nadhemni_2020
             InitializeComponent();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Close();
