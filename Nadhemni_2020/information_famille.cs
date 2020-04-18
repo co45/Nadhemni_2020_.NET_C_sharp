@@ -74,21 +74,36 @@ namespace Nadhemni_2020
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            if (bunifuDropdown1.selectedValue=="Marié")
+            {
+                bunifuFlatButton3.Visible = true;
+            }
+            else
+            {
+                bunifuFlatButton3.Visible = false;
+            }
+
             if (bunifuDropdown2.selectedValue == "1")
             {
                 bunifuFlatButton4.Visible = true;
+                bunifuFlatButton5.Visible = false;
+                bunifuFlatButton6.Visible = false;
+                bunifuFlatButton7.Visible = false;
 
             }
             else if (bunifuDropdown2.selectedValue == "2")
             {
                 bunifuFlatButton4.Visible = true;
                 bunifuFlatButton5.Visible = true;
+                bunifuFlatButton6.Visible = false;
+                bunifuFlatButton7.Visible = false;
             }
             else if (bunifuDropdown2.selectedValue == "3")
             {
                 bunifuFlatButton4.Visible = true;
                 bunifuFlatButton5.Visible = true;
                 bunifuFlatButton6.Visible = true;
+                bunifuFlatButton7.Visible = false;
 
             }
             else if (bunifuDropdown2.selectedValue == "4")
@@ -98,6 +113,14 @@ namespace Nadhemni_2020
                 bunifuFlatButton6.Visible = true;
                 bunifuFlatButton7.Visible = true;
             }
+            else
+            {
+                bunifuFlatButton4.Visible = false;
+                bunifuFlatButton5.Visible = false;
+                bunifuFlatButton6.Visible = false;
+                bunifuFlatButton7.Visible = false;
+            }
+            
         }
 
     }
