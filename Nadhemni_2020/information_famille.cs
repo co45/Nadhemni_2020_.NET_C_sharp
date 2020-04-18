@@ -14,7 +14,7 @@ namespace Nadhemni_2020
     {
         Information a = new Information();
         Information_membre x = new Information_membre();
-        Home f = new Home();
+        
 
         public information_famille()
         {
@@ -69,7 +69,6 @@ namespace Nadhemni_2020
             bunifuFlatButton1.Enabled = false;
             ActiveForm.Close();
 
-            f.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
