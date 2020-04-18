@@ -34,10 +34,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label11 = new System.Windows.Forms.Label();
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -103,17 +103,20 @@
             this.panel1.Size = new System.Drawing.Size(714, 636);
             this.panel1.TabIndex = 8;
             // 
-            // label1
+            // bunifuDropdown2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(58, 320);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 19);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Nombre d\'enfant";
+            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown2.BorderRadius = 3;
+            this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
+            this.bunifuDropdown2.Items = new string[0];
+            this.bunifuDropdown2.Location = new System.Drawing.Point(209, 310);
+            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown2.Name = "bunifuDropdown2";
+            this.bunifuDropdown2.NomalColor = System.Drawing.Color.DarkCyan;
+            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuDropdown2.selectedIndex = -1;
+            this.bunifuDropdown2.Size = new System.Drawing.Size(273, 29);
+            this.bunifuDropdown2.TabIndex = 34;
             // 
             // label11
             // 
@@ -142,20 +145,17 @@
             this.bunifuDropdown1.Size = new System.Drawing.Size(273, 29);
             this.bunifuDropdown1.TabIndex = 31;
             // 
-            // bunifuDropdown2
+            // label1
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown2.BorderRadius = 3;
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.Items = new string[0];
-            this.bunifuDropdown2.Location = new System.Drawing.Point(209, 310);
-            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.Color.DarkCyan;
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(273, 29);
-            this.bunifuDropdown2.TabIndex = 34;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(58, 320);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 19);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Nombre d\'enfant";
             // 
             // pictureBox2
             // 
@@ -431,6 +431,7 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // pictureBox1
             // 

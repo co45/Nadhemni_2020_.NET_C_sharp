@@ -61,5 +61,12 @@ namespace Nadhemni_2020
             x.Show();
 
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Home f = new Home();
+            f.Show();
+        }
     }
 }
