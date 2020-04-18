@@ -204,5 +204,17 @@
   <ItemGroup>
     <None Include="Resources\home_96px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upward_arrow_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calque 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calque 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calque 4g.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

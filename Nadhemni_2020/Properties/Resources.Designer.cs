@@ -93,6 +93,36 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Calque_2 {
+            get {
+                object obj = ResourceManager.GetObject("Calque 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Calque_3 {
+            get {
+                object obj = ResourceManager.GetObject("Calque 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Calque_4g {
+            get {
+                object obj = ResourceManager.GetObject("Calque 4g", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dd {
             get {
                 object obj = ResourceManager.GetObject("dd", resourceCulture);
@@ -226,6 +256,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap tick_box_32px {
             get {
                 object obj = ResourceManager.GetObject("tick_box_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upward_arrow_32px {
+            get {
+                object obj = ResourceManager.GetObject("upward_arrow_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
