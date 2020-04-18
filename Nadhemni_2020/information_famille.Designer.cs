@@ -102,20 +102,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(714, 636);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bunifuDropdown2
             // 
             this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDropdown2.BorderRadius = 3;
             this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.Items = new string[0];
-            this.bunifuDropdown2.Location = new System.Drawing.Point(209, 310);
+            this.bunifuDropdown2.Items = new string[] {
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"};
+            this.bunifuDropdown2.Location = new System.Drawing.Point(209, 342);
             this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuDropdown2.Name = "bunifuDropdown2";
             this.bunifuDropdown2.NomalColor = System.Drawing.Color.DarkCyan;
             this.bunifuDropdown2.onHoverColor = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(273, 29);
+            this.bunifuDropdown2.selectedIndex = 0;
+            this.bunifuDropdown2.Size = new System.Drawing.Size(78, 29);
             this.bunifuDropdown2.TabIndex = 34;
             // 
             // label11
@@ -124,7 +130,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(58, 260);
+            this.label11.Location = new System.Drawing.Point(58, 257);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 19);
             this.label11.TabIndex = 32;
@@ -151,7 +157,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(58, 320);
+            this.label1.Location = new System.Drawing.Point(58, 348);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 19);
             this.label1.TabIndex = 14;
@@ -202,7 +208,7 @@
             this.bunifuFlatButton7.IconVisible = true;
             this.bunifuFlatButton7.IconZoom = 90D;
             this.bunifuFlatButton7.IsTab = false;
-            this.bunifuFlatButton7.Location = new System.Drawing.Point(503, 421);
+            this.bunifuFlatButton7.Location = new System.Drawing.Point(503, 380);
             this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.DarkCyan;
@@ -215,6 +221,7 @@
             this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton7.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton7.Visible = false;
             this.bunifuFlatButton7.Click += new System.EventHandler(this.bunifuFlatButton7_Click);
             // 
             // bunifuFlatButton6
@@ -238,7 +245,7 @@
             this.bunifuFlatButton6.IconVisible = true;
             this.bunifuFlatButton6.IconZoom = 90D;
             this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(503, 384);
+            this.bunifuFlatButton6.Location = new System.Drawing.Point(295, 380);
             this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.DarkCyan;
@@ -251,6 +258,7 @@
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton6.Visible = false;
             this.bunifuFlatButton6.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
             // 
             // bunifuFlatButton5
@@ -274,7 +282,7 @@
             this.bunifuFlatButton5.IconVisible = true;
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(503, 347);
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(503, 343);
             this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.DarkCyan;
@@ -287,6 +295,7 @@
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton5.Visible = false;
             this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
             // 
             // bunifuFlatButton4
@@ -310,7 +319,7 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(504, 310);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(295, 343);
             this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.DarkCyan;
@@ -323,6 +332,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Visible = false;
             this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // bunifuFlatButton3

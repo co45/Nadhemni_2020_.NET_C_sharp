@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Information));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -106,6 +106,33 @@
             this.panel1.Size = new System.Drawing.Size(714, 640);
             this.panel1.TabIndex = 2;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(58, 554);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 19);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Planing";
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.BorderRadius = 3;
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.Items = new string[0];
+            this.bunifuDropdown1.Location = new System.Drawing.Point(228, 389);
+            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.NomalColor = System.Drawing.Color.DarkCyan;
+            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuDropdown1.selectedIndex = -1;
+            this.bunifuDropdown1.Size = new System.Drawing.Size(273, 29);
+            this.bunifuDropdown1.TabIndex = 32;
+            // 
             // metroDateTime1
             // 
             this.metroDateTime1.Location = new System.Drawing.Point(228, 288);
@@ -155,7 +182,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton2.Location = new System.Drawing.Point(357, 353);
+            this.radioButton2.Location = new System.Drawing.Point(346, 340);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(86, 24);
             this.radioButton2.TabIndex = 20;
@@ -175,7 +202,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Homme";
             this.radioButton1.UseVisualStyleBackColor = true;
-            
             // 
             // label6
             // 
@@ -257,9 +283,9 @@
             this.bunifuMaterialTextbox8.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox8.HintText = "";
             this.bunifuMaterialTextbox8.isPassword = false;
-            this.bunifuMaterialTextbox8.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox8.LineFocusedColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox8.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox8.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox8.LineMouseHoverColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox8.LineThickness = 3;
             this.bunifuMaterialTextbox8.Location = new System.Drawing.Point(228, 422);
             this.bunifuMaterialTextbox8.Margin = new System.Windows.Forms.Padding(4);
@@ -276,9 +302,9 @@
             this.bunifuMaterialTextbox5.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox5.HintText = "";
             this.bunifuMaterialTextbox5.isPassword = false;
-            this.bunifuMaterialTextbox5.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox5.LineFocusedColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox5.LineThickness = 3;
             this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(228, 223);
             this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(4);
@@ -295,9 +321,9 @@
             this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox3.HintText = "";
             this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox3.LineThickness = 3;
             this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(228, 173);
             this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
@@ -314,9 +340,9 @@
             this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox2.HintText = "";
             this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox2.LineThickness = 3;
             this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(228, 123);
             this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
@@ -333,9 +359,9 @@
             this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
             this.bunifuMaterialTextbox1.HintText = "";
             this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.MediumSeaGreen;
             this.bunifuMaterialTextbox1.LineThickness = 3;
             this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(228, 75);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
@@ -366,33 +392,6 @@
             this.label10.Size = new System.Drawing.Size(185, 37);
             this.label10.TabIndex = 29;
             this.label10.Text = "Information";
-            // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(228, 389);
-            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.DarkCyan;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(273, 29);
-            this.bunifuDropdown1.TabIndex = 32;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(58, 554);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 19);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Planing";
             // 
             // pictureBox2
             // 
