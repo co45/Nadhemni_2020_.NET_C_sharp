@@ -17,6 +17,20 @@
       <Association Name="user_identity" Member="identity" ThisKey="id_user" OtherKey="Id_personne" Type="identity" />
     </Type>
   </Table>
+  <Table Name="dbo.tache" Member="tache">
+    <Type Name="tache">
+      <Column Name="id_tache" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="titre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="t_debut" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="t_fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="duree" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="emplacement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="personne_imp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tache_identity" Member="identity" ThisKey="id_tache" OtherKey="Id_personne" Type="identity" />
+    </Type>
+  </Table>
   <Table Name="dbo.[identity]" Member="identity">
     <Type Name="identity">
       <Column Name="Id_personne" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -33,23 +47,10 @@
       <Column Name="etablissement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="niveau_etude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="distance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="adresse_identity" Member="adresse1" ThisKey="adresse" OtherKey="id_adresse" Type="adresse" IsForeignKey="true" />
-      <Association Name="user_identity" Member="user" ThisKey="Id_personne" OtherKey="id_user" Type="user" IsForeignKey="true" />
       <Association Name="tache_identity" Member="tache" ThisKey="Id_personne" OtherKey="id_tache" Type="tache" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tache" Member="tache">
-    <Type Name="tache">
-      <Column Name="id_tache" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="titre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="t_debut" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="t_fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="duree" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="emplacement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="personne_imp" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="tache_identity" Member="identity" ThisKey="id_tache" OtherKey="Id_personne" Type="identity" />
+      <Association Name="user_identity" Member="user" ThisKey="Id_personne" OtherKey="id_user" Type="user" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

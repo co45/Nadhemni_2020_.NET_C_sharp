@@ -11,8 +11,13 @@ using System.IO;
 
 namespace Nadhemni_2020
 {
+    
     public partial class Information : Form
     {
+        public DataClassesDataContext db = new DataClassesDataContext();
+        public identity pers = new identity();
+        public user us = new user();
+
         public Information()
         {
             InitializeComponent();
@@ -34,6 +39,16 @@ namespace Nadhemni_2020
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            us.login = bunifuMaterialTextbox1.Text;
+            us.mdp = bunifuMaterialTextbox2.Text;
+            pers.nom = bunifuMaterialTextbox3.Text;
+            pers.prenom = bunifuMaterialTextbox5.Text;
+            pers.date_naissance = metroDateTime1.Value.Date;
+            pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
+
+            pers.fonction = bunifuMaterialTextbox4.Text;
+            pers.mail = bunifuMaterialTextbox8.Text;
+            
             this.Hide();
             information_famille a = new information_famille();
             a.Show();
