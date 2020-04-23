@@ -51,11 +51,15 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\bunifu\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\..\..\..\source\repos\testmetro\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -68,6 +72,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Facebook Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facebook Login.Designer.cs">
+      <DependentUpon>Facebook Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Information_membre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Facebook Login.resx">
+      <DependentUpon>Facebook Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Information_membre.resx">
       <DependentUpon>Information_membre.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +134,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -209,6 +236,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
