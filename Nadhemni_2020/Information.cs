@@ -14,14 +14,19 @@ namespace Nadhemni_2020
     
     public partial class Information : Form
     {
+        
         public DataClassesDataContext db = new DataClassesDataContext();
-        public identity pers = new identity();
-        public user us = new user();
+        private static identity pers = new identity();
+        private static user us = new user();
+
+        public static identity Pers { get => pers; set => pers = value; }
+        public static user Us { get => us; set => us = value; }
 
         public Information()
         {
             InitializeComponent();
         }
+        
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -41,13 +46,15 @@ namespace Nadhemni_2020
         {
             us.login = bunifuMaterialTextbox1.Text;
             us.mdp = bunifuMaterialTextbox2.Text;
-            pers.nom = bunifuMaterialTextbox3.Text;
-            pers.prenom = bunifuMaterialTextbox5.Text;
-            pers.date_naissance = metroDateTime1.Value.Date;
-            pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
+            Pers.nom = bunifuMaterialTextbox3.Text;
+            Pers.prenom = bunifuMaterialTextbox5.Text;
+            Pers.date_naissance = metroDateTime1.Value.Date;
+            Pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
 
-            pers.fonction = bunifuMaterialTextbox4.Text;
-            pers.mail = bunifuMaterialTextbox8.Text;
+            Pers.fonction = bunifuMaterialTextbox4.Text;
+            Pers.mail = bunifuMaterialTextbox8.Text;
+            
+            
             
             this.Hide();
             information_famille a = new information_famille();
@@ -67,6 +74,12 @@ namespace Nadhemni_2020
 
 
 
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            planing_Form p = new planing_Form();
+            p.Show();
         }
     }
 }

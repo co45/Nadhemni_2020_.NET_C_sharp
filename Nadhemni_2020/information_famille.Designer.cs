@@ -365,7 +365,7 @@
             // 
             // bunifuFlatButton2
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
@@ -387,9 +387,9 @@
             this.bunifuFlatButton2.Location = new System.Drawing.Point(398, 592);
             this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.DarkCyan;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(143, 35);
             this.bunifuFlatButton2.TabIndex = 28;
@@ -401,7 +401,7 @@
             // 
             // bunifuFlatButton1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
@@ -423,9 +423,9 @@
             this.bunifuFlatButton1.Location = new System.Drawing.Point(549, 592);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.DarkCyan;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(143, 35);
             this.bunifuFlatButton1.TabIndex = 27;

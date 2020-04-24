@@ -66,6 +66,7 @@ namespace Nadhemni_2020
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            Information.Pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
             bunifuFlatButton1.Enabled = false;
             ActiveForm.Close();
 
@@ -122,5 +123,6 @@ namespace Nadhemni_2020
             
         }
 
+        
     }
 }

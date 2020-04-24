@@ -123,6 +123,16 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap d41586_018_06619_3_16101678 {
+            get {
+                object obj = ResourceManager.GetObject("d41586-018-06619-3_16101678", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dd {
             get {
                 object obj = ResourceManager.GetObject("dd", resourceCulture);
@@ -226,6 +236,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap place_marker_64px {
             get {
                 object obj = ResourceManager.GetObject("place_marker_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_96px {
+            get {
+                object obj = ResourceManager.GetObject("plus_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

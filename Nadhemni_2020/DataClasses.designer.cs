@@ -36,12 +36,15 @@ namespace Nadhemni_2020
     partial void Insertuser(user instance);
     partial void Updateuser(user instance);
     partial void Deleteuser(user instance);
-    partial void Inserttache(tache instance);
-    partial void Updatetache(tache instance);
-    partial void Deletetache(tache instance);
     partial void Insertidentity(identity instance);
     partial void Updateidentity(identity instance);
     partial void Deleteidentity(identity instance);
+    partial void Insertplaning(planing instance);
+    partial void Updateplaning(planing instance);
+    partial void Deleteplaning(planing instance);
+    partial void Inserttache(tache instance);
+    partial void Updatetache(tache instance);
+    partial void Deletetache(tache instance);
     #endregion
 		
 		public DataClassesDataContext() : 
@@ -90,19 +93,27 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		public System.Data.Linq.Table<tache> tache
-		{
-			get
-			{
-				return this.GetTable<tache>();
-			}
-		}
-		
 		public System.Data.Linq.Table<identity> identity
 		{
 			get
 			{
 				return this.GetTable<identity>();
+			}
+		}
+		
+		public System.Data.Linq.Table<planing> planing
+		{
+			get
+			{
+				return this.GetTable<planing>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tache> tache
+		{
+			get
+			{
+				return this.GetTable<tache>();
 			}
 		}
 	}
@@ -407,288 +418,6 @@ namespace Nadhemni_2020
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tache")]
-	public partial class tache : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_tache;
-		
-		private string _titre;
-		
-		private System.DateTime _t_debut;
-		
-		private System.DateTime _t_fin;
-		
-		private string _description;
-		
-		private System.Nullable<double> _duree;
-		
-		private string _emplacement;
-		
-		private System.Nullable<int> _personne_imp;
-		
-		private string _type;
-		
-		private EntitySet<identity> _identity;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_tacheChanging(int value);
-    partial void Onid_tacheChanged();
-    partial void OntitreChanging(string value);
-    partial void OntitreChanged();
-    partial void Ont_debutChanging(System.DateTime value);
-    partial void Ont_debutChanged();
-    partial void Ont_finChanging(System.DateTime value);
-    partial void Ont_finChanged();
-    partial void OndescriptionChanging(string value);
-    partial void OndescriptionChanged();
-    partial void OndureeChanging(System.Nullable<double> value);
-    partial void OndureeChanged();
-    partial void OnemplacementChanging(string value);
-    partial void OnemplacementChanged();
-    partial void Onpersonne_impChanging(System.Nullable<int> value);
-    partial void Onpersonne_impChanged();
-    partial void OntypeChanging(string value);
-    partial void OntypeChanged();
-    #endregion
-		
-		public tache()
-		{
-			this._identity = new EntitySet<identity>(new Action<identity>(this.attach_identity), new Action<identity>(this.detach_identity));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_tache", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_tache
-		{
-			get
-			{
-				return this._id_tache;
-			}
-			set
-			{
-				if ((this._id_tache != value))
-				{
-					this.Onid_tacheChanging(value);
-					this.SendPropertyChanging();
-					this._id_tache = value;
-					this.SendPropertyChanged("id_tache");
-					this.Onid_tacheChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_titre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string titre
-		{
-			get
-			{
-				return this._titre;
-			}
-			set
-			{
-				if ((this._titre != value))
-				{
-					this.OntitreChanging(value);
-					this.SendPropertyChanging();
-					this._titre = value;
-					this.SendPropertyChanged("titre");
-					this.OntitreChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_debut", DbType="DateTime NOT NULL")]
-		public System.DateTime t_debut
-		{
-			get
-			{
-				return this._t_debut;
-			}
-			set
-			{
-				if ((this._t_debut != value))
-				{
-					this.Ont_debutChanging(value);
-					this.SendPropertyChanging();
-					this._t_debut = value;
-					this.SendPropertyChanged("t_debut");
-					this.Ont_debutChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_fin", DbType="DateTime NOT NULL")]
-		public System.DateTime t_fin
-		{
-			get
-			{
-				return this._t_fin;
-			}
-			set
-			{
-				if ((this._t_fin != value))
-				{
-					this.Ont_finChanging(value);
-					this.SendPropertyChanging();
-					this._t_fin = value;
-					this.SendPropertyChanged("t_fin");
-					this.Ont_finChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-		public string description
-		{
-			get
-			{
-				return this._description;
-			}
-			set
-			{
-				if ((this._description != value))
-				{
-					this.OndescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._description = value;
-					this.SendPropertyChanged("description");
-					this.OndescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_duree", DbType="Float")]
-		public System.Nullable<double> duree
-		{
-			get
-			{
-				return this._duree;
-			}
-			set
-			{
-				if ((this._duree != value))
-				{
-					this.OndureeChanging(value);
-					this.SendPropertyChanging();
-					this._duree = value;
-					this.SendPropertyChanged("duree");
-					this.OndureeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_emplacement", DbType="VarChar(50)")]
-		public string emplacement
-		{
-			get
-			{
-				return this._emplacement;
-			}
-			set
-			{
-				if ((this._emplacement != value))
-				{
-					this.OnemplacementChanging(value);
-					this.SendPropertyChanging();
-					this._emplacement = value;
-					this.SendPropertyChanged("emplacement");
-					this.OnemplacementChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_personne_imp", DbType="Int")]
-		public System.Nullable<int> personne_imp
-		{
-			get
-			{
-				return this._personne_imp;
-			}
-			set
-			{
-				if ((this._personne_imp != value))
-				{
-					this.Onpersonne_impChanging(value);
-					this.SendPropertyChanging();
-					this._personne_imp = value;
-					this.SendPropertyChanged("personne_imp");
-					this.Onpersonne_impChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string type
-		{
-			get
-			{
-				return this._type;
-			}
-			set
-			{
-				if ((this._type != value))
-				{
-					this.OntypeChanging(value);
-					this.SendPropertyChanging();
-					this._type = value;
-					this.SendPropertyChanged("type");
-					this.OntypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_identity", Storage="_identity", ThisKey="id_tache", OtherKey="Id_personne")]
-		public EntitySet<identity> identity
-		{
-			get
-			{
-				return this._identity;
-			}
-			set
-			{
-				this._identity.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_identity(identity entity)
-		{
-			this.SendPropertyChanging();
-			entity.tache = this;
-		}
-		
-		private void detach_identity(identity entity)
-		{
-			this.SendPropertyChanging();
-			entity.tache = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[identity]")]
 	public partial class identity : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -726,8 +455,6 @@ namespace Nadhemni_2020
 		private string _mail;
 		
 		private EntityRef<adresse> _adresse1;
-		
-		private EntityRef<tache> _tache;
 		
 		private EntityRef<user> _user;
 		
@@ -770,7 +497,6 @@ namespace Nadhemni_2020
 		public identity()
 		{
 			this._adresse1 = default(EntityRef<adresse>);
-			this._tache = default(EntityRef<tache>);
 			this._user = default(EntityRef<user>);
 			OnCreated();
 		}
@@ -786,7 +512,7 @@ namespace Nadhemni_2020
 			{
 				if ((this._Id_personne != value))
 				{
-					if ((this._tache.HasLoadedOrAssignedValue || this._user.HasLoadedOrAssignedValue))
+					if (this._user.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -899,7 +625,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_photo", DbType="Binary(50)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_photo", DbType="Binary(50)", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary photo
 		{
 			get
@@ -1117,40 +843,6 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_identity", Storage="_tache", ThisKey="Id_personne", OtherKey="id_tache", IsForeignKey=true)]
-		public tache tache
-		{
-			get
-			{
-				return this._tache.Entity;
-			}
-			set
-			{
-				tache previousValue = this._tache.Entity;
-				if (((previousValue != value) 
-							|| (this._tache.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tache.Entity = null;
-						previousValue.identity.Remove(this);
-					}
-					this._tache.Entity = value;
-					if ((value != null))
-					{
-						value.identity.Add(this);
-						this._Id_personne = value.id_tache;
-					}
-					else
-					{
-						this._Id_personne = default(int);
-					}
-					this.SendPropertyChanged("tache");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_identity", Storage="_user", ThisKey="Id_personne", OtherKey="id_user", IsForeignKey=true)]
 		public user user
 		{
@@ -1203,6 +895,415 @@ namespace Nadhemni_2020
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.planing")]
+	public partial class planing : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id_planing;
+		
+		private int _id_taches;
+		
+		private EntityRef<tache> _tache;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnId_planingChanging(int value);
+    partial void OnId_planingChanged();
+    partial void Onid_tachesChanging(int value);
+    partial void Onid_tachesChanged();
+    #endregion
+		
+		public planing()
+		{
+			this._tache = default(EntityRef<tache>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_planing", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Id_planing
+		{
+			get
+			{
+				return this._Id_planing;
+			}
+			set
+			{
+				if ((this._Id_planing != value))
+				{
+					this.OnId_planingChanging(value);
+					this.SendPropertyChanging();
+					this._Id_planing = value;
+					this.SendPropertyChanged("Id_planing");
+					this.OnId_planingChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_taches", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id_taches
+		{
+			get
+			{
+				return this._id_taches;
+			}
+			set
+			{
+				if ((this._id_taches != value))
+				{
+					if (this._tache.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onid_tachesChanging(value);
+					this.SendPropertyChanging();
+					this._id_taches = value;
+					this.SendPropertyChanged("id_taches");
+					this.Onid_tachesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_planing", Storage="_tache", ThisKey="id_taches", OtherKey="id_tache", IsForeignKey=true)]
+		public tache tache
+		{
+			get
+			{
+				return this._tache.Entity;
+			}
+			set
+			{
+				tache previousValue = this._tache.Entity;
+				if (((previousValue != value) 
+							|| (this._tache.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tache.Entity = null;
+						previousValue.planing.Remove(this);
+					}
+					this._tache.Entity = value;
+					if ((value != null))
+					{
+						value.planing.Add(this);
+						this._id_taches = value.id_tache;
+					}
+					else
+					{
+						this._id_taches = default(int);
+					}
+					this.SendPropertyChanged("tache");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tache")]
+	public partial class tache : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id_tache;
+		
+		private string _titre;
+		
+		private System.DateTime _t_debut;
+		
+		private System.DateTime _t_fin;
+		
+		private string _description;
+		
+		private System.Nullable<double> _duree;
+		
+		private string _emplacement;
+		
+		private System.Nullable<int> _personne_imp;
+		
+		private string _type;
+		
+		private EntitySet<planing> _planing;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onid_tacheChanging(int value);
+    partial void Onid_tacheChanged();
+    partial void OntitreChanging(string value);
+    partial void OntitreChanged();
+    partial void Ont_debutChanging(System.DateTime value);
+    partial void Ont_debutChanged();
+    partial void Ont_finChanging(System.DateTime value);
+    partial void Ont_finChanged();
+    partial void OndescriptionChanging(string value);
+    partial void OndescriptionChanged();
+    partial void OndureeChanging(System.Nullable<double> value);
+    partial void OndureeChanged();
+    partial void OnemplacementChanging(string value);
+    partial void OnemplacementChanged();
+    partial void Onpersonne_impChanging(System.Nullable<int> value);
+    partial void Onpersonne_impChanged();
+    partial void OntypeChanging(string value);
+    partial void OntypeChanged();
+    #endregion
+		
+		public tache()
+		{
+			this._planing = new EntitySet<planing>(new Action<planing>(this.attach_planing), new Action<planing>(this.detach_planing));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_tache", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id_tache
+		{
+			get
+			{
+				return this._id_tache;
+			}
+			set
+			{
+				if ((this._id_tache != value))
+				{
+					this.Onid_tacheChanging(value);
+					this.SendPropertyChanging();
+					this._id_tache = value;
+					this.SendPropertyChanged("id_tache");
+					this.Onid_tacheChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_titre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string titre
+		{
+			get
+			{
+				return this._titre;
+			}
+			set
+			{
+				if ((this._titre != value))
+				{
+					this.OntitreChanging(value);
+					this.SendPropertyChanging();
+					this._titre = value;
+					this.SendPropertyChanged("titre");
+					this.OntitreChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_debut", DbType="DateTime NOT NULL")]
+		public System.DateTime t_debut
+		{
+			get
+			{
+				return this._t_debut;
+			}
+			set
+			{
+				if ((this._t_debut != value))
+				{
+					this.Ont_debutChanging(value);
+					this.SendPropertyChanging();
+					this._t_debut = value;
+					this.SendPropertyChanged("t_debut");
+					this.Ont_debutChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_fin", DbType="DateTime NOT NULL")]
+		public System.DateTime t_fin
+		{
+			get
+			{
+				return this._t_fin;
+			}
+			set
+			{
+				if ((this._t_fin != value))
+				{
+					this.Ont_finChanging(value);
+					this.SendPropertyChanging();
+					this._t_fin = value;
+					this.SendPropertyChanged("t_fin");
+					this.Ont_finChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_description", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string description
+		{
+			get
+			{
+				return this._description;
+			}
+			set
+			{
+				if ((this._description != value))
+				{
+					this.OndescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._description = value;
+					this.SendPropertyChanged("description");
+					this.OndescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_duree", DbType="Float")]
+		public System.Nullable<double> duree
+		{
+			get
+			{
+				return this._duree;
+			}
+			set
+			{
+				if ((this._duree != value))
+				{
+					this.OndureeChanging(value);
+					this.SendPropertyChanging();
+					this._duree = value;
+					this.SendPropertyChanged("duree");
+					this.OndureeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_emplacement", DbType="VarChar(50)")]
+		public string emplacement
+		{
+			get
+			{
+				return this._emplacement;
+			}
+			set
+			{
+				if ((this._emplacement != value))
+				{
+					this.OnemplacementChanging(value);
+					this.SendPropertyChanging();
+					this._emplacement = value;
+					this.SendPropertyChanged("emplacement");
+					this.OnemplacementChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_personne_imp", DbType="Int")]
+		public System.Nullable<int> personne_imp
+		{
+			get
+			{
+				return this._personne_imp;
+			}
+			set
+			{
+				if ((this._personne_imp != value))
+				{
+					this.Onpersonne_impChanging(value);
+					this.SendPropertyChanging();
+					this._personne_imp = value;
+					this.SendPropertyChanged("personne_imp");
+					this.Onpersonne_impChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string type
+		{
+			get
+			{
+				return this._type;
+			}
+			set
+			{
+				if ((this._type != value))
+				{
+					this.OntypeChanging(value);
+					this.SendPropertyChanging();
+					this._type = value;
+					this.SendPropertyChanged("type");
+					this.OntypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_planing", Storage="_planing", ThisKey="id_tache", OtherKey="id_taches")]
+		public EntitySet<planing> planing
+		{
+			get
+			{
+				return this._planing;
+			}
+			set
+			{
+				this._planing.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_planing(planing entity)
+		{
+			this.SendPropertyChanging();
+			entity.tache = this;
+		}
+		
+		private void detach_planing(planing entity)
+		{
+			this.SendPropertyChanging();
+			entity.tache = null;
 		}
 	}
 }

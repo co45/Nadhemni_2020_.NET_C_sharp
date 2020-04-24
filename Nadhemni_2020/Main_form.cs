@@ -23,18 +23,19 @@ namespace Nadhemni_2020
             this.Close();
         }
 
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Information a = new Information();
-            a.Show();
-            
-        }
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Facebook_Login f = new Facebook_Login();
             f.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Information a = new Information();
+            a.Show();
         }
     }
 }

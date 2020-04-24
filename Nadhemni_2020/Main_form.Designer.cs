@@ -33,6 +33,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -65,6 +66,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.linkLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuThinButton21);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox6);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
@@ -85,6 +87,20 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(429, 606);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.BlueViolet;
+            this.linkLabel1.Location = new System.Drawing.Point(178, 406);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(90, 20);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "S\'inscrire";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // bunifuThinButton21
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
@@ -103,20 +119,19 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Gainsboro;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.BlueViolet;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.BlueViolet;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(76, 323);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(75, 358);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(299, 41);
             this.bunifuThinButton21.TabIndex = 9;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::Nadhemni_2020.Properties.Resources.Calque_4g;
-            this.pictureBox6.Location = new System.Drawing.Point(282, 389);
+            this.pictureBox6.Location = new System.Drawing.Point(281, 443);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(45, 45);
@@ -129,7 +144,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Nadhemni_2020.Properties.Resources.Calque_3;
-            this.pictureBox2.Location = new System.Drawing.Point(203, 389);
+            this.pictureBox2.Location = new System.Drawing.Point(202, 443);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 45);
@@ -166,7 +181,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Nadhemni_2020.Properties.Resources.Calque_2;
-            this.pictureBox1.Location = new System.Drawing.Point(121, 389);
+            this.pictureBox1.Location = new System.Drawing.Point(120, 443);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 45);
@@ -183,10 +198,10 @@
             this.bunifuTextbox2.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextbox2.ForeColor = System.Drawing.Color.White;
             this.bunifuTextbox2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox2.Icon")));
-            this.bunifuTextbox2.Location = new System.Drawing.Point(76, 260);
+            this.bunifuTextbox2.Location = new System.Drawing.Point(75, 299);
             this.bunifuTextbox2.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuTextbox2.Name = "bunifuTextbox2";
-            this.bunifuTextbox2.Size = new System.Drawing.Size(299, 38);
+            this.bunifuTextbox2.Size = new System.Drawing.Size(299, 34);
             this.bunifuTextbox2.TabIndex = 2;
             this.bunifuTextbox2.text = "";
             // 
@@ -198,10 +213,10 @@
             this.bunifuTextbox1.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextbox1.ForeColor = System.Drawing.Color.White;
             this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(76, 210);
+            this.bunifuTextbox1.Location = new System.Drawing.Point(75, 249);
             this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(299, 40);
+            this.bunifuTextbox1.Size = new System.Drawing.Size(299, 36);
             this.bunifuTextbox1.TabIndex = 1;
             this.bunifuTextbox1.text = "";
             // 
@@ -252,6 +267,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
