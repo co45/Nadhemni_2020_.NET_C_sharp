@@ -121,29 +121,41 @@
   <data name="writings-in-a-planner-636246" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\writings-in-a-planner-636246.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fingerprints-FB-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fingerprints-FB-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tick_box_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tick_box_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendar_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calendar_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sans titre-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sans titre-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="place_marker_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\place_marker_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calque 4g" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calque 4g.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="c991f25409ad9755523c1ad8aa56e736" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\c991f25409ad9755523c1ad8aa56e736.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="guardian_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guardian_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="d41586-018-06619-3_16101678" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\d41586-018-06619-3_16101678.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="notebook-12263981" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notebook-12263981.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="d41586-018-06619-3_16101678" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\d41586-018-06619-3_16101678.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sans titre-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sans titre-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upward_arrow_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upward_arrow_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notebook-1226398" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\notebook-1226398.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="forward_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forward_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,46 +163,55 @@
   <data name="dd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="family-activities-battle-coronavirus-cabin-fever-1280x720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\family-activities-battle-coronavirus-cabin-fever-1280x720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_new_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_new_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fill-out-form-1024x679" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fill-out-form-1024x679.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="back_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sans titre-121" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sans titre-121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checklist_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checklist_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statistics_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statistics_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="calendar_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calendar_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calque 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calque 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="settings_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calque 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calque 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="notebook-1226398" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\notebook-1226398.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fill-out-form-1024x679" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fill-out-form-1024x679.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sans titre-121" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sans titre-121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="back_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="place_marker_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\place_marker_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tick_box_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tick_box_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Calque 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Calque 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="family-activities-battle-coronavirus-cabin-fever-1280x720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\family-activities-battle-coronavirus-cabin-fever-1280x720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="upward_arrow_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\upward_arrow_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="guardian_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\guardian_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="c991f25409ad9755523c1ad8aa56e736" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\c991f25409ad9755523c1ad8aa56e736.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="plus_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fingerprints-FB-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fingerprints-FB-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_50px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

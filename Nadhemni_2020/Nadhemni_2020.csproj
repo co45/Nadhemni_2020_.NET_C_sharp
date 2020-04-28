@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,6 +121,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facebook Login.resx">
       <DependentUpon>Facebook Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +263,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_new_20px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_50px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

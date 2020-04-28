@@ -69,6 +69,8 @@ namespace Nadhemni_2020
             Information.Pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
             bunifuFlatButton1.Enabled = false;
             ActiveForm.Close();
+            dashboard d = new dashboard();
+            d.Show();
 
         }
 

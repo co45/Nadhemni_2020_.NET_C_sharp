@@ -63,6 +63,26 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_50px {
+            get {
+                object obj = ResourceManager.GetObject("add_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_new_20px {
+            get {
+                object obj = ResourceManager.GetObject("add_new_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_96px {
             get {
                 object obj = ResourceManager.GetObject("back_96px", resourceCulture);
@@ -116,6 +136,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap Calque_4g {
             get {
                 object obj = ResourceManager.GetObject("Calque 4g", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checklist_50px {
+            get {
+                object obj = ResourceManager.GetObject("checklist_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +223,26 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_50px {
+            get {
+                object obj = ResourceManager.GetObject("home_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home_50px1 {
+            get {
+                object obj = ResourceManager.GetObject("home_50px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_96px {
             get {
                 object obj = ResourceManager.GetObject("home_96px", resourceCulture);
@@ -206,6 +256,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo1 {
+            get {
+                object obj = ResourceManager.GetObject("logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +336,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap settings_96px {
             get {
                 object obj = ResourceManager.GetObject("settings_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap statistics_50px {
+            get {
+                object obj = ResourceManager.GetObject("statistics_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

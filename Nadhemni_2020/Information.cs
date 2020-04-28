@@ -50,12 +50,15 @@ namespace Nadhemni_2020
             Pers.prenom = bunifuMaterialTextbox5.Text;
             Pers.date_naissance = metroDateTime1.Value.Date;
             Pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
-
+            pers.etat_civil = bunifuMaterialTextbox6.Text;
             Pers.fonction = bunifuMaterialTextbox4.Text;
             Pers.mail = bunifuMaterialTextbox8.Text;
             
-            
-            
+
+            db.user.InsertOnSubmit(us);
+            db.identity.InsertOnSubmit(pers);
+            db.SubmitChanges();
+
             this.Hide();
             information_famille a = new information_famille();
             a.Show();
@@ -70,6 +73,10 @@ namespace Nadhemni_2020
             {
                 String img = o.FileName.ToString();
                 pictureBox3.ImageLocation = img;
+                
+
+
+
             }
 
 
