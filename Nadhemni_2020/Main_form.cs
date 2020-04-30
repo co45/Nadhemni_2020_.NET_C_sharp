@@ -37,5 +37,14 @@ namespace Nadhemni_2020
             Information a = new Information();
             a.Show();
         }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Information i = new Information();
+            ActiveForm.Hide();
+            i.Show();
+        }
+
+        
     }
 }

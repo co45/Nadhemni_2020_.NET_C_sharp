@@ -14,7 +14,7 @@ namespace Nadhemni_2020
     {
         Information a = new Information();
         Information_membre x = new Information_membre();
-        
+        public DataClassesDataContext db = new DataClassesDataContext();
 
         public information_famille()
         {
@@ -67,6 +67,10 @@ namespace Nadhemni_2020
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             Information.Pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
+            Information.Pers.etat_civil = bunifuDropdown2.selectedValue.ToString();
+            db.user.InsertOnSubmit(Information.Us);
+            db.identity.InsertOnSubmit(Information.Pers);
+            db.SubmitChanges();
             bunifuFlatButton1.Enabled = false;
             ActiveForm.Close();
             dashboard d = new dashboard();

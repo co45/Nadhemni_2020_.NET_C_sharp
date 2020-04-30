@@ -142,7 +142,7 @@
             this.bunifuFlatButton7.Iconimage_right = null;
             this.bunifuFlatButton7.Iconimage_right_Selected = null;
             this.bunifuFlatButton7.Iconimage_Selected = null;
-            this.bunifuFlatButton7.IconMarginLeft = 2;
+            this.bunifuFlatButton7.IconMarginLeft = 15;
             this.bunifuFlatButton7.IconMarginRight = 0;
             this.bunifuFlatButton7.IconRightVisible = true;
             this.bunifuFlatButton7.IconRightZoom = 0D;
@@ -179,7 +179,7 @@
             this.bunifuFlatButton6.Iconimage_right = null;
             this.bunifuFlatButton6.Iconimage_right_Selected = null;
             this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 2;
+            this.bunifuFlatButton6.IconMarginLeft = 15;
             this.bunifuFlatButton6.IconMarginRight = 0;
             this.bunifuFlatButton6.IconRightVisible = true;
             this.bunifuFlatButton6.IconRightZoom = 0D;
@@ -216,7 +216,7 @@
             this.bunifuFlatButton5.Iconimage_right = null;
             this.bunifuFlatButton5.Iconimage_right_Selected = null;
             this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 2;
+            this.bunifuFlatButton5.IconMarginLeft = 15;
             this.bunifuFlatButton5.IconMarginRight = 0;
             this.bunifuFlatButton5.IconRightVisible = true;
             this.bunifuFlatButton5.IconRightZoom = 0D;
@@ -253,7 +253,7 @@
             this.bunifuFlatButton4.Iconimage_right = null;
             this.bunifuFlatButton4.Iconimage_right_Selected = null;
             this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 2;
+            this.bunifuFlatButton4.IconMarginLeft = 15;
             this.bunifuFlatButton4.IconMarginRight = 0;
             this.bunifuFlatButton4.IconRightVisible = true;
             this.bunifuFlatButton4.IconRightZoom = 0D;
@@ -290,7 +290,7 @@
             this.bunifuFlatButton3.Iconimage_right = null;
             this.bunifuFlatButton3.Iconimage_right_Selected = null;
             this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 2;
+            this.bunifuFlatButton3.IconMarginLeft = 15;
             this.bunifuFlatButton3.IconMarginRight = 1;
             this.bunifuFlatButton3.IconRightVisible = false;
             this.bunifuFlatButton3.IconRightZoom = 0D;

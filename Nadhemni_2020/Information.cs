@@ -14,13 +14,14 @@ namespace Nadhemni_2020
     
     public partial class Information : Form
     {
+
         
-        public DataClassesDataContext db = new DataClassesDataContext();
         private static identity pers = new identity();
         private static user us = new user();
 
         public static identity Pers { get => pers; set => pers = value; }
         public static user Us { get => us; set => us = value; }
+        
 
         public Information()
         {
@@ -53,11 +54,11 @@ namespace Nadhemni_2020
             pers.etat_civil = bunifuMaterialTextbox6.Text;
             Pers.fonction = bunifuMaterialTextbox4.Text;
             Pers.mail = bunifuMaterialTextbox8.Text;
+            Pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
             
 
-            db.user.InsertOnSubmit(us);
-            db.identity.InsertOnSubmit(pers);
-            db.SubmitChanges();
+            
+            
 
             this.Hide();
             information_famille a = new information_famille();
