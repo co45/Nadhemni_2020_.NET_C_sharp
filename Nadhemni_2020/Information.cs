@@ -15,12 +15,11 @@ namespace Nadhemni_2020
     public partial class Information : Form
     {
 
-        
-        private static identity pers = new identity();
-        private static user us = new user();
+        DataClassesDataContext db = new DataClassesDataContext();
+         public identity pers = new identity();
+         public user us = new user();
 
-        public static identity Pers { get => pers; set => pers = value; }
-        public static user Us { get => us; set => us = value; }
+        
         
 
         public Information()
@@ -43,22 +42,24 @@ namespace Nadhemni_2020
             a.Show();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        public void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             us.login = bunifuMaterialTextbox1.Text;
             us.mdp = bunifuMaterialTextbox2.Text;
-            Pers.nom = bunifuMaterialTextbox3.Text;
-            Pers.prenom = bunifuMaterialTextbox5.Text;
-            Pers.date_naissance = metroDateTime1.Value.Date;
-            Pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
+            pers.nom = bunifuMaterialTextbox3.Text;
+            pers.prenom = bunifuMaterialTextbox5.Text;
+            pers.date_naissance = metroDateTime1.Value.Date;
+            pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
             pers.etat_civil = bunifuMaterialTextbox6.Text;
-            Pers.fonction = bunifuMaterialTextbox4.Text;
-            Pers.mail = bunifuMaterialTextbox8.Text;
-            Pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
-            
+            pers.fonction = bunifuMaterialTextbox4.Text;
+            pers.mail = bunifuMaterialTextbox8.Text;
+            pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
+            db.user.InsertOnSubmit(us);
+            db.identity.InsertOnSubmit(pers);
 
-            
-            
+
+
+
 
             this.Hide();
             information_famille a = new information_famille();

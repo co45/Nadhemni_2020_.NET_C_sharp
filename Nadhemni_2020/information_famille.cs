@@ -12,10 +12,8 @@ namespace Nadhemni_2020
 {
     public partial class information_famille : Form
     {
-        Information a = new Information();
-        Information_membre x = new Information_membre();
-        public DataClassesDataContext db = new DataClassesDataContext();
-
+        DataClassesDataContext bd = new DataClassesDataContext();
+        Main_form x = new Main_form();
         public information_famille()
         {
             InitializeComponent();
@@ -24,7 +22,7 @@ namespace Nadhemni_2020
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main_form x = new Main_form();
+            
             x.Show();
         }
 
@@ -34,12 +32,7 @@ namespace Nadhemni_2020
             x.Show();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-            a.Show();
-        }
+        
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
@@ -66,13 +59,8 @@ namespace Nadhemni_2020
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            Information.Pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
-            Information.Pers.etat_civil = bunifuDropdown2.selectedValue.ToString();
-            db.user.InsertOnSubmit(Information.Us);
-            db.identity.InsertOnSubmit(Information.Pers);
-            db.SubmitChanges();
-            bunifuFlatButton1.Enabled = false;
-            ActiveForm.Close();
+            
+            
             dashboard d = new dashboard();
             d.Show();
 
@@ -95,7 +83,7 @@ namespace Nadhemni_2020
                 bunifuFlatButton5.Visible = false;
                 bunifuFlatButton6.Visible = false;
                 bunifuFlatButton7.Visible = false;
-
+                
             }
             else if (bunifuDropdown2.selectedValue == "2")
             {
