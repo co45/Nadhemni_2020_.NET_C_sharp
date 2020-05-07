@@ -95,12 +95,6 @@
     <Compile Include="Information_membre.Designer.cs">
       <DependentUpon>Information_membre.cs</DependentUpon>
     </Compile>
-    <Compile Include="information_famille.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="information_famille.Designer.cs">
-      <DependentUpon>information_famille.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,9 +123,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Information_membre.resx">
       <DependentUpon>Information_membre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="information_famille.resx">
-      <DependentUpon>information_famille.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_form.resx">
       <DependentUpon>Main_form.cs</DependentUpon>
@@ -284,6 +275,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portrait_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portrait_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_100px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

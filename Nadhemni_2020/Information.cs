@@ -50,19 +50,18 @@ namespace Nadhemni_2020
             pers.prenom = bunifuMaterialTextbox5.Text;
             pers.date_naissance = metroDateTime1.Value.Date;
             pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
-            pers.etat_civil = bunifuMaterialTextbox6.Text;
+            pers.etat_civil = bunifuDropdown3.selectedValue.ToString();
             pers.fonction = bunifuMaterialTextbox4.Text;
             pers.mail = bunifuMaterialTextbox8.Text;
             pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
+            pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
+            
             db.user.InsertOnSubmit(us);
             db.identity.InsertOnSubmit(pers);
-
-
-
-
+            db.SubmitChanges();
 
             this.Hide();
-            information_famille a = new information_famille();
+            dashboard a = new dashboard();
             a.Show();
         }
 
@@ -90,5 +89,9 @@ namespace Nadhemni_2020
             planing_Form p = new planing_Form();
             p.Show();
         }
+
+        
+
+        
     }
 }
