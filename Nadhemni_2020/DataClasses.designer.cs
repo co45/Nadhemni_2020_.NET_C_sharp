@@ -39,9 +39,6 @@ namespace Nadhemni_2020
     partial void Insertidentity(identity instance);
     partial void Updateidentity(identity instance);
     partial void Deleteidentity(identity instance);
-    partial void Insertplaning(planing instance);
-    partial void Updateplaning(planing instance);
-    partial void Deleteplaning(planing instance);
     partial void Inserttache(tache instance);
     partial void Updatetache(tache instance);
     partial void Deletetache(tache instance);
@@ -126,13 +123,11 @@ namespace Nadhemni_2020
 		
 		private int _id_adresse;
 		
-		private int _numero;
+		private System.Nullable<int> _numero;
 		
 		private string _rue;
 		
 		private string _localisation;
-		
-		private EntitySet<identity> _identity;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -140,7 +135,7 @@ namespace Nadhemni_2020
     partial void OnCreated();
     partial void Onid_adresseChanging(int value);
     partial void Onid_adresseChanged();
-    partial void OnnumeroChanging(int value);
+    partial void OnnumeroChanging(System.Nullable<int> value);
     partial void OnnumeroChanged();
     partial void OnrueChanging(string value);
     partial void OnrueChanged();
@@ -150,7 +145,6 @@ namespace Nadhemni_2020
 		
 		public adresse()
 		{
-			this._identity = new EntitySet<identity>(new Action<identity>(this.attach_identity), new Action<identity>(this.detach_identity));
 			OnCreated();
 		}
 		
@@ -174,8 +168,8 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_numero", DbType="Int NOT NULL")]
-		public int numero
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_numero", DbType="Int")]
+		public System.Nullable<int> numero
 		{
 			get
 			{
@@ -194,7 +188,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rue", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_rue", DbType="VarChar(50)")]
 		public string rue
 		{
 			get
@@ -214,7 +208,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_localisation", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_localisation", DbType="VarChar(50)")]
 		public string localisation
 		{
 			get
@@ -231,19 +225,6 @@ namespace Nadhemni_2020
 					this.SendPropertyChanged("localisation");
 					this.OnlocalisationChanged();
 				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="adresse_identity", Storage="_identity", ThisKey="id_adresse", OtherKey="adresse")]
-		public EntitySet<identity> identity
-		{
-			get
-			{
-				return this._identity;
-			}
-			set
-			{
-				this._identity.Assign(value);
 			}
 		}
 		
@@ -266,18 +247,6 @@ namespace Nadhemni_2020
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_identity(identity entity)
-		{
-			this.SendPropertyChanging();
-			entity.adresse1 = this;
-		}
-		
-		private void detach_identity(identity entity)
-		{
-			this.SendPropertyChanging();
-			entity.adresse1 = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[user]")]
@@ -291,8 +260,6 @@ namespace Nadhemni_2020
 		private string _login;
 		
 		private string _mdp;
-		
-		private EntitySet<identity> _identity;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -308,7 +275,6 @@ namespace Nadhemni_2020
 		
 		public user()
 		{
-			this._identity = new EntitySet<identity>(new Action<identity>(this.attach_identity), new Action<identity>(this.detach_identity));
 			OnCreated();
 		}
 		
@@ -372,19 +338,6 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_identity", Storage="_identity", ThisKey="id_user", OtherKey="Id_personne")]
-		public EntitySet<identity> identity
-		{
-			get
-			{
-				return this._identity;
-			}
-			set
-			{
-				this._identity.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -404,18 +357,6 @@ namespace Nadhemni_2020
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_identity(identity entity)
-		{
-			this.SendPropertyChanging();
-			entity.user = this;
-		}
-		
-		private void detach_identity(identity entity)
-		{
-			this.SendPropertyChanging();
-			entity.user = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[identity]")]
@@ -430,7 +371,7 @@ namespace Nadhemni_2020
 		
 		private string _prenom;
 		
-		private System.DateTime _date_naissance;
+		private System.Nullable<System.DateTime> _date_naissance;
 		
 		private string _genre;
 		
@@ -438,11 +379,9 @@ namespace Nadhemni_2020
 		
 		private System.Data.Linq.Binary _photo;
 		
-		private int _adresse;
-		
 		private string _etat_civil;
 		
-		private int _nbre_enfant;
+		private System.Nullable<int> _nbre_enfant;
 		
 		private string _etat_sante;
 		
@@ -454,9 +393,7 @@ namespace Nadhemni_2020
 		
 		private string _mail;
 		
-		private EntityRef<adresse> _adresse1;
-		
-		private EntityRef<user> _user;
+		private System.Nullable<int> _planing;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -468,7 +405,7 @@ namespace Nadhemni_2020
     partial void OnnomChanged();
     partial void OnprenomChanging(string value);
     partial void OnprenomChanged();
-    partial void Ondate_naissanceChanging(System.DateTime value);
+    partial void Ondate_naissanceChanging(System.Nullable<System.DateTime> value);
     partial void Ondate_naissanceChanged();
     partial void OngenreChanging(string value);
     partial void OngenreChanged();
@@ -476,11 +413,9 @@ namespace Nadhemni_2020
     partial void OnfonctionChanged();
     partial void OnphotoChanging(System.Data.Linq.Binary value);
     partial void OnphotoChanged();
-    partial void OnadresseChanging(int value);
-    partial void OnadresseChanged();
     partial void Onetat_civilChanging(string value);
     partial void Onetat_civilChanged();
-    partial void Onnbre_enfantChanging(int value);
+    partial void Onnbre_enfantChanging(System.Nullable<int> value);
     partial void Onnbre_enfantChanged();
     partial void Onetat_santeChanging(string value);
     partial void Onetat_santeChanged();
@@ -492,12 +427,12 @@ namespace Nadhemni_2020
     partial void OndistanceChanged();
     partial void OnmailChanging(string value);
     partial void OnmailChanged();
+    partial void OnplaningChanging(System.Nullable<int> value);
+    partial void OnplaningChanged();
     #endregion
 		
 		public identity()
 		{
-			this._adresse1 = default(EntityRef<adresse>);
-			this._user = default(EntityRef<user>);
 			OnCreated();
 		}
 		
@@ -512,10 +447,6 @@ namespace Nadhemni_2020
 			{
 				if ((this._Id_personne != value))
 				{
-					if (this._user.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnId_personneChanging(value);
 					this.SendPropertyChanging();
 					this._Id_personne = value;
@@ -525,7 +456,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nom", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nom", DbType="VarChar(50)")]
 		public string nom
 		{
 			get
@@ -545,7 +476,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prenom", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prenom", DbType="VarChar(50)")]
 		public string prenom
 		{
 			get
@@ -565,8 +496,8 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_naissance", DbType="Date NOT NULL")]
-		public System.DateTime date_naissance
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_naissance", DbType="Date")]
+		public System.Nullable<System.DateTime> date_naissance
 		{
 			get
 			{
@@ -585,7 +516,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_genre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_genre", DbType="VarChar(50)")]
 		public string genre
 		{
 			get
@@ -625,7 +556,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_photo", DbType="Binary(50)", CanBeNull=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_photo", DbType="Binary(50)", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary photo
 		{
 			get
@@ -645,31 +576,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_adresse", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int adresse
-		{
-			get
-			{
-				return this._adresse;
-			}
-			set
-			{
-				if ((this._adresse != value))
-				{
-					if (this._adresse1.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnadresseChanging(value);
-					this.SendPropertyChanging();
-					this._adresse = value;
-					this.SendPropertyChanged("adresse");
-					this.OnadresseChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etat_civil", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etat_civil", DbType="VarChar(50)")]
 		public string etat_civil
 		{
 			get
@@ -689,8 +596,8 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nbre_enfant", DbType="Int NOT NULL")]
-		public int nbre_enfant
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nbre_enfant", DbType="Int")]
+		public System.Nullable<int> nbre_enfant
 		{
 			get
 			{
@@ -709,7 +616,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etat_sante", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_etat_sante", DbType="VarChar(50)")]
 		public string etat_sante
 		{
 			get
@@ -789,7 +696,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mail", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mail", DbType="VarChar(50)")]
 		public string mail
 		{
 			get
@@ -809,70 +716,22 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="adresse_identity", Storage="_adresse1", ThisKey="adresse", OtherKey="id_adresse", IsForeignKey=true)]
-		public adresse adresse1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_planing", DbType="Int")]
+		public System.Nullable<int> planing
 		{
 			get
 			{
-				return this._adresse1.Entity;
+				return this._planing;
 			}
 			set
 			{
-				adresse previousValue = this._adresse1.Entity;
-				if (((previousValue != value) 
-							|| (this._adresse1.HasLoadedOrAssignedValue == false)))
+				if ((this._planing != value))
 				{
+					this.OnplaningChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._adresse1.Entity = null;
-						previousValue.identity.Remove(this);
-					}
-					this._adresse1.Entity = value;
-					if ((value != null))
-					{
-						value.identity.Add(this);
-						this._adresse = value.id_adresse;
-					}
-					else
-					{
-						this._adresse = default(int);
-					}
-					this.SendPropertyChanged("adresse1");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_identity", Storage="_user", ThisKey="Id_personne", OtherKey="id_user", IsForeignKey=true)]
-		public user user
-		{
-			get
-			{
-				return this._user.Entity;
-			}
-			set
-			{
-				user previousValue = this._user.Entity;
-				if (((previousValue != value) 
-							|| (this._user.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._user.Entity = null;
-						previousValue.identity.Remove(this);
-					}
-					this._user.Entity = value;
-					if ((value != null))
-					{
-						value.identity.Add(this);
-						this._Id_personne = value.id_user;
-					}
-					else
-					{
-						this._Id_personne = default(int);
-					}
-					this.SendPropertyChanged("user");
+					this._planing = value;
+					this.SendPropertyChanged("planing");
+					this.OnplaningChanged();
 				}
 			}
 		}
@@ -899,35 +758,19 @@ namespace Nadhemni_2020
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.planing")]
-	public partial class planing : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class planing
 	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		private System.Nullable<int> _Id_planing;
 		
-		private int _Id_planing;
-		
-		private int _id_taches;
-		
-		private EntityRef<tache> _tache;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnId_planingChanging(int value);
-    partial void OnId_planingChanged();
-    partial void Onid_tachesChanging(int value);
-    partial void Onid_tachesChanged();
-    #endregion
+		private System.Nullable<int> _id_taches;
 		
 		public planing()
 		{
-			this._tache = default(EntityRef<tache>);
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_planing", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Id_planing
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_planing", DbType="Int")]
+		public System.Nullable<int> Id_planing
 		{
 			get
 			{
@@ -937,17 +780,13 @@ namespace Nadhemni_2020
 			{
 				if ((this._Id_planing != value))
 				{
-					this.OnId_planingChanging(value);
-					this.SendPropertyChanging();
 					this._Id_planing = value;
-					this.SendPropertyChanged("Id_planing");
-					this.OnId_planingChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_taches", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_taches
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_taches", DbType="Int")]
+		public System.Nullable<int> id_taches
 		{
 			get
 			{
@@ -957,70 +796,8 @@ namespace Nadhemni_2020
 			{
 				if ((this._id_taches != value))
 				{
-					if (this._tache.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onid_tachesChanging(value);
-					this.SendPropertyChanging();
 					this._id_taches = value;
-					this.SendPropertyChanged("id_taches");
-					this.Onid_tachesChanged();
 				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_planing", Storage="_tache", ThisKey="id_taches", OtherKey="id_tache", IsForeignKey=true)]
-		public tache tache
-		{
-			get
-			{
-				return this._tache.Entity;
-			}
-			set
-			{
-				tache previousValue = this._tache.Entity;
-				if (((previousValue != value) 
-							|| (this._tache.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tache.Entity = null;
-						previousValue.planing.Remove(this);
-					}
-					this._tache.Entity = value;
-					if ((value != null))
-					{
-						value.planing.Add(this);
-						this._id_taches = value.id_tache;
-					}
-					else
-					{
-						this._id_taches = default(int);
-					}
-					this.SendPropertyChanged("tache");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -1049,8 +826,6 @@ namespace Nadhemni_2020
 		
 		private string _type;
 		
-		private EntitySet<planing> _planing;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1077,7 +852,6 @@ namespace Nadhemni_2020
 		
 		public tache()
 		{
-			this._planing = new EntitySet<planing>(new Action<planing>(this.attach_planing), new Action<planing>(this.detach_planing));
 			OnCreated();
 		}
 		
@@ -1261,19 +1035,6 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_planing", Storage="_planing", ThisKey="id_tache", OtherKey="id_taches")]
-		public EntitySet<planing> planing
-		{
-			get
-			{
-				return this._planing;
-			}
-			set
-			{
-				this._planing.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1292,18 +1053,6 @@ namespace Nadhemni_2020
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_planing(planing entity)
-		{
-			this.SendPropertyChanging();
-			entity.tache = this;
-		}
-		
-		private void detach_planing(planing entity)
-		{
-			this.SendPropertyChanging();
-			entity.tache = null;
 		}
 	}
 }

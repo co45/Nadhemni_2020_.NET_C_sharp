@@ -3,10 +3,9 @@
   <Table Name="dbo.adresse" Member="adresse">
     <Type Name="adresse">
       <Column Name="id_adresse" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="numero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="rue" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="localisation" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="adresse_identity" Member="identity" ThisKey="id_adresse" OtherKey="adresse" Type="identity" />
+      <Column Name="numero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="localisation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.[user]" Member="user">
@@ -14,34 +13,31 @@
       <Column Name="id_user" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="login" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="mdp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="user_identity" Member="identity" ThisKey="id_user" OtherKey="Id_personne" Type="identity" />
     </Type>
   </Table>
   <Table Name="dbo.[identity]" Member="identity">
     <Type Name="identity">
       <Column Name="Id_personne" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="nom" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="prenom" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="date_naissance" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="genre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prenom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="date_naissance" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="genre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="fonction" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="photo" Type="System.Data.Linq.Binary" DbType="Binary(50)" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="adresse" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="etat_civil" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="nbre_enfant" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="etat_sante" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="etat_civil" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nbre_enfant" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="etat_sante" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="etablissement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="niveau_etude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="distance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="mail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="adresse_identity" Member="adresse1" ThisKey="adresse" OtherKey="id_adresse" Type="adresse" IsForeignKey="true" />
-      <Association Name="user_identity" Member="user" ThisKey="Id_personne" OtherKey="id_user" Type="user" IsForeignKey="true" />
+      <Column Name="mail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="planing" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.planing" Member="planing">
     <Type Name="planing">
-      <Column Name="Id_planing" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_taches" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_planing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_taches" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="tache_planing" Member="tache" ThisKey="id_taches" OtherKey="id_tache" Type="tache" IsForeignKey="true" />
     </Type>
   </Table>

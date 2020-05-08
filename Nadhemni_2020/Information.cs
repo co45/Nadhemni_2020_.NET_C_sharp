@@ -16,8 +16,9 @@ namespace Nadhemni_2020
     {
 
         DataClassesDataContext db = new DataClassesDataContext();
-         public identity pers = new identity();
-         public user us = new user();
+        public identity pers = new identity();
+        public user us = new user();
+        public adresse ad= new adresse();
 
         
         
@@ -46,6 +47,7 @@ namespace Nadhemni_2020
         {
             us.login = bunifuMaterialTextbox1.Text;
             us.mdp = bunifuMaterialTextbox2.Text;
+
             pers.nom = bunifuMaterialTextbox3.Text;
             pers.prenom = bunifuMaterialTextbox5.Text;
             pers.date_naissance = metroDateTime1.Value.Date;
@@ -55,9 +57,17 @@ namespace Nadhemni_2020
             pers.mail = bunifuMaterialTextbox8.Text;
             pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
             pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
+
+            ad.numero = int.Parse(bunifuMaterialTextbox6.Text);
+            ad.rue = bunifuMaterialTextbox7.Text;
             
+            us.id_user = pers.Id_personne;
+            
+            
+            db.adresse.InsertOnSubmit(ad);
             db.user.InsertOnSubmit(us);
             db.identity.InsertOnSubmit(pers);
+           
             db.SubmitChanges();
 
             this.Hide();
@@ -65,17 +75,21 @@ namespace Nadhemni_2020
             a.Show();
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        public void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-
+            byte[] imgBt = null;
+            
             OpenFileDialog o = new OpenFileDialog();
             o.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
             if (o.ShowDialog()==DialogResult.OK)
             {
                 String img = o.FileName.ToString();
                 pictureBox3.ImageLocation = img;
-                
+                FileStream fs = new FileStream(img,FileMode.Open , FileAccess.Read );
+                BinaryReader br = new BinaryReader(fs);
+                imgBt = br.ReadBytes((int)fs.Length);
 
+              
 
 
             }
@@ -84,11 +98,7 @@ namespace Nadhemni_2020
 
         }
 
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
-        {
-            planing_Form p = new planing_Form();
-            p.Show();
-        }
+        
 
         
 
