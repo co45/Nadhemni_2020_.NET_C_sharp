@@ -16,7 +16,7 @@ namespace Nadhemni_2020
     {
 
         DataClassesDataContext db = new DataClassesDataContext();
-        public identity pers = new identity();
+        public infop pers = new infop();
         public user us = new user();
         public adresse ad= new adresse();
 
@@ -60,13 +60,13 @@ namespace Nadhemni_2020
 
             ad.numero = int.Parse(bunifuMaterialTextbox6.Text);
             ad.rue = bunifuMaterialTextbox7.Text;
-            
+
+            pers.adresse = ad.id_adresse;
             us.id_user = pers.Id_personne;
-            
-            
+                    
             db.adresse.InsertOnSubmit(ad);
             db.user.InsertOnSubmit(us);
-            db.identity.InsertOnSubmit(pers);
+            db.infop.InsertOnSubmit(pers);
            
             db.SubmitChanges();
 

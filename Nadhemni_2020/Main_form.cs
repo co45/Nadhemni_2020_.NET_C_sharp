@@ -45,6 +45,33 @@ namespace Nadhemni_2020
             i.Show();
         }
 
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            if (IsvalidUser(bunifuMaterialTextbox5.Text, bunifuMaterialTextbox1.Text))
+            {
+                dashboard F = new dashboard();
+                F.Show();
+            }
+        }
+
+        private bool IsvalidUser(string userName, string password)
+        {
+            DataClassesDataContext context = new DataClassesDataContext();
+
+            var q = from p in context.user
+                    where p.login == bunifuMaterialTextbox5.Text
+                    && p.mdp == bunifuMaterialTextbox1.Text
+                    select p;
+            if (q.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         
     }
 }

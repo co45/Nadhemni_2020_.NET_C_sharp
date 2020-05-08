@@ -87,7 +87,7 @@
             this.pictureBox2.Image = global::Nadhemni_2020.Properties.Resources.settings_96px;
             this.pictureBox2.Location = new System.Drawing.Point(88, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 55);
+            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
