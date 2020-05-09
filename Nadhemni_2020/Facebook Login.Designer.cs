@@ -41,10 +41,11 @@
             // webBrowserLogin
             // 
             this.webBrowserLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.webBrowserLogin.Location = new System.Drawing.Point(0, 31);
-            this.webBrowserLogin.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserLogin.Location = new System.Drawing.Point(0, 26);
+            this.webBrowserLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.webBrowserLogin.MinimumSize = new System.Drawing.Size(15, 16);
             this.webBrowserLogin.Name = "webBrowserLogin";
-            this.webBrowserLogin.Size = new System.Drawing.Size(800, 419);
+            this.webBrowserLogin.Size = new System.Drawing.Size(600, 340);
             this.webBrowserLogin.TabIndex = 0;
             // 
             // bunifuElipse1
@@ -64,10 +65,10 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Black;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(800, 31);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(600, 32);
             this.bunifuGradientPanel1.TabIndex = 1;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
@@ -76,8 +77,8 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(768, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(568, -2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -88,12 +89,13 @@
             // Facebook_Login
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.webBrowserLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Facebook_Login";
             this.Text = "Facebook_Login";
             this.Load += new System.EventHandler(this.Facebook_Login_Load);

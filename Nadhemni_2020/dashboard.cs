@@ -17,6 +17,7 @@ namespace Nadhemni_2020
             InitializeComponent();
             timer1.Start();
         }
+        
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -25,23 +26,11 @@ namespace Nadhemni_2020
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bunifuCards1.BringToFront();
+            bunifuCards2.Hide();
+            bunifuCards1.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            bunifuCards2.BringToFront();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            bunifuCards3.BringToFront();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            bunifuCards4.BringToFront();
-        }
+       
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -53,6 +42,29 @@ namespace Nadhemni_2020
                     label1.Location = new Point(0 - label1.Width, label1.Location.Y);
                 }
             
+        }
+
+        private void dashboard_Load(object sender, EventArgs e)
+        {
+            bunifuCards1.Hide();
+            bunifuCards2.Hide();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+            DataClassesDataContext db = new DataClassesDataContext();
+            
+        }
+
+        private void bunifuDropdown2_onItemSelected(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            bunifuCards1.Hide();
+            bunifuCards2.Show();
         }
     }
 }

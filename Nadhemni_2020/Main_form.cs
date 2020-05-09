@@ -72,6 +72,9 @@ namespace Nadhemni_2020
             }
         }
 
-        
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

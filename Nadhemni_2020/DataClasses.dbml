@@ -2,19 +2,27 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-F7MSF8V0;Initial Catalog=nadhemni;Integrated Security=True;Pooling=False" SettingsObjectName="Nadhemni_2020.Properties.Settings" SettingsPropertyName="nadhemniConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.adresse" Member="adresse">
     <Type Name="adresse">
-      <Column Name="id_adresse" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_pers" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="numero" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="rue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="localisation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="adresse_infop" Member="infop" ThisKey="id_adresse" OtherKey="adresse" Type="infop" />
+      <Association Name="adresse_adresseinfo" Member="adresseinfo" ThisKey="id_pers" OtherKey="id_ad" Type="adresseinfo" />
     </Type>
   </Table>
-  <Table Name="dbo.[user]" Member="user">
-    <Type Name="user">
-      <Column Name="id_user" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="login" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="mdp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="user_infop" Member="infop" ThisKey="id_user" OtherKey="Id_personne" Type="infop" />
+  <Table Name="dbo.userinfo" Member="userinfo">
+    <Type Name="userinfo">
+      <Column Name="id_u" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_i" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="infop_userinfo" Member="infop" ThisKey="id_i" OtherKey="Id_personne" Type="infop" IsForeignKey="true" />
+      <Association Name="user_userinfo" Member="user" ThisKey="id_u" OtherKey="id_user" Type="user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.adresseinfo" Member="adresseinfo">
+    <Type Name="adresseinfo">
+      <Column Name="id_in" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_ad" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="adresse_adresseinfo" Member="adresse" ThisKey="id_ad" OtherKey="id_pers" Type="adresse" IsForeignKey="true" />
+      <Association Name="infop_adresseinfo" Member="infop" ThisKey="id_in" OtherKey="Id_personne" Type="infop" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.infop" Member="infop">
@@ -28,23 +36,21 @@
       <Column Name="photo" Type="System.Data.Linq.Binary" DbType="Binary(50)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="etat_civil" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="nbre_enfant" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="adresse" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="etat_sante" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="etablissement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="niveau_etude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="distance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="mail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="planing" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="adresse_infop" Member="adresse1" ThisKey="adresse" OtherKey="id_adresse" Type="adresse" IsForeignKey="true" />
-      <Association Name="user_infop" Member="user" ThisKey="Id_personne" OtherKey="id_user" Type="user" IsForeignKey="true" />
-      <Association Name="planing_infop" Member="planing1" ThisKey="planing" OtherKey="Id_planing" Type="planing" IsForeignKey="true" />
+      <Association Name="infop_userinfo" Member="userinfo" ThisKey="Id_personne" OtherKey="id_i" Type="userinfo" />
+      <Association Name="infop_adresseinfo" Member="adresseinfo" ThisKey="Id_personne" OtherKey="id_in" Type="adresseinfo" />
+      <Association Name="infop_planing" Member="planing" ThisKey="Id_personne" OtherKey="id_per" Type="planing" />
     </Type>
   </Table>
   <Table Name="dbo.planing" Member="planing">
     <Type Name="planing">
-      <Column Name="Id_planing" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_taches" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="planing_infop" Member="infop" ThisKey="Id_planing" OtherKey="planing" Type="infop" />
+      <Column Name="id_per" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_taches" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="infop_planing" Member="infop" ThisKey="id_per" OtherKey="Id_personne" Type="infop" IsForeignKey="true" />
       <Association Name="tache_planing" Member="tache" ThisKey="id_taches" OtherKey="id_tache" Type="tache" IsForeignKey="true" />
     </Type>
   </Table>
@@ -60,6 +66,14 @@
       <Column Name="personne_imp" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="tache_planing" Member="planing" ThisKey="id_tache" OtherKey="id_taches" Type="planing" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[user]" Member="user">
+    <Type Name="user">
+      <Column Name="id_user" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="login" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mdp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="user_userinfo" Member="userinfo" ThisKey="id_user" OtherKey="id_u" Type="userinfo" />
     </Type>
   </Table>
 </Database>

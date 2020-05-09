@@ -74,6 +74,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 606);
             this.panel1.TabIndex = 0;
@@ -81,9 +82,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Nadhemni_2020.Properties.Resources.password_100px;
-            this.pictureBox7.Location = new System.Drawing.Point(34, 336);
+            this.pictureBox7.Location = new System.Drawing.Point(35, 336);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox7.Size = new System.Drawing.Size(35, 33);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 24;
             this.pictureBox7.TabStop = false;
@@ -92,8 +94,9 @@
             // 
             this.pictureBox3.Image = global::Nadhemni_2020.Properties.Resources.user_64px;
             this.pictureBox3.Location = new System.Drawing.Point(31, 272);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox3.Size = new System.Drawing.Size(43, 42);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
@@ -110,8 +113,8 @@
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Indigo;
             this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(86, 318);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(85, 318);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
             this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(273, 42);
             this.bunifuMaterialTextbox1.TabIndex = 21;
@@ -129,8 +132,8 @@
             this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.Indigo;
             this.bunifuMaterialTextbox5.LineThickness = 3;
-            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(86, 266);
-            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(85, 266);
+            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
             this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(273, 42);
             this.bunifuMaterialTextbox5.TabIndex = 20;
@@ -168,8 +171,8 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.BlueViolet;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.BlueViolet;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(86, 384);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(85, 384);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(271, 41);
             this.bunifuThinButton21.TabIndex = 18;
@@ -181,10 +184,10 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::Nadhemni_2020.Properties.Resources.Calque_4g;
-            this.pictureBox6.Location = new System.Drawing.Point(275, 477);
+            this.pictureBox6.Location = new System.Drawing.Point(275, 478);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(45, 46);
+            this.pictureBox6.Size = new System.Drawing.Size(51, 46);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 17;
             this.pictureBox6.TabStop = false;
@@ -194,10 +197,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Nadhemni_2020.Properties.Resources.Calque_3;
-            this.pictureBox2.Location = new System.Drawing.Point(197, 477);
+            this.pictureBox2.Location = new System.Drawing.Point(197, 478);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 46);
+            this.pictureBox2.Size = new System.Drawing.Size(51, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
@@ -205,7 +208,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Nadhemni_2020.Properties.Resources.logo;
-            this.pictureBox5.Location = new System.Drawing.Point(142, 67);
+            this.pictureBox5.Location = new System.Drawing.Point(141, 66);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(160, 150);
@@ -218,23 +221,24 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(398, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(399, 0);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Nadhemni_2020.Properties.Resources.Calque_2;
-            this.pictureBox1.Location = new System.Drawing.Point(114, 477);
+            this.pictureBox1.Location = new System.Drawing.Point(115, 478);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;

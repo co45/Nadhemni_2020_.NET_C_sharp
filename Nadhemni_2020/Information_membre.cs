@@ -13,7 +13,7 @@ namespace Nadhemni_2020
     public partial class Information_membre : Form
     {
         DataClassesDataContext db = new DataClassesDataContext();
-        identity m = new identity();
+        infop m = new infop();
 
         public Information_membre()
         {
@@ -34,7 +34,7 @@ namespace Nadhemni_2020
             m.fonction = bunifuMaterialTextbox2.Text;
             m.etablissement = bunifuMaterialTextbox1.Text;
             m.etat_sante = bunifuDropdown2.selectedValue;
-            db.identity.InsertOnSubmit(m);
+            db.infop.InsertOnSubmit(m);
             db.SubmitChanges();
 
         }

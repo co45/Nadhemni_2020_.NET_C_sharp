@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +17,10 @@ namespace Nadhemni_2020
     public partial class Information : Form
     {
 
-        DataClassesDataContext db = new DataClassesDataContext();
+        internal static DataClassesDataContext db = new DataClassesDataContext();
         public infop pers = new infop();
-        public user us = new user();
         public adresse ad= new adresse();
+        user u = new user();
 
         
         
@@ -45,39 +47,51 @@ namespace Nadhemni_2020
 
         public void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            us.login = bunifuMaterialTextbox1.Text;
-            us.mdp = bunifuMaterialTextbox2.Text;
+            try
+            {
+                
+                //insertion des informations
+                pers.nom = bunifuMaterialTextbox3.Text;
+                pers.prenom = bunifuMaterialTextbox5.Text;
+                pers.date_naissance = metroDateTime1.Value.Date;
+                pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
+                pers.etat_civil = bunifuDropdown3.selectedValue.ToString();
+                pers.fonction = bunifuMaterialTextbox4.Text;
+                pers.mail = bunifuMaterialTextbox8.Text;
+                pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
+                pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
 
-            pers.nom = bunifuMaterialTextbox3.Text;
-            pers.prenom = bunifuMaterialTextbox5.Text;
-            pers.date_naissance = metroDateTime1.Value.Date;
-            pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
-            pers.etat_civil = bunifuDropdown3.selectedValue.ToString();
-            pers.fonction = bunifuMaterialTextbox4.Text;
-            pers.mail = bunifuMaterialTextbox8.Text;
-            pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
-            pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
+                // insertion de l'image 
+                MemoryStream ms = new MemoryStream();
+                pictureBox3.Image.Save(ms,ImageFormat.Jpeg);
+                byte[] photo_aray = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(photo_aray, 0, photo_aray.Length);
+                pers.photo = photo_aray;
+                //ad.numero = int.Parse(bunifuMaterialTextbox6.Text);
+                //ad.rue = bunifuMaterialTextbox7.Text;
 
-            ad.numero = int.Parse(bunifuMaterialTextbox6.Text);
-            ad.rue = bunifuMaterialTextbox7.Text;
 
-            pers.adresse = ad.id_adresse;
-            us.id_user = pers.Id_personne;
-                    
-            db.adresse.InsertOnSubmit(ad);
-            db.user.InsertOnSubmit(us);
-            db.infop.InsertOnSubmit(pers);
-           
-            db.SubmitChanges();
 
-            this.Hide();
-            dashboard a = new dashboard();
-            a.Show();
+                //db.adresse.InsertOnSubmit(ad);
+
+                db.infop.InsertOnSubmit(pers);
+
+                db.SubmitChanges();
+
+                this.Hide();
+                newpass a = new newpass();
+                a.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            byte[] imgBt = null;
+            
             
             OpenFileDialog o = new OpenFileDialog();
             o.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
@@ -85,11 +99,13 @@ namespace Nadhemni_2020
             {
                 String img = o.FileName.ToString();
                 pictureBox3.ImageLocation = img;
-                FileStream fs = new FileStream(img,FileMode.Open , FileAccess.Read );
-                BinaryReader br = new BinaryReader(fs);
-                imgBt = br.ReadBytes((int)fs.Length);
+                pictureBox3.Image = Image.FromFile(img);
 
-              
+                
+
+                
+
+
 
 
             }
