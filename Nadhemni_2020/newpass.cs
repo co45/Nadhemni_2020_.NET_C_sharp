@@ -22,11 +22,10 @@ namespace Nadhemni_2020
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            Control x; 
+           
             try
             {
                 user us = new user();
-
                 us.login = bunifuMaterialTextbox1.Text;
                 us.mdp = bunifuMaterialTextbox2.Text;
                 db.user.InsertOnSubmit(us);

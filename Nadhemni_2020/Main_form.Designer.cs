@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_form));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox5 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -78,28 +78,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(431, 606);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Nadhemni_2020.Properties.Resources.password_100px;
-            this.pictureBox7.Location = new System.Drawing.Point(35, 336);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 33);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 24;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Nadhemni_2020.Properties.Resources.user_64px;
-            this.pictureBox3.Location = new System.Drawing.Point(31, 272);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 42);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // bunifuMaterialTextbox1
             // 
@@ -153,6 +132,28 @@
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::Nadhemni_2020.Properties.Resources.password_100px;
+            this.pictureBox7.Location = new System.Drawing.Point(35, 336);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 24;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Nadhemni_2020.Properties.Resources.user_64px;
+            this.pictureBox3.Location = new System.Drawing.Point(31, 272);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 42);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
+            // 
             // bunifuThinButton21
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
@@ -172,7 +173,7 @@
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.BlueViolet;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.BlueViolet;
             this.bunifuThinButton21.Location = new System.Drawing.Point(85, 384);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(271, 41);
             this.bunifuThinButton21.TabIndex = 18;

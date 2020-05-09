@@ -103,6 +103,16 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cadre {
+            get {
+                object obj = ResourceManager.GetObject("cadre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_32px {
             get {
                 object obj = ResourceManager.GetObject("calendar_32px", resourceCulture);
@@ -166,6 +176,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap dd {
             get {
                 object obj = ResourceManager.GetObject("dd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap family_64px {
+            get {
+                object obj = ResourceManager.GetObject("family_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

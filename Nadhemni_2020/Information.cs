@@ -62,12 +62,11 @@ namespace Nadhemni_2020
                 pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
 
                 // insertion de l'image 
-                MemoryStream ms = new MemoryStream();
-                pictureBox3.Image.Save(ms,ImageFormat.Jpeg);
-                byte[] photo_aray = new byte[ms.Length];
-                ms.Position = 0;
-                ms.Read(photo_aray, 0, photo_aray.Length);
-                pers.photo = photo_aray;
+               /* MemoryStream ms = new MemoryStream();
+                pictureBox3.Image.Save(ms,pictureBox3.Image.RawFormat);
+                byte[] photo_aray = ms.ToArray();
+               
+                pers.photo = photo_aray;*/
                 //ad.numero = int.Parse(bunifuMaterialTextbox6.Text);
                 //ad.rue = bunifuMaterialTextbox7.Text;
 

@@ -52,10 +52,16 @@ namespace Nadhemni_2020
                 dashboard F = new dashboard();
                 F.Show();
             }
+            else
+            {
+                string text = "Pseudo ou mot de passe invalide !";
+                MessageBox.Show(text);
+            }
         }
 
         private bool IsvalidUser(string userName, string password)
         {
+            
             DataClassesDataContext context = new DataClassesDataContext();
 
             var q = from p in context.user
@@ -69,12 +75,18 @@ namespace Nadhemni_2020
             else
             {
                 return false;
+                
             }
         }
 
         private void pictureBox4_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
