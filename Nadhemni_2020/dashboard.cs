@@ -52,12 +52,12 @@ namespace Nadhemni_2020
 
         private void dashboard_Load(object sender, EventArgs e)
         {
-            
 
+            bunifuCards4.Hide();
             bunifuCards3.Hide();
             bunifuCards2.Hide();
             bunifuCards1.Show();
-
+            bunifuFlatButton1.Select();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = Information.db.tache;
             //label11.Text = Main_form.id.ToString();
@@ -103,7 +103,11 @@ namespace Nadhemni_2020
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = Information.db.tache;
 
+                var selectQuery =
+                      from a in Information.db.tache
+                      select a;
 
+                dataGridView1.DataSource = selectQuery;
 
             }
             catch (Exception x)
@@ -146,7 +150,7 @@ namespace Nadhemni_2020
                 }
                 tache t = Information.db.tache.Single<tache>(x => x.id_tache == int.Parse(label14.Text));
 
-                var lr = from x in Information.db.tache//Form1.dbRobot.TaskRobots
+                var lr = from x in Information.db.tache
                           where x.id_tache == int.Parse(label14.Text)
                           select x;
 
@@ -183,6 +187,76 @@ namespace Nadhemni_2020
                 this.label14.Text = a;
                 this.label13.Text = b;
             }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            bunifuCards4.Show();
+            bunifuCards3.Hide();
+            bunifuCards2.Hide();
+            bunifuCards1.Hide();
+
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+                bunifuMaterialTextbox2.Text = Convert.ToString(selectedRow.Cells["description"].Value);
+                bunifuMaterialTextbox1.Text = Convert.ToString(selectedRow.Cells["titre"].Value);
+                
+
+            }
+
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            bunifuCards4.Hide();
+            bunifuCards3.Show();
+
+            
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+                label23.Text = Convert.ToString(selectedRow.Cells["id_tache"].Value);
+               
+
+            }
+
+            tache tt = Information.db.tache.Single<tache>(x => x.id_tache == int.Parse(label23.Text));
+           
+                tt.description = bunifuMaterialTextbox2.Text;
+                tt.titre = bunifuMaterialTextbox1.Text;
+                tt.t_debut = dateTimePicker4.Value.Date;
+                tt.t_fin = dateTimePicker3.Value.Date;
+                tt.duree = int.Parse(bunifuDropdown4.selectedValue);
+                tt.type = bunifuDropdown3.selectedValue.ToString();
+                Information.db.tache.InsertOnSubmit(tt);
+                Information.db.SubmitChanges();
+
+                MessageBox.Show("Tache modifié avec succes !");
+                this.Update();
+
+             var sq =
+                      from a in Information.db.tache
+                      select a;
+
+                dataGridView1.DataSource = sq;
+
+            
+
+
+            var selectQuery =
+                      from a in Information.db.tache
+                      select a;
+            dataGridView1.DataSource = selectQuery;
+
+            bunifuCards4.Hide();
+            bunifuCards3.Show();
         }
     }
 }
