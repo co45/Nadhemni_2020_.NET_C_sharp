@@ -56,12 +56,12 @@
   </Table>
   <Table Name="dbo.tache" Member="tache">
     <Type Name="tache">
-      <Column Name="id_tache" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_tache" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="titre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="t_debut" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="t_fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="duree" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="duree" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="emplacement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="personne_imp" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />

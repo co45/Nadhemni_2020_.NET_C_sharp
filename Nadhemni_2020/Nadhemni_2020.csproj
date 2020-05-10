@@ -301,6 +301,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\edit_file_64px.png" />
+    <None Include="Resources\delete_trash_64px1.png" />
+    <None Include="Resources\portrait %281%29.png" />
+    <None Include="Resources\portrait_96px.png" />
+    <None Include="Resources\delete_trash_64px.png" />
     <None Include="Resources\cadre.png" />
     <None Include="Resources\family_64px.png" />
   </ItemGroup>

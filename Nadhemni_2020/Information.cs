@@ -16,6 +16,7 @@ namespace Nadhemni_2020
     
     public partial class Information : Form
     {
+        public static string idd;
 
         internal static DataClassesDataContext db = new DataClassesDataContext();
         public infop pers = new infop();
@@ -77,8 +78,8 @@ namespace Nadhemni_2020
                 db.infop.InsertOnSubmit(pers);
 
                 db.SubmitChanges();
-
-                this.Hide();
+                
+                this.Close();
                 newpass a = new newpass();
                 a.Show();
             }
@@ -113,10 +114,9 @@ namespace Nadhemni_2020
 
         }
 
-        
+        private void Information_Load(object sender, EventArgs e)
+        {
 
-        
-
-        
+        }
     }
 }

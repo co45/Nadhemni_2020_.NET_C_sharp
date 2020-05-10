@@ -12,7 +12,8 @@ namespace Nadhemni_2020
 {
     public partial class Main_form : Form
     {
-        
+        DataClassesDataContext context = new DataClassesDataContext();
+        public static string id;
         public Main_form()
         {
             InitializeComponent();
@@ -49,27 +50,36 @@ namespace Nadhemni_2020
         {
             if (IsvalidUser(bunifuMaterialTextbox5.Text, bunifuMaterialTextbox1.Text))
             {
+                var r = from s in context.user
+                        where s.login == bunifuMaterialTextbox5.Text
+                        && s.mdp == bunifuMaterialTextbox1.Text
+                        select s.id_user ;
+                
                 dashboard F = new dashboard();
                 F.Show();
             }
             else
             {
-                string text = "Pseudo ou mot de passe invalide !";
-                MessageBox.Show(text);
+                MessageBox.Show("Pseudo ou mot de passe invalide !");
             }
+            
         }
 
         private bool IsvalidUser(string userName, string password)
         {
             
-            DataClassesDataContext context = new DataClassesDataContext();
+            
 
             var q = from p in context.user
-                    where p.login == bunifuMaterialTextbox5.Text
-                    && p.mdp == bunifuMaterialTextbox1.Text
+                    where p.login == userName
+                    && p.mdp == password
                     select p;
+
             if (q.Any())
             {
+               
+                
+
                 return true;
             }
             else

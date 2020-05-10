@@ -1280,7 +1280,7 @@ namespace Nadhemni_2020
 		
 		private string _description;
 		
-		private System.Nullable<double> _duree;
+		private System.Nullable<int> _duree;
 		
 		private string _emplacement;
 		
@@ -1304,7 +1304,7 @@ namespace Nadhemni_2020
     partial void Ont_finChanged();
     partial void OndescriptionChanging(string value);
     partial void OndescriptionChanged();
-    partial void OndureeChanging(System.Nullable<double> value);
+    partial void OndureeChanging(System.Nullable<int> value);
     partial void OndureeChanged();
     partial void OnemplacementChanging(string value);
     partial void OnemplacementChanged();
@@ -1320,7 +1320,7 @@ namespace Nadhemni_2020
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_tache", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_tache", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int id_tache
 		{
 			get
@@ -1420,8 +1420,8 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_duree", DbType="Float")]
-		public System.Nullable<double> duree
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_duree", DbType="Int")]
+		public System.Nullable<int> duree
 		{
 			get
 			{

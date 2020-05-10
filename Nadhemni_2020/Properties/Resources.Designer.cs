@@ -183,6 +183,36 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_trash_64px {
+            get {
+                object obj = ResourceManager.GetObject("delete_trash_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_trash_64px1 {
+            get {
+                object obj = ResourceManager.GetObject("delete_trash_64px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_file_64px {
+            get {
+                object obj = ResourceManager.GetObject("edit_file_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap family_64px {
             get {
                 object obj = ResourceManager.GetObject("family_64px", resourceCulture);
@@ -343,6 +373,16 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap portrait__1_ {
+            get {
+                object obj = ResourceManager.GetObject("portrait (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap portrait_100px {
             get {
                 object obj = ResourceManager.GetObject("portrait_100px", resourceCulture);
@@ -356,6 +396,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap portrait_50px {
             get {
                 object obj = ResourceManager.GetObject("portrait_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap portrait_96px {
+            get {
+                object obj = ResourceManager.GetObject("portrait_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

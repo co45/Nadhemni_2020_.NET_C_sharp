@@ -225,14 +225,14 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 100D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(588, 354);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(555, 358);
             this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.BlueViolet;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Indigo;
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(189, 30);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(221, 38);
             this.bunifuFlatButton3.TabIndex = 40;
             this.bunifuFlatButton3.Text = "Choisir";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -370,11 +370,11 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Nadhemni_2020.Properties.Resources.portrait_100px;
-            this.pictureBox3.Location = new System.Drawing.Point(558, 103);
+            this.pictureBox3.Image = global::Nadhemni_2020.Properties.Resources.portrait__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(555, 109);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(248, 248);
+            this.pictureBox3.Size = new System.Drawing.Size(221, 242);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 41;
             this.pictureBox3.TabStop = false;
@@ -671,7 +671,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(791, 1);
+            this.pictureBox4.Location = new System.Drawing.Point(801, 0);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
@@ -684,13 +684,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 747);
+            this.ClientSize = new System.Drawing.Size(938, 747);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Information";
             this.Text = "Information";
+            this.Load += new System.EventHandler(this.Information_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
