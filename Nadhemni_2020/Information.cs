@@ -19,9 +19,7 @@ namespace Nadhemni_2020
         public static string idd;
 
         internal static DataClassesDataContext db = new DataClassesDataContext();
-        public infop pers = new infop();
-        public adresse ad= new adresse();
-        user u = new user();
+         
 
         
         
@@ -48,45 +46,7 @@ namespace Nadhemni_2020
 
         public void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                
-                //insertion des informations
-                pers.nom = bunifuMaterialTextbox3.Text;
-                pers.prenom = bunifuMaterialTextbox5.Text;
-                pers.date_naissance = metroDateTime1.Value.Date;
-                pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
-                pers.etat_civil = bunifuDropdown3.selectedValue.ToString();
-                pers.fonction = bunifuMaterialTextbox4.Text;
-                pers.mail = bunifuMaterialTextbox8.Text;
-                pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
-                pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
-
-                // insertion de l'image 
-               /* MemoryStream ms = new MemoryStream();
-                pictureBox3.Image.Save(ms,pictureBox3.Image.RawFormat);
-                byte[] photo_aray = ms.ToArray();
-               
-                pers.photo = photo_aray;*/
-                //ad.numero = int.Parse(bunifuMaterialTextbox6.Text);
-                //ad.rue = bunifuMaterialTextbox7.Text;
-
-
-
-                //db.adresse.InsertOnSubmit(ad);
-
-                db.infop.InsertOnSubmit(pers);
-
-                db.SubmitChanges();
-                
-                this.Close();
-                newpass a = new newpass();
-                a.Show();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         public void bunifuFlatButton3_Click(object sender, EventArgs e)
@@ -117,6 +77,62 @@ namespace Nadhemni_2020
         private void Information_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                personne pers = new personne();
+
+                //insertion des informations
+                pers.nom = bunifuMaterialTextbox3.Text;
+                pers.prenom = bunifuMaterialTextbox5.Text;
+                pers.date_de_naissance = metroDateTime1.Value.Date;
+                pers.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
+                pers.etat_civil = bunifuDropdown3.selectedValue.ToString();
+                pers.fonction = bunifuMaterialTextbox4.Text;
+                pers.mail = bunifuMaterialTextbox8.Text;
+                pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
+                pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
+                /* insertion de l'image 
+                MemoryStream ms = new MemoryStream();
+                pictureBox3.Image.Save(ms,pictureBox3.Image.RawFormat);
+                byte[] photo_aray = ms.ToArray();
+                pers.photo = photo_aray;*/
+
+                db.personne.InsertOnSubmit(pers);
+
+                user u = new user();//db.user.Single(x => x.id_pers == pers.id_personne);
+                u.login = bunifuMaterialTextbox1.Text;
+                u.pass = bunifuMaterialTextbox2.Text;
+                db.user.InsertOnSubmit(u);
+
+                adresse ad = new adresse();// db.adresse.Single(x => x.id_persone == pers.id_personne);
+                ad.numero = bunifuMaterialTextbox6.Text;
+                ad.rue = bunifuMaterialTextbox7.Text;
+                ad.localisation = mapform.Code;
+                db.adresse.InsertOnSubmit(ad);
+
+                db.SubmitChanges();
+
+
+                this.Close();
+                dashboard a = new dashboard();
+                a.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            mapform map = new mapform();
+            map.Show();
+            map.BringToFront();
         }
     }
 }

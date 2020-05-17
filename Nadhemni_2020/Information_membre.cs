@@ -13,7 +13,7 @@ namespace Nadhemni_2020
     public partial class Information_membre : Form
     {
         DataClassesDataContext db = new DataClassesDataContext();
-        infop m = new infop();
+        personne m = new personne();
 
         public Information_membre()
         {
@@ -29,15 +29,20 @@ namespace Nadhemni_2020
         {
             m.nom = bunifuMaterialTextbox3.Text;
             m.prenom = bunifuMaterialTextbox5.Text;
-            m.date_naissance = metroDateTime1.Value.Date;
+            m.date_de_naissance = metroDateTime1.Value.Date;
             m.genre = (radioButton1.Checked == true) ? "Homme" : "Femme";
             m.fonction = bunifuMaterialTextbox2.Text;
             m.etablissement = bunifuMaterialTextbox1.Text;
             m.etat_sante = bunifuDropdown2.selectedValue;
-            db.infop.InsertOnSubmit(m);
+            db.personne.InsertOnSubmit(m);
             db.SubmitChanges();
 
         }
 
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            mapform p = new mapform();
+            p.Show();
+        }
     }
 }

@@ -8,18 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
+using System.Speech.Recognition;
+using System.Globalization;
+using System.IO;
 
 namespace Nadhemni_2020
 {
     public partial class dashboard : Form
     {
-        
-        tache t = new tache();
+        DataClassesDataContext dtb = new DataClassesDataContext();
+        SpeechRecognitionEngine s = new SpeechRecognitionEngine(new CultureInfo("fr-FR"));
+
 
         public dashboard()
         {
             InitializeComponent();
             timer1.Start();
+
+           /* Grammar words = new DictationGrammar();
+
+            s.LoadGrammarAsync(words);
+            s.SetInputToDefaultAudioDevice();
+            RecognitionResult res = s.Recognize();
+
+            if (bunifuCheckbox1.Checked == true )
+                bunifuMaterialTextbox3.Text = res.Text;*/
+
+
+        
         }
         
 
@@ -44,28 +60,41 @@ namespace Nadhemni_2020
 
                 if (label1.Location.X > this.Width)
                 {
+
                     label1.Location = new Point(0 - label1.Width, label1.Location.Y);
                     label9.Text = DateTime.Now.ToString("MMM dd yyyy,hh:mm");
-            }
+
+                }
             
         }
 
         private void dashboard_Load(object sender, EventArgs e)
         {
+            int idp = int.Parse(Main_form.id);
+            personne t1 = Information.db.personne.Single<personne>(x => x.id_personne == idp);
+            label11.Text = t1.nom;
+            label9.Text = DateTime.Now.ToString("MMM dd yyyy,hh:mm");
+
+            var r = from s in dtb.plan
+                    where s.date_heure_fin < DateTime.Now
+                    && s.personne.id_personne == idp
+                    select s.personne;
+            label10.Text = r.Count().ToString();
+
 
             bunifuCards4.Hide();
             bunifuCards3.Hide();
             bunifuCards2.Hide();
             bunifuCards1.Show();
-            bunifuFlatButton1.Select();
+
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = Information.db.tache;
-            //label11.Text = Main_form.id.ToString();
-
-
-
+            //speechtoText();
+            
 
         }
+
+        
 
         private void groupBox2_Enter(object sender, EventArgs e)
         {
@@ -88,17 +117,26 @@ namespace Nadhemni_2020
         {
             try
             {
+                tache t = new tache();
+                
+
                 t.description = bunifuMaterialTextbox4.Text;
                 t.titre = bunifuMaterialTextbox3.Text;
-                t.t_debut = dateTimePicker1.Value.Date;
-                t.t_fin = dateTimePicker2.Value.Date;
                 t.duree = int.Parse(bunifuDropdown2.selectedValue);
                 t.type = bunifuDropdown1.selectedValue.ToString();
+
+
                 Information.db.tache.InsertOnSubmit(t);
                 Information.db.SubmitChanges();
 
+                plan p = Information.db.plan.Single(x => x.id_taches == t.id_tache);
+                Information.db.plan.InsertOnSubmit(p);
+                Information.db.SubmitChanges();
+
                 MessageBox.Show("Tache ajouté avec succes !");
-                this.Update();
+                bunifuMaterialTextbox4.Text="";
+                t.titre = bunifuMaterialTextbox3.Text="";
+                
 
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = Information.db.tache;
@@ -150,16 +188,17 @@ namespace Nadhemni_2020
                 }
                 tache t = Information.db.tache.Single<tache>(x => x.id_tache == int.Parse(label14.Text));
 
-                var lr = from x in Information.db.tache
-                          where x.id_tache == int.Parse(label14.Text)
+                var lr = from x in Information.db.plan
+                          where x.id_taches == int.Parse(label14.Text)
                           select x;
 
                 foreach (var k in lr)
                 {
-                    Information.db.tache.DeleteOnSubmit(k);
+                    Information.db.plan.DeleteOnSubmit(k);
                 }
                 Information.db.tache.DeleteOnSubmit(t);
                 Information.db.SubmitChanges();
+
                 var selectQuery =
                       from a in Information.db.tache
                       select a;
@@ -175,6 +214,8 @@ namespace Nadhemni_2020
             }
               
         }
+
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -231,15 +272,12 @@ namespace Nadhemni_2020
            
                 tt.description = bunifuMaterialTextbox2.Text;
                 tt.titre = bunifuMaterialTextbox1.Text;
-                tt.t_debut = dateTimePicker4.Value.Date;
-                tt.t_fin = dateTimePicker3.Value.Date;
+                
                 tt.duree = int.Parse(bunifuDropdown4.selectedValue);
                 tt.type = bunifuDropdown3.selectedValue.ToString();
-                Information.db.tache.InsertOnSubmit(tt);
                 Information.db.SubmitChanges();
 
                 MessageBox.Show("Tache modifié avec succes !");
-                this.Update();
 
              var sq =
                       from a in Information.db.tache
@@ -258,5 +296,39 @@ namespace Nadhemni_2020
             bunifuCards4.Hide();
             bunifuCards3.Show();
         }
+
+
+        /*private void bunifuMaterialTextbox3_Click(object sender, EventArgs e)
+        {
+            SpeechRecognitionEngine s = new SpeechRecognitionEngine(new CultureInfo("fr-FR"));
+            Grammar words = new DictationGrammar();
+
+            s.LoadGrammar(words);
+            s.SetInputToDefaultAudioDevice();
+            RecognitionResult res = s.Recognize();
+
+            if(bunifuCheckbox1.Checked==true)
+                bunifuMaterialTextbox3.Text = res.Text;
+
+        }*/
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
+
+        /*private void bunifuMaterialTextbox4_Click(object sender, EventArgs e)
+        {
+            Grammar words = new DictationGrammar();
+
+            s.LoadGrammar(words);
+            s.SetInputToDefaultAudioDevice();
+            RecognitionResult res = s.Recognize();
+
+            if(bunifuCheckbox1.Checked == true)
+                bunifuMaterialTextbox4.Text = res.Text;
+
+        }*/
     }
 }

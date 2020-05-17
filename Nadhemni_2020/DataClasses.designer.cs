@@ -22,7 +22,7 @@ namespace Nadhemni_2020
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="nadhemni")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="nadhemnidata")]
 	public partial class DataClassesDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -33,28 +33,22 @@ namespace Nadhemni_2020
     partial void Insertadresse(adresse instance);
     partial void Updateadresse(adresse instance);
     partial void Deleteadresse(adresse instance);
-    partial void Insertuserinfo(userinfo instance);
-    partial void Updateuserinfo(userinfo instance);
-    partial void Deleteuserinfo(userinfo instance);
-    partial void Insertadresseinfo(adresseinfo instance);
-    partial void Updateadresseinfo(adresseinfo instance);
-    partial void Deleteadresseinfo(adresseinfo instance);
-    partial void Insertinfop(infop instance);
-    partial void Updateinfop(infop instance);
-    partial void Deleteinfop(infop instance);
-    partial void Insertplaning(planing instance);
-    partial void Updateplaning(planing instance);
-    partial void Deleteplaning(planing instance);
-    partial void Inserttache(tache instance);
-    partial void Updatetache(tache instance);
-    partial void Deletetache(tache instance);
     partial void Insertuser(user instance);
     partial void Updateuser(user instance);
     partial void Deleteuser(user instance);
+    partial void Insertpersonne(personne instance);
+    partial void Updatepersonne(personne instance);
+    partial void Deletepersonne(personne instance);
+    partial void Insertplan(plan instance);
+    partial void Updateplan(plan instance);
+    partial void Deleteplan(plan instance);
+    partial void Inserttache(tache instance);
+    partial void Updatetache(tache instance);
+    partial void Deletetache(tache instance);
     #endregion
 		
 		public DataClassesDataContext() : 
-				base(global::Nadhemni_2020.Properties.Settings.Default.nadhemniConnectionString, mappingSource)
+				base(global::Nadhemni_2020.Properties.Settings.Default.nadhemnidataConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -91,35 +85,27 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		public System.Data.Linq.Table<userinfo> userinfo
+		public System.Data.Linq.Table<user> user
 		{
 			get
 			{
-				return this.GetTable<userinfo>();
+				return this.GetTable<user>();
 			}
 		}
 		
-		public System.Data.Linq.Table<adresseinfo> adresseinfo
+		public System.Data.Linq.Table<personne> personne
 		{
 			get
 			{
-				return this.GetTable<adresseinfo>();
+				return this.GetTable<personne>();
 			}
 		}
 		
-		public System.Data.Linq.Table<infop> infop
+		public System.Data.Linq.Table<plan> plan
 		{
 			get
 			{
-				return this.GetTable<infop>();
-			}
-		}
-		
-		public System.Data.Linq.Table<planing> planing
-		{
-			get
-			{
-				return this.GetTable<planing>();
+				return this.GetTable<plan>();
 			}
 		}
 		
@@ -130,14 +116,6 @@ namespace Nadhemni_2020
 				return this.GetTable<tache>();
 			}
 		}
-		
-		public System.Data.Linq.Table<user> user
-		{
-			get
-			{
-				return this.GetTable<user>();
-			}
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.adresse")]
@@ -146,58 +124,62 @@ namespace Nadhemni_2020
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_pers;
+		private int _id_adresse;
 		
-		private System.Nullable<int> _numero;
+		private string _numero;
 		
 		private string _rue;
 		
 		private string _localisation;
 		
-		private EntitySet<adresseinfo> _adresseinfo;
+		private int _id_persone;
+		
+		private EntityRef<personne> _personne;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_persChanging(int value);
-    partial void Onid_persChanged();
-    partial void OnnumeroChanging(System.Nullable<int> value);
+    partial void Onid_adresseChanging(int value);
+    partial void Onid_adresseChanged();
+    partial void OnnumeroChanging(string value);
     partial void OnnumeroChanged();
     partial void OnrueChanging(string value);
     partial void OnrueChanged();
     partial void OnlocalisationChanging(string value);
     partial void OnlocalisationChanged();
+    partial void Onid_personeChanging(int value);
+    partial void Onid_personeChanged();
     #endregion
 		
 		public adresse()
 		{
-			this._adresseinfo = new EntitySet<adresseinfo>(new Action<adresseinfo>(this.attach_adresseinfo), new Action<adresseinfo>(this.detach_adresseinfo));
+			this._personne = default(EntityRef<personne>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pers", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_pers
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_adresse", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_adresse
 		{
 			get
 			{
-				return this._id_pers;
+				return this._id_adresse;
 			}
 			set
 			{
-				if ((this._id_pers != value))
+				if ((this._id_adresse != value))
 				{
-					this.Onid_persChanging(value);
+					this.Onid_adresseChanging(value);
 					this.SendPropertyChanging();
-					this._id_pers = value;
-					this.SendPropertyChanged("id_pers");
-					this.Onid_persChanged();
+					this._id_adresse = value;
+					this.SendPropertyChanged("id_adresse");
+					this.Onid_adresseChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_numero", DbType="Int")]
-		public System.Nullable<int> numero
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_numero", DbType="VarChar(50)")]
+		public string numero
 		{
 			get
 			{
@@ -256,16 +238,61 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="adresse_adresseinfo", Storage="_adresseinfo", ThisKey="id_pers", OtherKey="id_ad")]
-		public EntitySet<adresseinfo> adresseinfo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_persone", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id_persone
 		{
 			get
 			{
-				return this._adresseinfo;
+				return this._id_persone;
 			}
 			set
 			{
-				this._adresseinfo.Assign(value);
+				if ((this._id_persone != value))
+				{
+					if (this._personne.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onid_personeChanging(value);
+					this.SendPropertyChanging();
+					this._id_persone = value;
+					this.SendPropertyChanged("id_persone");
+					this.Onid_personeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="personne_adresse", Storage="_personne", ThisKey="id_persone", OtherKey="id_personne", IsForeignKey=true)]
+		public personne personne
+		{
+			get
+			{
+				return this._personne.Entity;
+			}
+			set
+			{
+				personne previousValue = this._personne.Entity;
+				if (((previousValue != value) 
+							|| (this._personne.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._personne.Entity = null;
+						previousValue.adresse.Remove(this);
+					}
+					this._personne.Entity = value;
+					if ((value != null))
+					{
+						value.adresse.Add(this);
+						this._id_persone = value.id_personne;
+					}
+					else
+					{
+						this._id_persone = default(int);
+					}
+					this.SendPropertyChanged("personne");
+				}
 			}
 		}
 		
@@ -288,163 +315,158 @@ namespace Nadhemni_2020
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_adresseinfo(adresseinfo entity)
-		{
-			this.SendPropertyChanging();
-			entity.adresse = this;
-		}
-		
-		private void detach_adresseinfo(adresseinfo entity)
-		{
-			this.SendPropertyChanging();
-			entity.adresse = null;
-		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.userinfo")]
-	public partial class userinfo : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[user]")]
+	public partial class user : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_u;
+		private int _id_user;
 		
-		private int _id_i;
+		private int _id_pers;
 		
-		private EntityRef<infop> _infop;
+		private string _login;
 		
-		private EntityRef<user> _user;
+		private string _pass;
+		
+		private EntityRef<personne> _personne;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_uChanging(int value);
-    partial void Onid_uChanged();
-    partial void Onid_iChanging(int value);
-    partial void Onid_iChanged();
+    partial void Onid_userChanging(int value);
+    partial void Onid_userChanged();
+    partial void Onid_persChanging(int value);
+    partial void Onid_persChanged();
+    partial void OnloginChanging(string value);
+    partial void OnloginChanged();
+    partial void OnpassChanging(string value);
+    partial void OnpassChanged();
     #endregion
 		
-		public userinfo()
+		public user()
 		{
-			this._infop = default(EntityRef<infop>);
-			this._user = default(EntityRef<user>);
+			this._personne = default(EntityRef<personne>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_u", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_u
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_user", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_user
 		{
 			get
 			{
-				return this._id_u;
+				return this._id_user;
 			}
 			set
 			{
-				if ((this._id_u != value))
+				if ((this._id_user != value))
 				{
-					if (this._user.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onid_uChanging(value);
+					this.Onid_userChanging(value);
 					this.SendPropertyChanging();
-					this._id_u = value;
-					this.SendPropertyChanged("id_u");
-					this.Onid_uChanged();
+					this._id_user = value;
+					this.SendPropertyChanged("id_user");
+					this.Onid_userChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_i", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_i
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_pers", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id_pers
 		{
 			get
 			{
-				return this._id_i;
+				return this._id_pers;
 			}
 			set
 			{
-				if ((this._id_i != value))
+				if ((this._id_pers != value))
 				{
-					if (this._infop.HasLoadedOrAssignedValue)
+					if (this._personne.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.Onid_iChanging(value);
+					this.Onid_persChanging(value);
 					this.SendPropertyChanging();
-					this._id_i = value;
-					this.SendPropertyChanged("id_i");
-					this.Onid_iChanged();
+					this._id_pers = value;
+					this.SendPropertyChanged("id_pers");
+					this.Onid_persChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="infop_userinfo", Storage="_infop", ThisKey="id_i", OtherKey="Id_personne", IsForeignKey=true)]
-		public infop infop
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_login", DbType="VarChar(50)")]
+		public string login
 		{
 			get
 			{
-				return this._infop.Entity;
+				return this._login;
 			}
 			set
 			{
-				infop previousValue = this._infop.Entity;
+				if ((this._login != value))
+				{
+					this.OnloginChanging(value);
+					this.SendPropertyChanging();
+					this._login = value;
+					this.SendPropertyChanged("login");
+					this.OnloginChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pass", DbType="VarChar(50)")]
+		public string pass
+		{
+			get
+			{
+				return this._pass;
+			}
+			set
+			{
+				if ((this._pass != value))
+				{
+					this.OnpassChanging(value);
+					this.SendPropertyChanging();
+					this._pass = value;
+					this.SendPropertyChanged("pass");
+					this.OnpassChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="personne_user", Storage="_personne", ThisKey="id_pers", OtherKey="id_personne", IsForeignKey=true)]
+		public personne personne
+		{
+			get
+			{
+				return this._personne.Entity;
+			}
+			set
+			{
+				personne previousValue = this._personne.Entity;
 				if (((previousValue != value) 
-							|| (this._infop.HasLoadedOrAssignedValue == false)))
+							|| (this._personne.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._infop.Entity = null;
-						previousValue.userinfo.Remove(this);
+						this._personne.Entity = null;
+						previousValue.user.Remove(this);
 					}
-					this._infop.Entity = value;
+					this._personne.Entity = value;
 					if ((value != null))
 					{
-						value.userinfo.Add(this);
-						this._id_i = value.Id_personne;
+						value.user.Add(this);
+						this._id_pers = value.id_personne;
 					}
 					else
 					{
-						this._id_i = default(int);
+						this._id_pers = default(int);
 					}
-					this.SendPropertyChanged("infop");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_userinfo", Storage="_user", ThisKey="id_u", OtherKey="id_user", IsForeignKey=true)]
-		public user user
-		{
-			get
-			{
-				return this._user.Entity;
-			}
-			set
-			{
-				user previousValue = this._user.Entity;
-				if (((previousValue != value) 
-							|| (this._user.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._user.Entity = null;
-						previousValue.userinfo.Remove(this);
-					}
-					this._user.Entity = value;
-					if ((value != null))
-					{
-						value.userinfo.Add(this);
-						this._id_u = value.id_user;
-					}
-					else
-					{
-						this._id_u = default(int);
-					}
-					this.SendPropertyChanged("user");
+					this.SendPropertyChanged("personne");
 				}
 			}
 		}
@@ -470,187 +492,19 @@ namespace Nadhemni_2020
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.adresseinfo")]
-	public partial class adresseinfo : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.personne")]
+	public partial class personne : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_in;
-		
-		private int _id_ad;
-		
-		private EntityRef<adresse> _adresse;
-		
-		private EntityRef<infop> _infop;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_inChanging(int value);
-    partial void Onid_inChanged();
-    partial void Onid_adChanging(int value);
-    partial void Onid_adChanged();
-    #endregion
-		
-		public adresseinfo()
-		{
-			this._adresse = default(EntityRef<adresse>);
-			this._infop = default(EntityRef<infop>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_in", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_in
-		{
-			get
-			{
-				return this._id_in;
-			}
-			set
-			{
-				if ((this._id_in != value))
-				{
-					if (this._infop.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onid_inChanging(value);
-					this.SendPropertyChanging();
-					this._id_in = value;
-					this.SendPropertyChanged("id_in");
-					this.Onid_inChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_ad", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_ad
-		{
-			get
-			{
-				return this._id_ad;
-			}
-			set
-			{
-				if ((this._id_ad != value))
-				{
-					if (this._adresse.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onid_adChanging(value);
-					this.SendPropertyChanging();
-					this._id_ad = value;
-					this.SendPropertyChanged("id_ad");
-					this.Onid_adChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="adresse_adresseinfo", Storage="_adresse", ThisKey="id_ad", OtherKey="id_pers", IsForeignKey=true)]
-		public adresse adresse
-		{
-			get
-			{
-				return this._adresse.Entity;
-			}
-			set
-			{
-				adresse previousValue = this._adresse.Entity;
-				if (((previousValue != value) 
-							|| (this._adresse.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._adresse.Entity = null;
-						previousValue.adresseinfo.Remove(this);
-					}
-					this._adresse.Entity = value;
-					if ((value != null))
-					{
-						value.adresseinfo.Add(this);
-						this._id_ad = value.id_pers;
-					}
-					else
-					{
-						this._id_ad = default(int);
-					}
-					this.SendPropertyChanged("adresse");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="infop_adresseinfo", Storage="_infop", ThisKey="id_in", OtherKey="Id_personne", IsForeignKey=true)]
-		public infop infop
-		{
-			get
-			{
-				return this._infop.Entity;
-			}
-			set
-			{
-				infop previousValue = this._infop.Entity;
-				if (((previousValue != value) 
-							|| (this._infop.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._infop.Entity = null;
-						previousValue.adresseinfo.Remove(this);
-					}
-					this._infop.Entity = value;
-					if ((value != null))
-					{
-						value.adresseinfo.Add(this);
-						this._id_in = value.Id_personne;
-					}
-					else
-					{
-						this._id_in = default(int);
-					}
-					this.SendPropertyChanged("infop");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.infop")]
-	public partial class infop : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id_personne;
+		private int _id_personne;
 		
 		private string _nom;
 		
 		private string _prenom;
 		
-		private System.Nullable<System.DateTime> _date_naissance;
+		private System.Nullable<System.DateTime> _date_de_naissance;
 		
 		private string _genre;
 		
@@ -672,24 +526,24 @@ namespace Nadhemni_2020
 		
 		private string _mail;
 		
-		private EntitySet<userinfo> _userinfo;
+		private EntitySet<adresse> _adresse;
 		
-		private EntitySet<adresseinfo> _adresseinfo;
+		private EntitySet<user> _user;
 		
-		private EntitySet<planing> _planing;
+		private EntitySet<plan> _plan;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnId_personneChanging(int value);
-    partial void OnId_personneChanged();
+    partial void Onid_personneChanging(int value);
+    partial void Onid_personneChanged();
     partial void OnnomChanging(string value);
     partial void OnnomChanged();
     partial void OnprenomChanging(string value);
     partial void OnprenomChanged();
-    partial void Ondate_naissanceChanging(System.Nullable<System.DateTime> value);
-    partial void Ondate_naissanceChanged();
+    partial void Ondate_de_naissanceChanging(System.Nullable<System.DateTime> value);
+    partial void Ondate_de_naissanceChanged();
     partial void OngenreChanging(string value);
     partial void OngenreChanged();
     partial void OnfonctionChanging(string value);
@@ -712,30 +566,30 @@ namespace Nadhemni_2020
     partial void OnmailChanged();
     #endregion
 		
-		public infop()
+		public personne()
 		{
-			this._userinfo = new EntitySet<userinfo>(new Action<userinfo>(this.attach_userinfo), new Action<userinfo>(this.detach_userinfo));
-			this._adresseinfo = new EntitySet<adresseinfo>(new Action<adresseinfo>(this.attach_adresseinfo), new Action<adresseinfo>(this.detach_adresseinfo));
-			this._planing = new EntitySet<planing>(new Action<planing>(this.attach_planing), new Action<planing>(this.detach_planing));
+			this._adresse = new EntitySet<adresse>(new Action<adresse>(this.attach_adresse), new Action<adresse>(this.detach_adresse));
+			this._user = new EntitySet<user>(new Action<user>(this.attach_user), new Action<user>(this.detach_user));
+			this._plan = new EntitySet<plan>(new Action<plan>(this.attach_plan), new Action<plan>(this.detach_plan));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_personne", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id_personne
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_personne", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id_personne
 		{
 			get
 			{
-				return this._Id_personne;
+				return this._id_personne;
 			}
 			set
 			{
-				if ((this._Id_personne != value))
+				if ((this._id_personne != value))
 				{
-					this.OnId_personneChanging(value);
+					this.Onid_personneChanging(value);
 					this.SendPropertyChanging();
-					this._Id_personne = value;
-					this.SendPropertyChanged("Id_personne");
-					this.OnId_personneChanged();
+					this._id_personne = value;
+					this.SendPropertyChanged("id_personne");
+					this.Onid_personneChanged();
 				}
 			}
 		}
@@ -780,22 +634,22 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_naissance", DbType="Date")]
-		public System.Nullable<System.DateTime> date_naissance
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_de_naissance", DbType="DateTime")]
+		public System.Nullable<System.DateTime> date_de_naissance
 		{
 			get
 			{
-				return this._date_naissance;
+				return this._date_de_naissance;
 			}
 			set
 			{
-				if ((this._date_naissance != value))
+				if ((this._date_de_naissance != value))
 				{
-					this.Ondate_naissanceChanging(value);
+					this.Ondate_de_naissanceChanging(value);
 					this.SendPropertyChanging();
-					this._date_naissance = value;
-					this.SendPropertyChanged("date_naissance");
-					this.Ondate_naissanceChanged();
+					this._date_de_naissance = value;
+					this.SendPropertyChanged("date_de_naissance");
+					this.Ondate_de_naissanceChanged();
 				}
 			}
 		}
@@ -840,7 +694,7 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_photo", DbType="Binary(50)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_photo", DbType="Image", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary photo
 		{
 			get
@@ -1000,42 +854,42 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="infop_userinfo", Storage="_userinfo", ThisKey="Id_personne", OtherKey="id_i")]
-		public EntitySet<userinfo> userinfo
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="personne_adresse", Storage="_adresse", ThisKey="id_personne", OtherKey="id_persone")]
+		public EntitySet<adresse> adresse
 		{
 			get
 			{
-				return this._userinfo;
+				return this._adresse;
 			}
 			set
 			{
-				this._userinfo.Assign(value);
+				this._adresse.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="infop_adresseinfo", Storage="_adresseinfo", ThisKey="Id_personne", OtherKey="id_in")]
-		public EntitySet<adresseinfo> adresseinfo
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="personne_user", Storage="_user", ThisKey="id_personne", OtherKey="id_pers")]
+		public EntitySet<user> user
 		{
 			get
 			{
-				return this._adresseinfo;
+				return this._user;
 			}
 			set
 			{
-				this._adresseinfo.Assign(value);
+				this._user.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="infop_planing", Storage="_planing", ThisKey="Id_personne", OtherKey="id_per")]
-		public EntitySet<planing> planing
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="personne_plan", Storage="_plan", ThisKey="id_personne", OtherKey="id_prop")]
+		public EntitySet<plan> plan
 		{
 			get
 			{
-				return this._planing;
+				return this._plan;
 			}
 			set
 			{
-				this._planing.Assign(value);
+				this._plan.Assign(value);
 			}
 		}
 		
@@ -1059,54 +913,58 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		private void attach_userinfo(userinfo entity)
+		private void attach_adresse(adresse entity)
 		{
 			this.SendPropertyChanging();
-			entity.infop = this;
+			entity.personne = this;
 		}
 		
-		private void detach_userinfo(userinfo entity)
+		private void detach_adresse(adresse entity)
 		{
 			this.SendPropertyChanging();
-			entity.infop = null;
+			entity.personne = null;
 		}
 		
-		private void attach_adresseinfo(adresseinfo entity)
+		private void attach_user(user entity)
 		{
 			this.SendPropertyChanging();
-			entity.infop = this;
+			entity.personne = this;
 		}
 		
-		private void detach_adresseinfo(adresseinfo entity)
+		private void detach_user(user entity)
 		{
 			this.SendPropertyChanging();
-			entity.infop = null;
+			entity.personne = null;
 		}
 		
-		private void attach_planing(planing entity)
+		private void attach_plan(plan entity)
 		{
 			this.SendPropertyChanging();
-			entity.infop = this;
+			entity.personne = this;
 		}
 		
-		private void detach_planing(planing entity)
+		private void detach_plan(plan entity)
 		{
 			this.SendPropertyChanging();
-			entity.infop = null;
+			entity.personne = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.planing")]
-	public partial class planing : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[plan]")]
+	public partial class plan : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id_per;
-		
 		private int _id_taches;
 		
-		private EntityRef<infop> _infop;
+		private int _id_prop;
+		
+		private System.Nullable<System.DateTime> _date_heure_debut;
+		
+		private System.Nullable<System.DateTime> _date_heure_fin;
+		
+		private EntityRef<personne> _personne;
 		
 		private EntityRef<tache> _tache;
 		
@@ -1114,41 +972,21 @@ namespace Nadhemni_2020
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onid_perChanging(int value);
-    partial void Onid_perChanged();
     partial void Onid_tachesChanging(int value);
     partial void Onid_tachesChanged();
+    partial void Onid_propChanging(int value);
+    partial void Onid_propChanged();
+    partial void Ondate_heure_debutChanging(System.Nullable<System.DateTime> value);
+    partial void Ondate_heure_debutChanged();
+    partial void Ondate_heure_finChanging(System.Nullable<System.DateTime> value);
+    partial void Ondate_heure_finChanged();
     #endregion
 		
-		public planing()
+		public plan()
 		{
-			this._infop = default(EntityRef<infop>);
+			this._personne = default(EntityRef<personne>);
 			this._tache = default(EntityRef<tache>);
 			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_per", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_per
-		{
-			get
-			{
-				return this._id_per;
-			}
-			set
-			{
-				if ((this._id_per != value))
-				{
-					if (this._infop.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onid_perChanging(value);
-					this.SendPropertyChanging();
-					this._id_per = value;
-					this.SendPropertyChanged("id_per");
-					this.Onid_perChanged();
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_taches", DbType="Int NOT NULL", IsPrimaryKey=true)]
@@ -1175,41 +1013,105 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="infop_planing", Storage="_infop", ThisKey="id_per", OtherKey="Id_personne", IsForeignKey=true)]
-		public infop infop
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_prop", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int id_prop
 		{
 			get
 			{
-				return this._infop.Entity;
+				return this._id_prop;
 			}
 			set
 			{
-				infop previousValue = this._infop.Entity;
-				if (((previousValue != value) 
-							|| (this._infop.HasLoadedOrAssignedValue == false)))
+				if ((this._id_prop != value))
 				{
+					if (this._personne.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onid_propChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._infop.Entity = null;
-						previousValue.planing.Remove(this);
-					}
-					this._infop.Entity = value;
-					if ((value != null))
-					{
-						value.planing.Add(this);
-						this._id_per = value.Id_personne;
-					}
-					else
-					{
-						this._id_per = default(int);
-					}
-					this.SendPropertyChanged("infop");
+					this._id_prop = value;
+					this.SendPropertyChanged("id_prop");
+					this.Onid_propChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_planing", Storage="_tache", ThisKey="id_taches", OtherKey="id_tache", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_heure_debut", DbType="DateTime")]
+		public System.Nullable<System.DateTime> date_heure_debut
+		{
+			get
+			{
+				return this._date_heure_debut;
+			}
+			set
+			{
+				if ((this._date_heure_debut != value))
+				{
+					this.Ondate_heure_debutChanging(value);
+					this.SendPropertyChanging();
+					this._date_heure_debut = value;
+					this.SendPropertyChanged("date_heure_debut");
+					this.Ondate_heure_debutChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date_heure_fin", DbType="DateTime")]
+		public System.Nullable<System.DateTime> date_heure_fin
+		{
+			get
+			{
+				return this._date_heure_fin;
+			}
+			set
+			{
+				if ((this._date_heure_fin != value))
+				{
+					this.Ondate_heure_finChanging(value);
+					this.SendPropertyChanging();
+					this._date_heure_fin = value;
+					this.SendPropertyChanged("date_heure_fin");
+					this.Ondate_heure_finChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="personne_plan", Storage="_personne", ThisKey="id_prop", OtherKey="id_personne", IsForeignKey=true)]
+		public personne personne
+		{
+			get
+			{
+				return this._personne.Entity;
+			}
+			set
+			{
+				personne previousValue = this._personne.Entity;
+				if (((previousValue != value) 
+							|| (this._personne.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._personne.Entity = null;
+						previousValue.plan.Remove(this);
+					}
+					this._personne.Entity = value;
+					if ((value != null))
+					{
+						value.plan.Add(this);
+						this._id_prop = value.id_personne;
+					}
+					else
+					{
+						this._id_prop = default(int);
+					}
+					this.SendPropertyChanged("personne");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_plan", Storage="_tache", ThisKey="id_taches", OtherKey="id_tache", IsForeignKey=true)]
 		public tache tache
 		{
 			get
@@ -1226,12 +1128,12 @@ namespace Nadhemni_2020
 					if ((previousValue != null))
 					{
 						this._tache.Entity = null;
-						previousValue.planing.Remove(this);
+						previousValue.plan.Remove(this);
 					}
 					this._tache.Entity = value;
 					if ((value != null))
 					{
-						value.planing.Add(this);
+						value.plan.Add(this);
 						this._id_taches = value.id_tache;
 					}
 					else
@@ -1274,10 +1176,6 @@ namespace Nadhemni_2020
 		
 		private string _titre;
 		
-		private System.DateTime _t_debut;
-		
-		private System.DateTime _t_fin;
-		
 		private string _description;
 		
 		private System.Nullable<int> _duree;
@@ -1288,7 +1186,7 @@ namespace Nadhemni_2020
 		
 		private string _type;
 		
-		private EntitySet<planing> _planing;
+		private EntitySet<plan> _plan;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1298,10 +1196,6 @@ namespace Nadhemni_2020
     partial void Onid_tacheChanged();
     partial void OntitreChanging(string value);
     partial void OntitreChanged();
-    partial void Ont_debutChanging(System.DateTime value);
-    partial void Ont_debutChanged();
-    partial void Ont_finChanging(System.DateTime value);
-    partial void Ont_finChanged();
     partial void OndescriptionChanging(string value);
     partial void OndescriptionChanged();
     partial void OndureeChanging(System.Nullable<int> value);
@@ -1316,7 +1210,7 @@ namespace Nadhemni_2020
 		
 		public tache()
 		{
-			this._planing = new EntitySet<planing>(new Action<planing>(this.attach_planing), new Action<planing>(this.detach_planing));
+			this._plan = new EntitySet<plan>(new Action<plan>(this.attach_plan), new Action<plan>(this.detach_plan));
 			OnCreated();
 		}
 		
@@ -1356,46 +1250,6 @@ namespace Nadhemni_2020
 					this._titre = value;
 					this.SendPropertyChanged("titre");
 					this.OntitreChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_debut", DbType="DateTime NOT NULL")]
-		public System.DateTime t_debut
-		{
-			get
-			{
-				return this._t_debut;
-			}
-			set
-			{
-				if ((this._t_debut != value))
-				{
-					this.Ont_debutChanging(value);
-					this.SendPropertyChanging();
-					this._t_debut = value;
-					this.SendPropertyChanged("t_debut");
-					this.Ont_debutChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_t_fin", DbType="DateTime NOT NULL")]
-		public System.DateTime t_fin
-		{
-			get
-			{
-				return this._t_fin;
-			}
-			set
-			{
-				if ((this._t_fin != value))
-				{
-					this.Ont_finChanging(value);
-					this.SendPropertyChanging();
-					this._t_fin = value;
-					this.SendPropertyChanged("t_fin");
-					this.Ont_finChanged();
 				}
 			}
 		}
@@ -1500,16 +1354,16 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_planing", Storage="_planing", ThisKey="id_tache", OtherKey="id_taches")]
-		public EntitySet<planing> planing
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tache_plan", Storage="_plan", ThisKey="id_tache", OtherKey="id_taches")]
+		public EntitySet<plan> plan
 		{
 			get
 			{
-				return this._planing;
+				return this._plan;
 			}
 			set
 			{
-				this._planing.Assign(value);
+				this._plan.Assign(value);
 			}
 		}
 		
@@ -1533,154 +1387,16 @@ namespace Nadhemni_2020
 			}
 		}
 		
-		private void attach_planing(planing entity)
+		private void attach_plan(plan entity)
 		{
 			this.SendPropertyChanging();
 			entity.tache = this;
 		}
 		
-		private void detach_planing(planing entity)
+		private void detach_plan(plan entity)
 		{
 			this.SendPropertyChanging();
 			entity.tache = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.[user]")]
-	public partial class user : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id_user;
-		
-		private string _login;
-		
-		private string _mdp;
-		
-		private EntitySet<userinfo> _userinfo;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onid_userChanging(int value);
-    partial void Onid_userChanged();
-    partial void OnloginChanging(string value);
-    partial void OnloginChanged();
-    partial void OnmdpChanging(string value);
-    partial void OnmdpChanged();
-    #endregion
-		
-		public user()
-		{
-			this._userinfo = new EntitySet<userinfo>(new Action<userinfo>(this.attach_userinfo), new Action<userinfo>(this.detach_userinfo));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_user", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int id_user
-		{
-			get
-			{
-				return this._id_user;
-			}
-			set
-			{
-				if ((this._id_user != value))
-				{
-					this.Onid_userChanging(value);
-					this.SendPropertyChanging();
-					this._id_user = value;
-					this.SendPropertyChanged("id_user");
-					this.Onid_userChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_login", DbType="VarChar(50)")]
-		public string login
-		{
-			get
-			{
-				return this._login;
-			}
-			set
-			{
-				if ((this._login != value))
-				{
-					this.OnloginChanging(value);
-					this.SendPropertyChanging();
-					this._login = value;
-					this.SendPropertyChanged("login");
-					this.OnloginChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mdp", DbType="VarChar(50)")]
-		public string mdp
-		{
-			get
-			{
-				return this._mdp;
-			}
-			set
-			{
-				if ((this._mdp != value))
-				{
-					this.OnmdpChanging(value);
-					this.SendPropertyChanging();
-					this._mdp = value;
-					this.SendPropertyChanged("mdp");
-					this.OnmdpChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="user_userinfo", Storage="_userinfo", ThisKey="id_user", OtherKey="id_u")]
-		public EntitySet<userinfo> userinfo
-		{
-			get
-			{
-				return this._userinfo;
-			}
-			set
-			{
-				this._userinfo.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_userinfo(userinfo entity)
-		{
-			this.SendPropertyChanging();
-			entity.user = this;
-		}
-		
-		private void detach_userinfo(userinfo entity)
-		{
-			this.SendPropertyChanging();
-			entity.user = null;
 		}
 	}
 }

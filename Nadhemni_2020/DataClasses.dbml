@@ -1,39 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="nadhemni" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-F7MSF8V0;Initial Catalog=nadhemni;Integrated Security=True;Pooling=False" SettingsObjectName="Nadhemni_2020.Properties.Settings" SettingsPropertyName="nadhemniConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="nadhemnidata" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-F7MSF8V0;Initial Catalog=nadhemnidata;Integrated Security=True;Pooling=False" SettingsObjectName="Nadhemni_2020.Properties.Settings" SettingsPropertyName="nadhemnidataConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.adresse" Member="adresse">
     <Type Name="adresse">
-      <Column Name="id_pers" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="numero" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_adresse" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="rue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="localisation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="adresse_adresseinfo" Member="adresseinfo" ThisKey="id_pers" OtherKey="id_ad" Type="adresseinfo" />
+      <Column Name="id_persone" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="personne_adresse" Member="personne" ThisKey="id_persone" OtherKey="id_personne" Type="personne" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.userinfo" Member="userinfo">
-    <Type Name="userinfo">
-      <Column Name="id_u" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_i" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="infop_userinfo" Member="infop" ThisKey="id_i" OtherKey="Id_personne" Type="infop" IsForeignKey="true" />
-      <Association Name="user_userinfo" Member="user" ThisKey="id_u" OtherKey="id_user" Type="user" IsForeignKey="true" />
+  <Table Name="dbo.[user]" Member="user">
+    <Type Name="user">
+      <Column Name="id_user" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_pers" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="login" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pass" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="personne_user" Member="personne" ThisKey="id_pers" OtherKey="id_personne" Type="personne" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.adresseinfo" Member="adresseinfo">
-    <Type Name="adresseinfo">
-      <Column Name="id_in" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="id_ad" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="adresse_adresseinfo" Member="adresse" ThisKey="id_ad" OtherKey="id_pers" Type="adresse" IsForeignKey="true" />
-      <Association Name="infop_adresseinfo" Member="infop" ThisKey="id_in" OtherKey="Id_personne" Type="infop" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.infop" Member="infop">
-    <Type Name="infop">
-      <Column Name="Id_personne" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+  <Table Name="dbo.personne" Member="personne">
+    <Type Name="personne">
+      <Column Name="id_personne" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="prenom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="date_naissance" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="date_de_naissance" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="genre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="fonction" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="photo" Type="System.Data.Linq.Binary" DbType="Binary(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="etat_civil" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="nbre_enfant" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="etat_sante" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
@@ -41,39 +35,31 @@
       <Column Name="niveau_etude" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="distance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="mail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="infop_userinfo" Member="userinfo" ThisKey="Id_personne" OtherKey="id_i" Type="userinfo" />
-      <Association Name="infop_adresseinfo" Member="adresseinfo" ThisKey="Id_personne" OtherKey="id_in" Type="adresseinfo" />
-      <Association Name="infop_planing" Member="planing" ThisKey="Id_personne" OtherKey="id_per" Type="planing" />
+      <Association Name="personne_adresse" Member="adresse" ThisKey="id_personne" OtherKey="id_persone" Type="adresse" />
+      <Association Name="personne_user" Member="user" ThisKey="id_personne" OtherKey="id_pers" Type="user" />
+      <Association Name="personne_plan" Member="plan" ThisKey="id_personne" OtherKey="id_prop" Type="plan" />
     </Type>
   </Table>
-  <Table Name="dbo.planing" Member="planing">
-    <Type Name="planing">
-      <Column Name="id_per" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+  <Table Name="dbo.[plan]" Member="plan">
+    <Type Name="plan">
       <Column Name="id_taches" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="infop_planing" Member="infop" ThisKey="id_per" OtherKey="Id_personne" Type="infop" IsForeignKey="true" />
-      <Association Name="tache_planing" Member="tache" ThisKey="id_taches" OtherKey="id_tache" Type="tache" IsForeignKey="true" />
+      <Column Name="id_prop" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="date_heure_debut" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_heure_fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="personne_plan" Member="personne" ThisKey="id_prop" OtherKey="id_personne" Type="personne" IsForeignKey="true" />
+      <Association Name="tache_plan" Member="tache" ThisKey="id_taches" OtherKey="id_tache" Type="tache" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tache" Member="tache">
     <Type Name="tache">
       <Column Name="id_tache" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="titre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="t_debut" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="t_fin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="duree" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="emplacement" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="personne_imp" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="type" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="tache_planing" Member="planing" ThisKey="id_tache" OtherKey="id_taches" Type="planing" />
-    </Type>
-  </Table>
-  <Table Name="dbo.[user]" Member="user">
-    <Type Name="user">
-      <Column Name="id_user" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="login" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="mdp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="user_userinfo" Member="userinfo" ThisKey="id_user" OtherKey="id_u" Type="userinfo" />
+      <Association Name="tache_plan" Member="plan" ThisKey="id_tache" OtherKey="id_taches" Type="plan" />
     </Type>
   </Table>
 </Database>

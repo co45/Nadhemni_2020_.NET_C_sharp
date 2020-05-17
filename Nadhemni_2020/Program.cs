@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Recognition;
+using System.Globalization;
+
 
 namespace Nadhemni_2020
 {
@@ -17,6 +20,8 @@ namespace Nadhemni_2020
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main_form());
+
         }
+        
     }
 }

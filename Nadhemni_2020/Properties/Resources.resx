@@ -139,6 +139,9 @@
   <data name="guardian_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardian_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="edit_file_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_file_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cadre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cadre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,8 +172,8 @@
   <data name="dd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home_50px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="portrait_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\portrait_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="family-activities-battle-coronavirus-cabin-fever-1280x720" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\family-activities-battle-coronavirus-cabin-fever-1280x720.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,9 +183,6 @@
   </data>
   <data name="add_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_trash_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_trash_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,14 +211,17 @@
   <data name="home_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Calque 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Calque 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_50px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="portrait_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\portrait_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calque 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calque 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +232,8 @@
   <data name="d41586-018-06619-3_16101678" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d41586-018-06619-3_16101678.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="portrait_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\portrait_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Calque 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calque 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fingerprints-FB-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fingerprints-FB-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,7 +241,7 @@
   <data name="plus_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit_file_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_file_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exit_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
