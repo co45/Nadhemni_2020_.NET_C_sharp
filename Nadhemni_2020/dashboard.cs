@@ -11,11 +11,15 @@ using System.Runtime.CompilerServices;
 using System.Speech.Recognition;
 using System.Globalization;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Nadhemni_2020
 {
     public partial class dashboard : Form
     {
+        int idp;
+        int num;
+        Main_form main = new Main_form();
         DataClassesDataContext dtb = new DataClassesDataContext();
         SpeechRecognitionEngine s = new SpeechRecognitionEngine(new CultureInfo("fr-FR"));
 
@@ -42,6 +46,7 @@ namespace Nadhemni_2020
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Close();
+            main.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,27 +75,65 @@ namespace Nadhemni_2020
 
         private void dashboard_Load(object sender, EventArgs e)
         {
-            int idp = int.Parse(Main_form.id);
-            personne t1 = Information.db.personne.Single<personne>(x => x.id_personne == idp);
-            label11.Text = t1.nom;
-            label9.Text = DateTime.Now.ToString("MMM dd yyyy,hh:mm");
-
-            var r = from s in dtb.plan
-                    where s.date_heure_fin < DateTime.Now
-                    && s.personne.id_personne == idp
-                    select s.personne;
-            label10.Text = r.Count().ToString();
-
-
             bunifuCards4.Hide();
             bunifuCards3.Hide();
             bunifuCards2.Hide();
             bunifuCards1.Show();
 
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = Information.db.tache;
-            //speechtoText();
+            if (Main_form.id == 0)
+                idp = int.Parse(Information.idd);
+            else
+                idp = Main_form.id;
+
+
+            personne t1 = Information.db.personne.Single<personne>(x => x.id_personne == idp);
+            label11.Text = t1.nom;
+            label9.Text = DateTime.Now.ToString("MMM dd yyyy,hh:mm");
+
+            var r = from s in dtb.plan
+                    where s.date_heure_fin > DateTime.Now
+                    && s.personne.id_personne == idp
+                    select s.personne;
+
+            var all = from s in dtb.plan
+                    where s.personne.id_personne == idp
+                    select s.id_taches;
+
+            label10.Text = r.Count().ToString();
+            bunifuGauge1.ProgressColor1 = Color.Indigo;
+            if (r.Count() != 0)
+            {
+                int gauge = ((all.Count() - r.Count()) / all.Count()) * 100; 
+                bunifuGauge1.Value = gauge;
+            }
             
+            else
+                bunifuGauge1.Value = 30;
+
+            var results = (from g in dtb.personne
+                           join tr in dtb.plan on g.id_personne equals tr.id_prop
+                           join t in dtb.tache on tr.id_taches equals t.id_tache
+                           orderby tr.date_heure_debut descending
+                           select new
+                           {
+                               Numero= t.id_tache,
+                               Titre = t.titre,
+                               Description = t.description,
+                               Debut = tr.date_heure_debut,
+                               Fin = tr.date_heure_fin
+                           }
+                       ).ToList();     
+
+            bunifuCustomDataGrid1.DataSource = results;
+            bunifuCustomDataGrid1.Columns[0].HeaderText = "Numero";
+            bunifuCustomDataGrid1.Columns[1].HeaderText = "Tache";
+            bunifuCustomDataGrid1.Columns[2].HeaderText = "Description";
+            bunifuCustomDataGrid1.Columns[3].HeaderText = "Debut";
+            bunifuCustomDataGrid1.Columns[4].HeaderText = "Fin";
+            bunifuCustomDataGrid1.Refresh();
+
+            //speechtoText();
+
 
         }
 
@@ -118,34 +161,33 @@ namespace Nadhemni_2020
             try
             {
                 tache t = new tache();
+                plan p = new plan();
+               
                 
 
                 t.description = bunifuMaterialTextbox4.Text;
                 t.titre = bunifuMaterialTextbox3.Text;
                 t.duree = int.Parse(bunifuDropdown2.selectedValue);
                 t.type = bunifuDropdown1.selectedValue.ToString();
+                
+                p.personne = Information.db.personne.Single<personne>(x => x.id_personne == idp);
+                t.emplacement = mapform.Code;
+                p.tache = t;
+                p.date_heure_debut = dateTimePicker2.Value;
+                p.date_heure_fin = dateTimePicker1.Value; 
 
 
+                Information.db.plan.InsertOnSubmit(p);
                 Information.db.tache.InsertOnSubmit(t);
                 Information.db.SubmitChanges();
 
-                plan p = Information.db.plan.Single(x => x.id_taches == t.id_tache);
-                Information.db.plan.InsertOnSubmit(p);
-                Information.db.SubmitChanges();
 
                 MessageBox.Show("Tache ajouté avec succes !");
-                bunifuMaterialTextbox4.Text="";
-                t.titre = bunifuMaterialTextbox3.Text="";
-                
+                bunifuMaterialTextbox4.Text = "";
+                bunifuMaterialTextbox3.Text = "";
 
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = Information.db.tache;
 
-                var selectQuery =
-                      from a in Information.db.tache
-                      select a;
-
-                dataGridView1.DataSource = selectQuery;
+                bunifuCustomDataGrid1.Refresh();
 
             }
             catch (Exception x)
@@ -170,7 +212,7 @@ namespace Nadhemni_2020
             bunifuCards3.Show();
             bunifuCards2.Hide();
             bunifuCards1.Hide();
-            dataGridView1.Refresh();
+            bunifuCustomDataGrid1.Refresh();
 
         }
 
@@ -178,18 +220,19 @@ namespace Nadhemni_2020
         {
             try
             {
-                if (dataGridView1.SelectedCells.Count > 0)
+              
+                if (bunifuCustomDataGrid1.SelectedCells.Count > 0)
                 {
-                    int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-                    DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-                    label14.Text = Convert.ToString(selectedRow.Cells["id_tache"].Value);
-                    label13.Text = Convert.ToString(selectedRow.Cells["titre"].Value);
+                    int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
+                    DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
+                    num = Convert.ToInt32(selectedRow.Cells["Numero"].Value);
+                    
                     
                 }
-                tache t = Information.db.tache.Single<tache>(x => x.id_tache == int.Parse(label14.Text));
+                tache t = Information.db.tache.Single<tache>(x => x.id_tache == num);
 
                 var lr = from x in Information.db.plan
-                          where x.id_taches == int.Parse(label14.Text)
+                          where x.id_taches == num
                           select x;
 
                 foreach (var k in lr)
@@ -199,11 +242,7 @@ namespace Nadhemni_2020
                 Information.db.tache.DeleteOnSubmit(t);
                 Information.db.SubmitChanges();
 
-                var selectQuery =
-                      from a in Information.db.tache
-                      select a;
-
-                dataGridView1.DataSource = selectQuery;
+                
 
                 MessageBox.Show("Suppression effectuée avec succées");
             
@@ -219,14 +258,11 @@ namespace Nadhemni_2020
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedCells.Count > 0)
+            if (bunifuCustomDataGrid1.SelectedCells.Count > 0)
             {
-                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-                string a = Convert.ToString(selectedRow.Cells["id_tache"].Value);
-                string b = Convert.ToString(selectedRow.Cells["titre"].Value);
-                this.label14.Text = a;
-                this.label13.Text = b;
+                int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
+                
             }
         }
 
@@ -237,12 +273,12 @@ namespace Nadhemni_2020
             bunifuCards2.Hide();
             bunifuCards1.Hide();
 
-            if (dataGridView1.SelectedCells.Count > 0)
+            if (bunifuCustomDataGrid1.SelectedCells.Count > 0)
             {
-                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-                bunifuMaterialTextbox2.Text = Convert.ToString(selectedRow.Cells["description"].Value);
-                bunifuMaterialTextbox1.Text = Convert.ToString(selectedRow.Cells["titre"].Value);
+                int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
+                bunifuMaterialTextbox2.Text = Convert.ToString(selectedRow.Cells["Description"].Value);
+                bunifuMaterialTextbox1.Text = Convert.ToString(selectedRow.Cells["Tache"].Value);
                 
 
             }
@@ -259,12 +295,11 @@ namespace Nadhemni_2020
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedCells.Count > 0)
+            if (bunifuCustomDataGrid1.SelectedCells.Count > 0)
             {
-                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
-                label23.Text = Convert.ToString(selectedRow.Cells["id_tache"].Value);
-               
+                int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
+                label23.Text = Convert.ToString(selectedRow.Cells["Numero"].Value);
 
             }
 
@@ -279,19 +314,7 @@ namespace Nadhemni_2020
 
                 MessageBox.Show("Tache modifié avec succes !");
 
-             var sq =
-                      from a in Information.db.tache
-                      select a;
-
-                dataGridView1.DataSource = sq;
-
-            
-
-
-            var selectQuery =
-                      from a in Information.db.tache
-                      select a;
-            dataGridView1.DataSource = selectQuery;
+            bunifuCustomDataGrid1.Refresh();
 
             bunifuCards4.Hide();
             bunifuCards3.Show();
@@ -314,8 +337,21 @@ namespace Nadhemni_2020
 
         private void button6_Click(object sender, EventArgs e)
         {
+
             this.Close();
-            
+            main.Show();
+
+        }
+
+        private void bunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            mapform m = new mapform();
+            m.Show();
+        }
+
+        private void label10_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         /*private void bunifuMaterialTextbox4_Click(object sender, EventArgs e)

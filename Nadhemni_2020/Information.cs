@@ -61,12 +61,6 @@ namespace Nadhemni_2020
                 pictureBox3.ImageLocation = img;
                 pictureBox3.Image = Image.FromFile(img);
 
-                
-
-                
-
-
-
 
             }
 
@@ -84,6 +78,9 @@ namespace Nadhemni_2020
             try
             {
                 personne pers = new personne();
+                user u = new user();
+                adresse ad = new adresse();
+                //plan p = new plan();
 
                 //insertion des informations
                 pers.nom = bunifuMaterialTextbox3.Text;
@@ -100,18 +97,19 @@ namespace Nadhemni_2020
                 pictureBox3.Image.Save(ms,pictureBox3.Image.RawFormat);
                 byte[] photo_aray = ms.ToArray();
                 pers.photo = photo_aray;*/
+                u.personne = pers;
 
-                db.personne.InsertOnSubmit(pers);
-
-                user u = new user();//db.user.Single(x => x.id_pers == pers.id_personne);
+                u.personne = pers;
                 u.login = bunifuMaterialTextbox1.Text;
                 u.pass = bunifuMaterialTextbox2.Text;
+                idd = u.id_pers.ToString();
                 db.user.InsertOnSubmit(u);
-
-                adresse ad = new adresse();// db.adresse.Single(x => x.id_persone == pers.id_personne);
+                ad.personne = pers;
                 ad.numero = bunifuMaterialTextbox6.Text;
                 ad.rue = bunifuMaterialTextbox7.Text;
                 ad.localisation = mapform.Code;
+
+                
                 db.adresse.InsertOnSubmit(ad);
 
                 db.SubmitChanges();

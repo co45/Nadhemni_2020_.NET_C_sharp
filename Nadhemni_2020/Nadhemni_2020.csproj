@@ -328,6 +328,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\colorful-abstract-background-with-memphis-elements_23-2148468895.jpg" />
+    <None Include="Resources\multiply_32px.png" />
     <None Include="Resources\exit_64px.png" />
     <None Include="Resources\edit_file_64px.png" />
     <None Include="Resources\delete_trash_64px1.png" />

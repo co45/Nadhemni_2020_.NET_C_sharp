@@ -22,7 +22,7 @@ namespace Nadhemni_2020
         GMarkerGoogle marker;
         GMapOverlay mo;
 
-        private static string code;
+        public static string code;
         double lat = 36.801752;
         double lang = 10.1470843;
 
@@ -79,6 +79,11 @@ namespace Nadhemni_2020
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Nadhemni_2020
     public partial class Main_form : Form
     {
         DataClassesDataContext context = new DataClassesDataContext();
-        public static string id;
+        public static int id = 0;
         public Main_form()
         {
             InitializeComponent();
@@ -54,7 +54,7 @@ namespace Nadhemni_2020
                         && s.pass == bunifuMaterialTextbox1.Text
                         select s.id_pers ;
 
-                id = r.FirstOrDefault().ToString();
+                id = r.FirstOrDefault();
 
                 this.Hide();
                 dashboard f = new dashboard();
@@ -91,6 +91,12 @@ namespace Nadhemni_2020
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox4_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+            
         }
     }
 }

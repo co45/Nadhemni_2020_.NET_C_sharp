@@ -163,6 +163,16 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap colorful_abstract_background_with_memphis_elements_23_2148468895 {
+            get {
+                object obj = ResourceManager.GetObject("colorful-abstract-background-with-memphis-elements_23-2148468895", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap d41586_018_06619_3_16101678 {
             get {
                 object obj = ResourceManager.GetObject("d41586-018-06619-3_16101678", resourceCulture);
@@ -326,6 +336,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap logo1 {
             get {
                 object obj = ResourceManager.GetObject("logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap multiply_32px {
+            get {
+                object obj = ResourceManager.GetObject("multiply_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
