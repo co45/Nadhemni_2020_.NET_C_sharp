@@ -70,15 +70,12 @@ namespace Nadhemni_2020
         private void dashboard_Load(object sender, EventArgs e)
         {
 
-            
-
             bunifuCards5.Hide();
             bunifuCards4.Hide();
             bunifuCards3.Hide();
             bunifuCards2.Hide();
             bunifuCards1.Show();
 
-            bunifuGauge2.Value = 80;
 
             if (Main_form.id == 0)
                 idp = int.Parse(Information.idd);
@@ -148,7 +145,7 @@ namespace Nadhemni_2020
                            orderby tr.date_heure_debut descending
                            select new
                            {
-                               Numero = t.id_tache,
+                               
                                Titre = t.titre,
                                Description = t.description,
                                Debut = tr.date_heure_debut,
@@ -157,12 +154,10 @@ namespace Nadhemni_2020
                        ).ToList();
 
             bunifuCustomDataGrid1.DataSource = results;
-
-            bunifuCustomDataGrid1.Columns[0].HeaderText = "Numero";
-            bunifuCustomDataGrid1.Columns[1].HeaderText = "Tache";
-            bunifuCustomDataGrid1.Columns[2].HeaderText = "Description";
-            bunifuCustomDataGrid1.Columns[3].HeaderText = "Debut";
-            bunifuCustomDataGrid1.Columns[4].HeaderText = "Fin";
+            bunifuCustomDataGrid1.Columns[0].HeaderText = "Tache";
+            bunifuCustomDataGrid1.Columns[1].HeaderText = "Description";
+            bunifuCustomDataGrid1.Columns[2].HeaderText = "Debut";
+            bunifuCustomDataGrid1.Columns[3].HeaderText = "Fin";
             bunifuCustomDataGrid1.Refresh();
         }
 
@@ -175,7 +170,7 @@ namespace Nadhemni_2020
                            orderby tr.date_heure_debut descending
                            select new
                            {
-                               Numero = t.id_tache,
+                               
                                Titre = t.titre,
                                Description = t.description,
                                Debut = tr.date_heure_debut,
@@ -184,11 +179,11 @@ namespace Nadhemni_2020
                        ).ToList();
 
             bunifuCustomDataGrid1.DataSource = results;
-            bunifuCustomDataGrid1.Columns[0].HeaderText = "Numero";
-            bunifuCustomDataGrid1.Columns[1].HeaderText = "Tache";
-            bunifuCustomDataGrid1.Columns[2].HeaderText = "Description";
-            bunifuCustomDataGrid1.Columns[3].HeaderText = "Debut";
-            bunifuCustomDataGrid1.Columns[4].HeaderText = "Fin";
+           
+            bunifuCustomDataGrid1.Columns[0].HeaderText = "Tache";
+            bunifuCustomDataGrid1.Columns[1].HeaderText = "Description";
+            bunifuCustomDataGrid1.Columns[2].HeaderText = "Debut";
+            bunifuCustomDataGrid1.Columns[3].HeaderText = "Fin";
 
             bunifuCustomDataGrid1.Refresh();
         }
@@ -334,7 +329,6 @@ namespace Nadhemni_2020
             {
                 int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
-
             }
         }
 
@@ -372,7 +366,6 @@ namespace Nadhemni_2020
                 int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
                 label23.Text = Convert.ToString(selectedRow.Cells["Numero"].Value);
-
             }
 
             tache tt = Information.db.tache.Single<tache>(x => x.id_tache == int.Parse(label23.Text));
@@ -397,10 +390,8 @@ namespace Nadhemni_2020
 
         private void button6_Click(object sender, EventArgs e)
         {
-
             this.Close();
             main.Show();
-
         }
 
         private void bunifuImageButton5_Click(object sender, EventArgs e)
@@ -422,32 +413,38 @@ namespace Nadhemni_2020
             bunifuCards2.Hide();
             bunifuCards3.Hide();
             bunifuCards4.Hide();
-
+            //jour
             var r = from s in dtb.plan
-                    where s.date_heure_fin > DateTime.Now
-                    && s.personne.id_personne == idp
+                    join rf in dtb.tache on s.accomplie equals 1
+                    where  s.personne.id_personne == idp && s.date_heure_fin == DateTime.Today
                     select s.personne;
-            int ri = r.Count();
-            label27.Text = ri.ToString();
-
 
             var all = from s in dtb.plan
                       where s.personne.id_personne == idp
                       select s.id_taches;
+
+            int ri = r.Count();
             int alli = all.Count();
 
+            label27.Text = (alli - ri).ToString();
             label29.Text = alli.ToString();
 
             MessageBox.Show(ri.ToString(),alli.ToString());
             
-            float gauge = ((alli - ri) / alli * 100);
+            int gauge = ((alli - ri) / alli * 100);
             MessageBox.Show(gauge.ToString());
-            
 
-            if (r.Count() != 0)
-                bunifuGauge1.Value = Convert.ToInt32(gauge);
-            else
-                bunifuGauge1.Value = 0;
+
+            
+            bunifuGauge1.Value = gauge;
+            
+            //mois
+            var rm = from s in dtb.plan
+                    join rf in dtb.tache on s.accomplie equals 1
+                    where s.personne.id_personne == idp 
+                    select s.personne;
+
+            bunifuGauge2.Value = ((alli - rm.Count()) / alli * 100);
         }
 
         public String stt(Grammar gr, SpeechRecognitionEngine en)
