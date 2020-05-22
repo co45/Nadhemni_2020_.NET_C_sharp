@@ -61,7 +61,7 @@ namespace Nadhemni_2020
 
                 label1.Location = new Point(0 - label1.Width, label1.Location.Y);
                 label9.Text = DateTime.Now.ToString("MMM dd yyyy,hh:mm");
-                datagridtache();
+                
 
             }
 
@@ -69,6 +69,8 @@ namespace Nadhemni_2020
 
         private void dashboard_Load(object sender, EventArgs e)
         {
+
+            
 
             bunifuCards5.Hide();
             bunifuCards4.Hide();
@@ -86,17 +88,15 @@ namespace Nadhemni_2020
             var req = (from g in dtb.personne
                        join tr in dtb.plan on g.id_personne equals tr.id_prop
                        join t in dtb.tache on tr.id_taches equals t.id_tache
-                       where tr.id_prop == idp && tr.date_heure_fin > DateTime.Now
+                       where tr.id_prop == idp && tr.accomplie == 0 
                        orderby tr.date_heure_debut descending
-                       select new
-                       {
-                           Titre = t.titre,
-                       }
+                       select t.titre
                        ).ToList();
 
-            foreach (var tache in req)
+            foreach (var titre in req)
             {
-                label1.Text = tache.ToString();
+                String news = titre.ToString();
+                label1.Text =" A faire : " + news + " - ";
             }
 
 
@@ -104,42 +104,74 @@ namespace Nadhemni_2020
             personne t1 = Information.db.personne.Single<personne>(x => x.id_personne == idp);
             label11.Text = t1.nom;
             label9.Text = DateTime.Now.ToString("MMM dd yyyy,hh:mm");
-
-            var r = from s in dtb.plan
-                    where s.date_heure_fin > DateTime.Now
-                    && s.personne.id_personne == idp
-                    select s.personne;
-
-            int ri = r.Count();
-            label27.Text = ri.ToString();
-
-
-            var all = from s in dtb.plan
-                      where s.personne.id_personne == idp
-                      select s.id_taches;
-            int alli = all.Count();
-            label29.Text = alli.ToString();
-
-            float gauge = (alli - ri) / alli * 100;
-            label10.Text = ri.ToString();
-
-            if (r.Count() != 0)
-                bunifuGauge1.Value = Convert.ToInt32(gauge);
-            else
-                bunifuGauge1.Value = 0;
-
-            datagridtache();
+            
+            datagridtacheall();
 
             //speechtoText();
 
 
         }
 
-        public void datagridtache()
+        public void datagridtacheall()
         {
             var results = (from g in dtb.personne
                            join tr in dtb.plan on g.id_personne equals tr.id_prop
                            join t in dtb.tache on tr.id_taches equals t.id_tache
+                           orderby tr.date_heure_debut descending
+                           select new
+                           {
+                               Numero = t.id_tache,
+                               Titre = t.titre,
+                               Description = t.description,
+                               Debut = tr.date_heure_debut,
+                               Fin = tr.date_heure_fin
+                           }
+                       ).ToList();
+
+            bunifuCustomDataGrid1.DataSource = results;
+
+            bunifuCustomDataGrid1.Columns[0].HeaderText = "Numero";
+            bunifuCustomDataGrid1.Columns[1].HeaderText = "Tache";
+            bunifuCustomDataGrid1.Columns[2].HeaderText = "Description";
+            bunifuCustomDataGrid1.Columns[3].HeaderText = "Debut";
+            bunifuCustomDataGrid1.Columns[4].HeaderText = "Fin";
+            bunifuCustomDataGrid1.Refresh();
+        }
+
+        public void datagridtachewait()
+        {
+            
+            var results = (from g in dtb.personne
+                           join tr in dtb.plan on g.id_personne equals tr.id_prop
+                           join t in dtb.tache on tr.id_taches equals t.id_tache
+                           where tr.accomplie == 0
+                           orderby tr.date_heure_debut descending
+                           select new
+                           {
+                               Numero = t.id_tache,
+                               Titre = t.titre,
+                               Description = t.description,
+                               Debut = tr.date_heure_debut,
+                               Fin = tr.date_heure_fin
+                           }
+                       ).ToList();
+
+            bunifuCustomDataGrid1.DataSource = results;
+
+            bunifuCustomDataGrid1.Columns[0].HeaderText = "Numero";
+            bunifuCustomDataGrid1.Columns[1].HeaderText = "Tache";
+            bunifuCustomDataGrid1.Columns[2].HeaderText = "Description";
+            bunifuCustomDataGrid1.Columns[3].HeaderText = "Debut";
+            bunifuCustomDataGrid1.Columns[4].HeaderText = "Fin";
+            bunifuCustomDataGrid1.Refresh();
+        }
+
+        public void datagridtachedone()
+        {
+            var results = (from g in dtb.personne
+                           join tr in dtb.plan on g.id_personne equals tr.id_prop
+                           join t in dtb.tache on tr.id_taches equals t.id_tache
+                           where tr.accomplie == 1
                            orderby tr.date_heure_debut descending
                            select new
                            {
@@ -210,7 +242,7 @@ namespace Nadhemni_2020
                 bunifuMaterialTextbox3.Text = "";
 
 
-                datagridtache();
+                datagridtacheall();
             }
             catch (Exception x)
             {
@@ -238,6 +270,21 @@ namespace Nadhemni_2020
             bunifuCards4.Hide();
             bunifuCards5.Hide();
             bunifuCustomDataGrid1.Refresh();
+
+            if (bunifuCheckbox1.Checked == true)
+            {
+                Choices commands = new Choices();
+                commands.Add(new string[] { "Normale", "Urgente", "Habituelle", "Inhabituelle", "Titre", "Description", "Durée", "Type", "Debut", "Fin", "Emplacement" });
+                GrammarBuilder b = new GrammarBuilder();
+                b.Append(commands);
+                Grammar gr = new Grammar(b);
+                rec.LoadGrammarAsync(gr);
+                rec.SetInputToDefaultAudioDevice();
+
+                rec.RecognizeAsync(RecognizeMode.Multiple);
+
+                rec.SpeechRecognized += Rec_SpeechRecognized1;
+            }
 
         }
 
@@ -268,13 +315,13 @@ namespace Nadhemni_2020
                 Information.db.SubmitChanges();
 
 
-                datagridtache();
+                datagridtacheall();
                 MessageBox.Show("Suppression effectuée avec succées");
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, " (Pas de  tache selectionné)");
+                MessageBox.Show(ex.Message, " (Pas de tache selectionné)");
             }
 
         }
@@ -339,7 +386,7 @@ namespace Nadhemni_2020
 
             MessageBox.Show("Tache modifié avec succes !");
 
-            datagridtache();
+            datagridtacheall();
 
             bunifuCards4.Hide();
             bunifuCards3.Show();
@@ -374,9 +421,33 @@ namespace Nadhemni_2020
             bunifuCards1.Hide();
             bunifuCards2.Hide();
             bunifuCards3.Hide();
-
             bunifuCards4.Hide();
 
+            var r = from s in dtb.plan
+                    where s.date_heure_fin > DateTime.Now
+                    && s.personne.id_personne == idp
+                    select s.personne;
+            int ri = r.Count();
+            label27.Text = ri.ToString();
+
+
+            var all = from s in dtb.plan
+                      where s.personne.id_personne == idp
+                      select s.id_taches;
+            int alli = all.Count();
+
+            label29.Text = alli.ToString();
+
+            MessageBox.Show(ri.ToString(),alli.ToString());
+            
+            float gauge = ((alli - ri) / alli * 100);
+            MessageBox.Show(gauge.ToString());
+            
+
+            if (r.Count() != 0)
+                bunifuGauge1.Value = Convert.ToInt32(gauge);
+            else
+                bunifuGauge1.Value = 0;
         }
 
         public String stt(Grammar gr, SpeechRecognitionEngine en)
@@ -395,49 +466,45 @@ namespace Nadhemni_2020
 
         private void Rec_SpeechRecognized1(object sender, SpeechRecognizedEventArgs e)
         {
-            Choices commands = new Choices();
-            commands.Add(new string[] { "Titre", "Description", "Durée", "Type", "Debut", "Fin", "Emplacement" });
-            Choices type = new Choices();
-            type.Add(new string[] { "Normal", "Urgent", "Durée", "Type", "Debut", "Fin", "Emplacement" });
+            
 
-            GrammarBuilder b = new GrammarBuilder();
-            b.Append(commands);
-            Grammar gr = new Grammar(b);
-
-            rec.LoadGrammarAsync(gr);
-            rec.SetInputToDefaultAudioDevice();
-
-            //start
-            rec.RecognizeAsync(RecognizeMode.Multiple);
-
-            rec.SpeechRecognized += Rec_SpeechRecognized1;
             if (bunifuCheckbox1.Checked == true)
             {
                 pictureBox5.Show();
                 switch (e.Result.Text)
                 {
                     case "Titre":
+                        pictureBox5.Location = new Point(443, 57);
                         bunifuMaterialTextbox3.Text = stt(words, s).ToString();
                         break;
 
                     case "Description":
+                        pictureBox5.Location = new Point(442, 108);
                         bunifuMaterialTextbox4.Text = stt(words, s).ToString();
                         break;
 
                     case "Durée":
+                        pictureBox5.Location = new Point(509, 165);
                         bunifuMaterialTextbox4.Text = stt(words, s).ToString();
                         break;
 
                     case "Type":
-                        
-                        break;
-
-                    case "Debut":
-
-                        break;
-
-                    case "Fin":
-
+                        pictureBox5.Location = new Point(440, 216);
+                        switch (e.Result.Text)
+                        {
+                            case "Normale" :
+                                bunifuDropdown1.selectedIndex = 0;
+                                break;
+                            case "Habituelle":
+                                bunifuDropdown1.selectedIndex = 2;
+                                break;
+                            case "Inhabituelle":
+                                bunifuDropdown1.selectedIndex = 3;
+                                break;
+                            case "Urgente":
+                                bunifuDropdown1.selectedIndex = 1;
+                                break;
+                        }
                         break;
 
                     case "Emplacement":
@@ -449,6 +516,57 @@ namespace Nadhemni_2020
             }
 
 
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            if (bunifuCustomDataGrid1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
+                label23.Text = Convert.ToString(selectedRow.Cells["Numero"].Value);
+            }
+
+            plan pt = Information.db.plan.Single<plan>(x => x.id_taches == int.Parse(label23.Text));
+
+            pt.accomplie = 1;
+            Information.db.SubmitChanges();
+
+            datagridtachedone();
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            if (bunifuCustomDataGrid1.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = bunifuCustomDataGrid1.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = bunifuCustomDataGrid1.Rows[selectedrowindex];
+                label23.Text = Convert.ToString(selectedRow.Cells["Numero"].Value);
+            }
+
+            plan pt = Information.db.plan.Single<plan>(x => x.id_taches == int.Parse(label23.Text));
+
+            pt.accomplie = 0;
+            Information.db.SubmitChanges();
+
+            datagridtachewait();
+        }
+
+        private void bunifuFlatButton8_Click(object sender, EventArgs e)
+        {
+            datagridtachedone();
+            
+            
+        }
+
+        private void bunifuFlatButton10_Click(object sender, EventArgs e)
+        {
+            datagridtacheall();
+        }
+
+        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        {
+            datagridtachewait();
         }
     }    
 }

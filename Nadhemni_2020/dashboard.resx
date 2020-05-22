@@ -145,7 +145,7 @@
     <value>NoControl</value>
   </data>
   <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 2</value>
+    <value>3, 1</value>
   </data>
   <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 23</value>
@@ -796,6 +796,309 @@
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="label28.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft JhengHei, 10.8pt, style=Bold</value>
+  </data>
+  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 24</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 24</value>
+  </data>
+  <data name="label28.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Planing</value>
+  </data>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
+  </data>
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 37</value>
+  </data>
+  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 67</value>
+  </data>
+  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="bunifuFlatButton10.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="bunifuFlatButton10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>715, 117</value>
+  </data>
+  <data name="bunifuFlatButton10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="bunifuFlatButton10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 50</value>
+  </data>
+  <data name="bunifuFlatButton10.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton10.Name" xml:space="preserve">
+    <value>bunifuFlatButton10</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton10.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton10.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton10.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="bunifuFlatButton9.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="bunifuFlatButton9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>776, 117</value>
+  </data>
+  <data name="bunifuFlatButton9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="bunifuFlatButton9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 50</value>
+  </data>
+  <data name="bunifuFlatButton9.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton9.Name" xml:space="preserve">
+    <value>bunifuFlatButton9</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton9.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton9.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton9.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="bunifuFlatButton8.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="bunifuFlatButton8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 117</value>
+  </data>
+  <data name="bunifuFlatButton8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="bunifuFlatButton8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 50</value>
+  </data>
+  <data name="bunifuFlatButton8.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton8.Name" xml:space="preserve">
+    <value>bunifuFlatButton8</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton8.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton8.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton8.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="bunifuFlatButton7.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="bunifuFlatButton7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 332</value>
+  </data>
+  <data name="bunifuFlatButton7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="bunifuFlatButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 50</value>
+  </data>
+  <data name="bunifuFlatButton7.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="bunifuFlatButton7.Text" xml:space="preserve">
+    <value>Uncheck</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton7.Name" xml:space="preserve">
+    <value>bunifuFlatButton7</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton7.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton7.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton7.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="bunifuFlatButton6.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="bunifuFlatButton6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 282</value>
+  </data>
+  <data name="bunifuFlatButton6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="bunifuFlatButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 50</value>
+  </data>
+  <data name="bunifuFlatButton6.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="bunifuFlatButton6.Text" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton6.Name" xml:space="preserve">
+    <value>bunifuFlatButton6</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton6.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton6.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton6.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="bunifuCustomDataGrid1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 37</value>
+  </data>
+  <data name="bunifuCustomDataGrid1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="bunifuCustomDataGrid1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>609, 345</value>
+  </data>
+  <data name="bunifuCustomDataGrid1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;bunifuCustomDataGrid1.Name" xml:space="preserve">
+    <value>bunifuCustomDataGrid1</value>
+  </data>
+  <data name="&gt;&gt;bunifuCustomDataGrid1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuCustomDataGrid1.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuCustomDataGrid1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="bunifuFlatButton2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="bunifuFlatButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 232</value>
+  </data>
+  <data name="bunifuFlatButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="bunifuFlatButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 50</value>
+  </data>
+  <data name="bunifuFlatButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="bunifuFlatButton2.Text" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton2.Name" xml:space="preserve">
+    <value>bunifuFlatButton2</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton2.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton2.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="bunifuFlatButton1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="bunifuFlatButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>651, 182</value>
+  </data>
+  <data name="bunifuFlatButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="bunifuFlatButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 50</value>
+  </data>
+  <data name="bunifuFlatButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="bunifuFlatButton1.Text" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton1.Name" xml:space="preserve">
+    <value>bunifuFlatButton1</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton1.Parent" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuFlatButton1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="bunifuCards3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 197</value>
+  </data>
+  <data name="bunifuCards3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="bunifuCards3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>847, 409</value>
+  </data>
+  <data name="bunifuCards3.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="bunifuCards3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards3.Name" xml:space="preserve">
+    <value>bunifuCards3</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards3.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCards, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="label24.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -884,7 +1187,7 @@
     <value>6</value>
   </data>
   <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>515, 12</value>
+    <value>510, 17</value>
   </data>
   <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1385,7 +1688,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1928,13 +2231,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards4.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="monthCalendar1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="monthCalendar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 48</value>
+    <value>51, 37</value>
   </data>
   <data name="monthCalendar1.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -1976,7 +2279,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="bunifuGauge3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2525,117 +2828,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards5.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="bunifuCustomDataGrid1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 34</value>
-  </data>
-  <data name="bunifuCustomDataGrid1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bunifuCustomDataGrid1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>540, 345</value>
-  </data>
-  <data name="bunifuCustomDataGrid1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;bunifuCustomDataGrid1.Name" xml:space="preserve">
-    <value>bunifuCustomDataGrid1</value>
-  </data>
-  <data name="&gt;&gt;bunifuCustomDataGrid1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bunifuCustomDataGrid1.Parent" xml:space="preserve">
-    <value>bunifuCards3</value>
-  </data>
-  <data name="&gt;&gt;bunifuCustomDataGrid1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="bunifuFlatButton2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="bunifuFlatButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>624, 155</value>
-  </data>
-  <data name="bunifuFlatButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="bunifuFlatButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 50</value>
-  </data>
-  <data name="bunifuFlatButton2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="bunifuFlatButton2.Text" xml:space="preserve">
-    <value>Modifier</value>
-  </data>
-  <data name="&gt;&gt;bunifuFlatButton2.Name" xml:space="preserve">
-    <value>bunifuFlatButton2</value>
-  </data>
-  <data name="&gt;&gt;bunifuFlatButton2.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bunifuFlatButton2.Parent" xml:space="preserve">
-    <value>bunifuCards3</value>
-  </data>
-  <data name="&gt;&gt;bunifuFlatButton2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="bunifuFlatButton1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="bunifuFlatButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>624, 105</value>
-  </data>
-  <data name="bunifuFlatButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="bunifuFlatButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 50</value>
-  </data>
-  <data name="bunifuFlatButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="bunifuFlatButton1.Text" xml:space="preserve">
-    <value>Supprimer</value>
-  </data>
-  <data name="&gt;&gt;bunifuFlatButton1.Name" xml:space="preserve">
-    <value>bunifuFlatButton1</value>
-  </data>
-  <data name="&gt;&gt;bunifuFlatButton1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bunifuFlatButton1.Parent" xml:space="preserve">
-    <value>bunifuCards3</value>
-  </data>
-  <data name="&gt;&gt;bunifuFlatButton1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="bunifuCards3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 197</value>
-  </data>
-  <data name="bunifuCards3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="bunifuCards3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>847, 409</value>
-  </data>
-  <data name="bunifuCards3.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="bunifuCards3.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;bunifuCards3.Name" xml:space="preserve">
-    <value>bunifuCards3</value>
-  </data>
-  <data name="&gt;&gt;bunifuCards3.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCards, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bunifuCards3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bunifuCards3.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">

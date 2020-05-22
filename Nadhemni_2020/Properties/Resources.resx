@@ -121,8 +121,14 @@
   <data name="writings-in-a-planner-636246" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\writings-in-a-planner-636246.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Calque 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calque 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exit_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkmark_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkmark_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tick_box_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tick_box_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,8 +148,8 @@
   <data name="guardian_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardian_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit_file_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit_file_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="microphone_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\microphone_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cadre" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cadre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,14 +193,11 @@
   <data name="add_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="delete_trash_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_trash_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fill-out-form-1024x679" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fill-out-form-1024x679.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="edit_file_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_file_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,6 +235,9 @@
   <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="settings_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Calque 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calque 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,8 +247,8 @@
   <data name="d41586-018-06619-3_16101678" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\d41586-018-06619-3_16101678.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Calque 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Calque 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fill-out-form-1024x679" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fill-out-form-1024x679.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fingerprints-FB-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fingerprints-FB-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,7 +256,10 @@
   <data name="plus_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="microphone_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\microphone_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

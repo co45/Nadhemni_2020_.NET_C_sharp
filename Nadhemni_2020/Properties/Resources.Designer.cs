@@ -93,6 +93,16 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap book_48px {
+            get {
+                object obj = ResourceManager.GetObject("book_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap c991f25409ad9755523c1ad8aa56e736 {
             get {
                 object obj = ResourceManager.GetObject("c991f25409ad9755523c1ad8aa56e736", resourceCulture);
@@ -153,9 +163,29 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_64px {
+            get {
+                object obj = ResourceManager.GetObject("cancel_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checklist_50px {
             get {
                 object obj = ResourceManager.GetObject("checklist_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkmark_48px {
+            get {
+                object obj = ResourceManager.GetObject("checkmark_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
