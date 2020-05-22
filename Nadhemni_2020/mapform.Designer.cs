@@ -52,9 +52,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(383, 34);
+            this.label3.Location = new System.Drawing.Point(286, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 17);
+            this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "-";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,7 +68,8 @@
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(10, 57);
+            this.gMapControl1.Location = new System.Drawing.Point(7, 46);
+            this.gMapControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
@@ -81,7 +83,7 @@
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(755, 623);
+            this.gMapControl1.Size = new System.Drawing.Size(566, 470);
             this.gMapControl1.TabIndex = 3;
             this.gMapControl1.Zoom = 0D;
             this.gMapControl1.Load += new System.EventHandler(this.gMapControl1_Load);
@@ -93,9 +95,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(689, 102);
+            this.label1.Location = new System.Drawing.Point(517, 83);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 19);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "latitude";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,9 +110,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(676, 134);
+            this.label2.Location = new System.Drawing.Point(507, 109);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 19);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "longitude";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -120,10 +124,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Indigo;
             this.bunifuImageButton1.Image = global::Nadhemni_2020.Properties.Resources.place_marker_64px;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(10, 640);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(7, 520);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(755, 41);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(566, 33);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 27;
             this.bunifuImageButton1.TabStop = false;
@@ -139,10 +143,11 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Indigo;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Indigo;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.MediumVioletRed;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-8, 0);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-6, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(892, 27);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(669, 22);
             this.bunifuGradientPanel1.TabIndex = 39;
             // 
             // pictureBox4
@@ -151,10 +156,10 @@
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Nadhemni_2020.Properties.Resources.multiply_32px;
             this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(753, -1);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(565, -1);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(22, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
@@ -162,10 +167,11 @@
             // 
             // mapform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(774, 692);
+            this.BackgroundImage = global::Nadhemni_2020.Properties.Resources.colorful_abstract_background_with_memphis_elements_23_2148468895;
+            this.ClientSize = new System.Drawing.Size(580, 562);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bunifuImageButton1);
@@ -173,6 +179,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "mapform";
             this.Text = "mapform";
             this.Load += new System.EventHandler(this.mapform_Load);

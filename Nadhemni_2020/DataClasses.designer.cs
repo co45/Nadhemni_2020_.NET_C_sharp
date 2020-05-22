@@ -964,6 +964,8 @@ namespace Nadhemni_2020
 		
 		private System.Nullable<System.DateTime> _date_heure_fin;
 		
+		private System.Nullable<int> _accomplie;
+		
 		private EntityRef<personne> _personne;
 		
 		private EntityRef<tache> _tache;
@@ -980,6 +982,8 @@ namespace Nadhemni_2020
     partial void Ondate_heure_debutChanged();
     partial void Ondate_heure_finChanging(System.Nullable<System.DateTime> value);
     partial void Ondate_heure_finChanged();
+    partial void OnaccomplieChanging(System.Nullable<int> value);
+    partial void OnaccomplieChanged();
     #endregion
 		
 		public plan()
@@ -1073,6 +1077,26 @@ namespace Nadhemni_2020
 					this._date_heure_fin = value;
 					this.SendPropertyChanged("date_heure_fin");
 					this.Ondate_heure_finChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_accomplie", DbType="Int")]
+		public System.Nullable<int> accomplie
+		{
+			get
+			{
+				return this._accomplie;
+			}
+			set
+			{
+				if ((this._accomplie != value))
+				{
+					this.OnaccomplieChanging(value);
+					this.SendPropertyChanging();
+					this._accomplie = value;
+					this.SendPropertyChanged("accomplie");
+					this.OnaccomplieChanged();
 				}
 			}
 		}

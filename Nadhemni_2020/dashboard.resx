@@ -124,14 +124,103 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>126</value>
+    <value>70</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>957, 621</value>
+    <value>965, 642</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label26.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>AdamGorry-Inline, 12pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 2</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 23</value>
+  </data>
+  <data name="label26.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>News :</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 1</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 25</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomLabel, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 615</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>984, 27</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -140,7 +229,6 @@
         2Jr/l7E3/6/haP7fzNn8f1QhXRU2/wcAWHLAd7pmW7oAAAAASUVORK5CYII=
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="bunifuGradientPanel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
@@ -148,18 +236,17 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>926, -2</value>
+    <value>939, -2</value>
   </data>
   <data name="pictureBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
+    <value>29, 30</value>
   </data>
   <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -176,10 +263,13 @@
     <value>0</value>
   </data>
   <data name="bunifuGradientPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-2, 0</value>
+    <value>-3, 0</value>
+  </data>
+  <data name="bunifuGradientPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="bunifuGradientPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>956, 27</value>
+    <value>971, 27</value>
   </data>
   <data name="bunifuGradientPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -194,60 +284,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuGradientPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 97</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 27</value>
-  </data>
-  <data name="panel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 97</value>
-  </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="button6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -404,7 +440,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 82</value>
+    <value>0, 82</value>
   </data>
   <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -500,7 +536,7 @@
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 80</value>
+    <value>257, 85</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 19</value>
@@ -533,7 +569,7 @@
     <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>655, 80</value>
+    <value>125, 85</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 19</value>
@@ -566,7 +602,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>655, 35</value>
+    <value>125, 39</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 23</value>
@@ -593,7 +629,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>568, 27</value>
+    <value>37, 32</value>
   </data>
   <data name="pictureBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -619,128 +655,6 @@
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 1</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 25</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>News</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCustomLabel, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 138</value>
-  </data>
-  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>847, 27</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="bunifuGauge1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="bunifuGauge1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 15.75pt</value>
-  </data>
-  <data name="bunifuGauge1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 0</value>
-  </data>
-  <data name="bunifuGauge1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 7, 8, 7</value>
-  </data>
-  <data name="bunifuGauge1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 144</value>
-  </data>
-  <data name="bunifuGauge1.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;bunifuGauge1.Name" xml:space="preserve">
-    <value>bunifuGauge1</value>
-  </data>
-  <data name="&gt;&gt;bunifuGauge1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuGauge, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bunifuGauge1.Parent" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;bunifuGauge1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -751,7 +665,7 @@
     <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>655, 57</value>
+    <value>125, 62</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 19</value>
@@ -772,13 +686,13 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>540, -24</value>
+    <value>9, -20</value>
   </data>
   <data name="pictureBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -802,16 +716,16 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 27</value>
+    <value>623, 42</value>
   </data>
   <data name="panel6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>847, 165</value>
+    <value>325, 145</value>
   </data>
   <data name="panel6.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -828,52 +742,58 @@
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="monthCalendar1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="monthCalendar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 54</value>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 6</value>
   </data>
-  <data name="monthCalendar1.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="&gt;&gt;monthCalendar1.Name" xml:space="preserve">
-    <value>monthCalendar1</value>
-  </data>
-  <data name="&gt;&gt;monthCalendar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;monthCalendar1.Parent" xml:space="preserve">
-    <value>bunifuCards1</value>
-  </data>
-  <data name="&gt;&gt;monthCalendar1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="bunifuCards1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 197</value>
-  </data>
-  <data name="bunifuCards1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="bunifuCards1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>847, 420</value>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 89</value>
   </data>
-  <data name="bunifuCards1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
-  <data name="bunifuCards1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;bunifuCards1.Name" xml:space="preserve">
-    <value>bunifuCards1</value>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
   </data>
-  <data name="&gt;&gt;bunifuCards1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCards, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bunifuCards1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-3, 27</value>
+  </data>
+  <data name="panel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 112</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;bunifuCards1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="label24.AutoSize" type="System.Boolean, mscorlib">
@@ -886,7 +806,7 @@
     <value>NoControl</value>
   </data>
   <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>664, 334</value>
+    <value>660, 321</value>
   </data>
   <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 19</value>
@@ -910,7 +830,7 @@
     <value>4</value>
   </data>
   <data name="bunifuCheckbox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 332</value>
+    <value>631, 320</value>
   </data>
   <data name="bunifuCheckbox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -937,7 +857,7 @@
     <value>Stretch</value>
   </data>
   <data name="bunifuFlatButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>634, 363</value>
+    <value>631, 351</value>
   </data>
   <data name="bunifuFlatButton3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -963,14 +883,44 @@
   <data name="&gt;&gt;bunifuFlatButton3.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>515, 12</value>
+  </data>
+  <data name="pictureBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>AutoSize</value>
+  </data>
+  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="pictureBox5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
+    <value>pictureBox5</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="bunifuImageButton5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 273</value>
+    <value>459, 273</value>
   </data>
   <data name="bunifuImageButton5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="bunifuImageButton5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 70</value>
+    <value>69, 70</value>
   </data>
   <data name="bunifuImageButton5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -988,13 +938,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;bunifuImageButton5.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="dateTimePicker1.CalendarFont" type="System.Drawing.Font, System.Drawing">
     <value>Arial Rounded MT Bold, 10.2pt</value>
   </data>
   <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 316</value>
+    <value>165, 316</value>
   </data>
   <data name="dateTimePicker1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1015,13 +965,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="dateTimePicker2.CalendarFont" type="System.Drawing.Font, System.Drawing">
     <value>Arial Rounded MT Bold, 10.2pt</value>
   </data>
   <data name="dateTimePicker2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 269</value>
+    <value>165, 270</value>
   </data>
   <data name="dateTimePicker2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -1042,7 +992,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;dateTimePicker2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1054,7 +1004,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 277</value>
+    <value>27, 277</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 19</value>
@@ -1075,7 +1025,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1087,7 +1037,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 327</value>
+    <value>27, 327</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 19</value>
@@ -1108,7 +1058,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1120,7 +1070,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 70</value>
+    <value>27, 70</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 19</value>
@@ -1141,7 +1091,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="bunifuDropdown1.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 214</value>
@@ -1165,13 +1115,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;bunifuDropdown1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="bunifuMaterialTextbox3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9.75pt</value>
   </data>
   <data name="bunifuMaterialTextbox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 45</value>
+    <value>165, 46</value>
   </data>
   <data name="bunifuMaterialTextbox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -1192,7 +1142,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;bunifuMaterialTextbox3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1225,7 +1175,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="bunifuMaterialTextbox4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 9.75pt</value>
@@ -1252,7 +1202,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;bunifuMaterialTextbox4.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="bunifuDropdown2.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 161</value>
@@ -1276,7 +1226,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;bunifuDropdown2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1288,7 +1238,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 177</value>
+    <value>27, 177</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 19</value>
@@ -1309,7 +1259,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1321,7 +1271,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 229</value>
+    <value>27, 229</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 19</value>
@@ -1342,7 +1292,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1354,7 +1304,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 121</value>
+    <value>27, 121</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 19</value>
@@ -1375,7 +1325,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Candara, 10.8pt, style=Bold</value>
@@ -1417,7 +1367,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="bunifuCards2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>847, 420</value>
+    <value>847, 409</value>
   </data>
   <data name="bunifuCards2.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -1474,7 +1424,7 @@
     <value>Stretch</value>
   </data>
   <data name="bunifuFlatButton5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>524, 377</value>
+    <value>521, 354</value>
   </data>
   <data name="bunifuFlatButton5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -1507,7 +1457,7 @@
     <value>Microsoft Sans Serif, 7.20000029pt</value>
   </data>
   <data name="bunifuFlatButton4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>676, 377</value>
+    <value>673, 354</value>
   </data>
   <data name="bunifuFlatButton4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
@@ -1960,7 +1910,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="bunifuCards4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>847, 420</value>
+    <value>847, 406</value>
   </data>
   <data name="bunifuCards4.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -1980,8 +1930,608 @@
   <data name="&gt;&gt;bunifuCards4.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="monthCalendar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="monthCalendar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 48</value>
+  </data>
+  <data name="monthCalendar1.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;monthCalendar1.Name" xml:space="preserve">
+    <value>monthCalendar1</value>
+  </data>
+  <data name="&gt;&gt;monthCalendar1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;monthCalendar1.Parent" xml:space="preserve">
+    <value>bunifuCards1</value>
+  </data>
+  <data name="&gt;&gt;monthCalendar1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="bunifuCards1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 197</value>
+  </data>
+  <data name="bunifuCards1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="bunifuCards1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>847, 409</value>
+  </data>
+  <data name="bunifuCards1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="bunifuCards1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards1.Name" xml:space="preserve">
+    <value>bunifuCards1</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCards, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="bunifuGauge3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="bunifuGauge3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 15.75pt</value>
+  </data>
+  <data name="bunifuGauge3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 36</value>
+  </data>
+  <data name="bunifuGauge3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 7, 8, 7</value>
+  </data>
+  <data name="bunifuGauge3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 122</value>
+  </data>
+  <data name="bunifuGauge3.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge3.Name" xml:space="preserve">
+    <value>bunifuGauge3</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge3.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuGauge, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge3.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 10</value>
+  </data>
+  <data name="label25.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 20</value>
+  </data>
+  <data name="label25.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Cette Année</value>
+  </data>
+  <data name="&gt;&gt;label25.Name" xml:space="preserve">
+    <value>label25</value>
+  </data>
+  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 56</value>
+  </data>
+  <data name="panel7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 151</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>bunifuCards5</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="bunifuGauge2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="bunifuGauge2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 15.75pt</value>
+  </data>
+  <data name="bunifuGauge2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 35</value>
+  </data>
+  <data name="bunifuGauge2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 7, 8, 7</value>
+  </data>
+  <data name="bunifuGauge2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 122</value>
+  </data>
+  <data name="bunifuGauge2.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge2.Name" xml:space="preserve">
+    <value>bunifuGauge2</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge2.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuGauge, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge2.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 6</value>
+  </data>
+  <data name="label15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Ce mois</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>643, 56</value>
+  </data>
+  <data name="panel5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 149</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>bunifuCards5</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label30.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label30.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 27</value>
+  </data>
+  <data name="label30.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 20</value>
+  </data>
+  <data name="label30.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="&gt;&gt;label30.Name" xml:space="preserve">
+    <value>label30</value>
+  </data>
+  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>207, 28</value>
+  </data>
+  <data name="label29.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 20</value>
+  </data>
+  <data name="label29.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label29.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label29.Name" xml:space="preserve">
+    <value>label29</value>
+  </data>
+  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label27.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 28</value>
+  </data>
+  <data name="label27.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 20</value>
+  </data>
+  <data name="label27.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label27.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label27.Name" xml:space="preserve">
+    <value>label27</value>
+  </data>
+  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="bunifuGauge1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="bunifuGauge1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 15.75pt</value>
+  </data>
+  <data name="bunifuGauge1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>34, 31</value>
+  </data>
+  <data name="bunifuGauge1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 7, 8, 7</value>
+  </data>
+  <data name="bunifuGauge1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>319, 138</value>
+  </data>
+  <data name="bunifuGauge1.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge1.Name" xml:space="preserve">
+    <value>bunifuGauge1</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuGauge, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge1.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;bunifuGauge1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 8</value>
+  </data>
+  <data name="label14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 20</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Aujourd'hui</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 221</value>
+  </data>
+  <data name="panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>381, 171</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>bunifuCards5</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 31</value>
+  </data>
+  <data name="label13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 24</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Taches accomplies :</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>bunifuCards5</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="bunifuCards5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>105, 198</value>
+  </data>
+  <data name="bunifuCards5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="bunifuCards5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>847, 407</value>
+  </data>
+  <data name="bunifuCards5.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="bunifuCards5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards5.Name" xml:space="preserve">
+    <value>bunifuCards5</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards5.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCards, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards5.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="bunifuCustomDataGrid1.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 34</value>
+  </data>
+  <data name="bunifuCustomDataGrid1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="bunifuCustomDataGrid1.Size" type="System.Drawing.Size, System.Drawing">
     <value>540, 345</value>
@@ -2068,7 +2618,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="bunifuCards3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>847, 420</value>
+    <value>847, 409</value>
   </data>
   <data name="bunifuCards3.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -2086,7 +2636,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>

@@ -124,7 +124,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 840);
+            this.panel1.Size = new System.Drawing.Size(799, 839);
             this.panel1.TabIndex = 2;
             // 
             // bunifuMaterialTextbox1
@@ -139,8 +139,8 @@
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Indigo;
             this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(214, 109);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(213, 110);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
             this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(273, 42);
             this.bunifuMaterialTextbox1.TabIndex = 54;
@@ -158,8 +158,8 @@
             this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Indigo;
             this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(214, 159);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(213, 159);
+            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
             this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(273, 42);
             this.bunifuMaterialTextbox2.TabIndex = 55;
@@ -183,7 +183,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(45, 131);
+            this.label2.Location = new System.Drawing.Point(45, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 19);
             this.label2.TabIndex = 56;
@@ -210,8 +210,8 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(642, 792);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(643, 793);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Indigo;
@@ -243,7 +243,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(206, 687);
+            this.label12.Location = new System.Drawing.Point(205, 687);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 19);
             this.label12.TabIndex = 51;
@@ -262,7 +262,7 @@
             this.bunifuMaterialTextbox7.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox7.LineThickness = 3;
             this.bunifuMaterialTextbox7.Location = new System.Drawing.Point(436, 663);
-            this.bunifuMaterialTextbox7.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox7.Name = "bunifuMaterialTextbox7";
             this.bunifuMaterialTextbox7.Size = new System.Drawing.Size(132, 42);
             this.bunifuMaterialTextbox7.TabIndex = 50;
@@ -281,7 +281,7 @@
             this.bunifuMaterialTextbox6.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox6.LineThickness = 3;
             this.bunifuMaterialTextbox6.Location = new System.Drawing.Point(280, 663);
-            this.bunifuMaterialTextbox6.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox6.Name = "bunifuMaterialTextbox6";
             this.bunifuMaterialTextbox6.Size = new System.Drawing.Size(91, 42);
             this.bunifuMaterialTextbox6.TabIndex = 49;
@@ -299,7 +299,7 @@
         "3",
         "4"};
             this.bunifuDropdown2.Location = new System.Drawing.Point(208, 624);
-            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuDropdown2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuDropdown2.Name = "bunifuDropdown2";
             this.bunifuDropdown2.NomalColor = System.Drawing.Color.Indigo;
             this.bunifuDropdown2.onHoverColor = System.Drawing.Color.BlueViolet;
@@ -329,7 +329,7 @@
             this.bunifuFlatButton3.IconZoom = 100D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(555, 358);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Indigo;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.BlueViolet;
@@ -353,7 +353,7 @@
         "Marié",
         "Divorcé"};
             this.bunifuDropdown3.Location = new System.Drawing.Point(211, 576);
-            this.bunifuDropdown3.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuDropdown3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuDropdown3.Name = "bunifuDropdown3";
             this.bunifuDropdown3.NomalColor = System.Drawing.Color.Indigo;
             this.bunifuDropdown3.onHoverColor = System.Drawing.Color.BlueViolet;
@@ -367,7 +367,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(42, 583);
+            this.label14.Location = new System.Drawing.Point(43, 583);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(68, 19);
             this.label14.TabIndex = 42;
@@ -394,8 +394,8 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(493, 792);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(493, 793);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.BlueViolet;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Indigo;
@@ -415,7 +415,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label15.Location = new System.Drawing.Point(42, 634);
+            this.label15.Location = new System.Drawing.Point(43, 634);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(130, 19);
             this.label15.TabIndex = 40;
@@ -438,7 +438,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Nadhemni_2020.Properties.Resources.portrait__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(555, 109);
+            this.pictureBox3.Location = new System.Drawing.Point(555, 110);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(221, 242);
@@ -452,7 +452,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(42, 435);
+            this.label7.Location = new System.Drawing.Point(43, 434);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 19);
             this.label7.TabIndex = 21;
@@ -495,7 +495,7 @@
         "Bonne santé",
         "Atteint d\'une maladie "};
             this.bunifuDropdown1.Location = new System.Drawing.Point(211, 523);
-            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuDropdown1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.NomalColor = System.Drawing.Color.Indigo;
             this.bunifuDropdown1.onHoverColor = System.Drawing.Color.BlueViolet;
@@ -509,7 +509,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(42, 485);
+            this.label8.Location = new System.Drawing.Point(43, 485);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 19);
             this.label8.TabIndex = 22;
@@ -521,7 +521,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(42, 385);
+            this.label6.Location = new System.Drawing.Point(43, 385);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 19);
             this.label6.TabIndex = 19;
@@ -533,7 +533,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(42, 537);
+            this.label13.Location = new System.Drawing.Point(43, 537);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 19);
             this.label13.TabIndex = 47;
@@ -545,7 +545,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(39, 684);
+            this.label9.Location = new System.Drawing.Point(45, 686);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 19);
             this.label9.TabIndex = 23;
@@ -557,7 +557,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(42, 332);
+            this.label5.Location = new System.Drawing.Point(43, 332);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 19);
             this.label5.TabIndex = 18;
@@ -576,7 +576,7 @@
             this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox3.LineThickness = 3;
             this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(211, 209);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
             this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(273, 42);
             this.bunifuMaterialTextbox3.TabIndex = 8;
@@ -603,8 +603,8 @@
             this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.Indigo;
             this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox5.LineThickness = 3;
-            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(211, 259);
-            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(211, 258);
+            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
             this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(273, 42);
             this.bunifuMaterialTextbox5.TabIndex = 10;
@@ -616,7 +616,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(42, 282);
+            this.label4.Location = new System.Drawing.Point(43, 282);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 19);
             this.label4.TabIndex = 17;
@@ -634,8 +634,8 @@
             this.bunifuMaterialTextbox8.LineIdleColor = System.Drawing.Color.Indigo;
             this.bunifuMaterialTextbox8.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox8.LineThickness = 3;
-            this.bunifuMaterialTextbox8.Location = new System.Drawing.Point(214, 462);
-            this.bunifuMaterialTextbox8.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox8.Location = new System.Drawing.Point(213, 462);
+            this.bunifuMaterialTextbox8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox8.Name = "bunifuMaterialTextbox8";
             this.bunifuMaterialTextbox8.Size = new System.Drawing.Size(273, 42);
             this.bunifuMaterialTextbox8.TabIndex = 13;
@@ -668,8 +668,8 @@
             this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.Indigo;
             this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.BlueViolet;
             this.bunifuMaterialTextbox4.LineThickness = 3;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(214, 414);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(213, 414);
+            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
             this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(273, 42);
             this.bunifuMaterialTextbox4.TabIndex = 42;
@@ -681,7 +681,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(42, 231);
+            this.label3.Location = new System.Drawing.Point(43, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 19);
             this.label3.TabIndex = 16;
@@ -693,7 +693,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(42, 736);
+            this.label11.Location = new System.Drawing.Point(43, 736);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 19);
             this.label11.TabIndex = 33;
@@ -737,7 +737,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 840);
+            this.ClientSize = new System.Drawing.Size(799, 839);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

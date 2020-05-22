@@ -46,6 +46,7 @@
       <Column Name="id_prop" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="date_heure_debut" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="date_heure_fin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="accomplie" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="personne_plan" Member="personne" ThisKey="id_prop" OtherKey="id_personne" Type="personne" IsForeignKey="true" />
       <Association Name="tache_plan" Member="tache" ThisKey="id_taches" OtherKey="id_tache" Type="tache" IsForeignKey="true" />
     </Type>

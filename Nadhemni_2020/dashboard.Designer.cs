@@ -39,12 +39,27 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGauge1 = new Bunifu.Framework.UI.BunifuGauge();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.bunifuGauge3 = new Bunifu.Framework.UI.BunifuGauge();
+            this.label25 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.bunifuGauge2 = new Bunifu.Framework.UI.BunifuGauge();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -58,6 +73,7 @@
             this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -98,15 +114,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
+            this.bunifuCards5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             this.bunifuCards3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
@@ -130,8 +150,6 @@
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Controls.Add(this.panel1);
-            this.panel6.Controls.Add(this.bunifuGauge1);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.pictureBox3);
             resources.ApplyResources(this.panel6, "panel6");
@@ -167,21 +185,6 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(18)))), ((int)(((byte)(123)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
@@ -196,6 +199,40 @@
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkMagenta;
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // label26
+            // 
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label26.Name = "label26";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // bunifuGauge1
+            // 
+            resources.ApplyResources(this.bunifuGauge1, "bunifuGauge1");
+            this.bunifuGauge1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuGauge1.Name = "bunifuGauge1";
+            this.bunifuGauge1.ProgressBgColor = System.Drawing.Color.Gray;
+            this.bunifuGauge1.ProgressColor1 = System.Drawing.Color.Cyan;
+            this.bunifuGauge1.ProgressColor2 = System.Drawing.Color.Cyan;
+            this.bunifuGauge1.Thickness = 30;
+            this.bunifuGauge1.Value = 0;
+            // 
             // bunifuCards1
             // 
             this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -209,16 +246,117 @@
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
             // 
-            // bunifuGauge1
+            // monthCalendar1
             // 
-            resources.ApplyResources(this.bunifuGauge1, "bunifuGauge1");
-            this.bunifuGauge1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuGauge1.Name = "bunifuGauge1";
-            this.bunifuGauge1.ProgressBgColor = System.Drawing.Color.Gray;
-            this.bunifuGauge1.ProgressColor1 = System.Drawing.Color.Indigo;
-            this.bunifuGauge1.ProgressColor2 = System.Drawing.Color.Tomato;
-            this.bunifuGauge1.Thickness = 30;
-            this.bunifuGauge1.Value = 0;
+            resources.ApplyResources(this.monthCalendar1, "monthCalendar1");
+            this.monthCalendar1.Name = "monthCalendar1";
+            // 
+            // bunifuCards5
+            // 
+            this.bunifuCards5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.bunifuCards5.BorderRadius = 5;
+            this.bunifuCards5.BottomSahddow = true;
+            this.bunifuCards5.color = System.Drawing.Color.Indigo;
+            this.bunifuCards5.Controls.Add(this.panel7);
+            this.bunifuCards5.Controls.Add(this.panel5);
+            this.bunifuCards5.Controls.Add(this.panel3);
+            this.bunifuCards5.Controls.Add(this.label13);
+            this.bunifuCards5.LeftSahddow = false;
+            resources.ApplyResources(this.bunifuCards5, "bunifuCards5");
+            this.bunifuCards5.Name = "bunifuCards5";
+            this.bunifuCards5.RightSahddow = true;
+            this.bunifuCards5.ShadowDepth = 20;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Indigo;
+            this.panel7.Controls.Add(this.bunifuGauge3);
+            this.panel7.Controls.Add(this.label25);
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
+            // bunifuGauge3
+            // 
+            resources.ApplyResources(this.bunifuGauge3, "bunifuGauge3");
+            this.bunifuGauge3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuGauge3.Name = "bunifuGauge3";
+            this.bunifuGauge3.ProgressBgColor = System.Drawing.Color.Gray;
+            this.bunifuGauge3.ProgressColor1 = System.Drawing.Color.Cyan;
+            this.bunifuGauge3.ProgressColor2 = System.Drawing.Color.Cyan;
+            this.bunifuGauge3.Thickness = 30;
+            this.bunifuGauge3.Value = 0;
+            // 
+            // label25
+            // 
+            resources.ApplyResources(this.label25, "label25");
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Name = "label25";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Indigo;
+            this.panel5.Controls.Add(this.bunifuGauge2);
+            this.panel5.Controls.Add(this.label15);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // bunifuGauge2
+            // 
+            resources.ApplyResources(this.bunifuGauge2, "bunifuGauge2");
+            this.bunifuGauge2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuGauge2.Name = "bunifuGauge2";
+            this.bunifuGauge2.ProgressBgColor = System.Drawing.Color.Gray;
+            this.bunifuGauge2.ProgressColor1 = System.Drawing.Color.Cyan;
+            this.bunifuGauge2.ProgressColor2 = System.Drawing.Color.Cyan;
+            this.bunifuGauge2.Thickness = 30;
+            this.bunifuGauge2.Value = 0;
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Name = "label15";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Indigo;
+            this.panel3.Controls.Add(this.label30);
+            this.panel3.Controls.Add(this.label29);
+            this.panel3.Controls.Add(this.label27);
+            this.panel3.Controls.Add(this.bunifuGauge1);
+            this.panel3.Controls.Add(this.label14);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // label30
+            // 
+            resources.ApplyResources(this.label30, "label30");
+            this.label30.ForeColor = System.Drawing.Color.White;
+            this.label30.Name = "label30";
+            // 
+            // label29
+            // 
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Name = "label29";
+            // 
+            // label27
+            // 
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Name = "label27";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Name = "label14";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Name = "label13";
             // 
             // timer1
             // 
@@ -278,6 +416,7 @@
             this.button5.Image = global::Nadhemni_2020.Properties.Resources.statistics_50px;
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -390,6 +529,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox5);
             this.groupBox2.Controls.Add(this.bunifuImageButton5);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.dateTimePicker2);
@@ -409,6 +549,13 @@
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Nadhemni_2020.Properties.Resources.microphone_32px;
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
             // 
             // bunifuImageButton5
             // 
@@ -466,7 +613,7 @@
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.NomalColor = System.Drawing.Color.Indigo;
             this.bunifuDropdown1.onHoverColor = System.Drawing.Color.BlueViolet;
-            this.bunifuDropdown1.selectedIndex = -1;
+            this.bunifuDropdown1.selectedIndex = 0;
             // 
             // bunifuMaterialTextbox3
             // 
@@ -521,7 +668,7 @@
             this.bunifuDropdown2.Name = "bunifuDropdown2";
             this.bunifuDropdown2.NomalColor = System.Drawing.Color.Indigo;
             this.bunifuDropdown2.onHoverColor = System.Drawing.Color.BlueViolet;
-            this.bunifuDropdown2.selectedIndex = -1;
+            this.bunifuDropdown2.selectedIndex = 0;
             this.bunifuDropdown2.onItemSelected += new System.EventHandler(this.bunifuDropdown2_onItemSelected);
             // 
             // label3
@@ -918,23 +1065,21 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // monthCalendar1
-            // 
-            resources.ApplyResources(this.monthCalendar1, "monthCalendar1");
-            this.monthCalendar1.Name = "monthCalendar1";
-            // 
             // dashboard
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.BackgroundImage = global::Nadhemni_2020.Properties.Resources.colorful_abstract_background_with_memphis_elements_23_2148468895;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.bunifuCards4);
+            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.bunifuCards5);
             this.Controls.Add(this.bunifuCards3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dashboard";
@@ -942,15 +1087,24 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
+            this.bunifuCards5.ResumeLayout(false);
+            this.bunifuCards5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             this.bunifuCards3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
@@ -1039,5 +1193,20 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards5;
+        private System.Windows.Forms.Panel panel7;
+        private Bunifu.Framework.UI.BunifuGauge bunifuGauge3;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuGauge bunifuGauge2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
