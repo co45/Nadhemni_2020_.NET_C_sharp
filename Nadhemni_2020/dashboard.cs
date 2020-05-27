@@ -89,14 +89,13 @@ namespace Nadhemni_2020
                        orderby tr.date_heure_debut descending
                        select t.titre
                        ).ToList();
+            
 
             foreach (var titre in req)
             {
-                String news = titre.ToString();
-                label1.Text =" A faire : " + news + " - ";
+                String news = string.Concat(req);
+                label1.Text = news;
             }
-
-
 
             personne t1 = Information.db.personne.Single<personne>(x => x.id_personne == idp);
             label11.Text = t1.nom;
@@ -104,7 +103,6 @@ namespace Nadhemni_2020
             
             datagridtacheall();
 
-            //speechtoText();
 
 
         }
@@ -225,6 +223,7 @@ namespace Nadhemni_2020
                 p.tache = t;
                 p.date_heure_debut = dateTimePicker2.Value;
                 p.date_heure_fin = dateTimePicker1.Value;
+                p.accomplie = 0;
 
 
                 Information.db.plan.InsertOnSubmit(p);
@@ -266,20 +265,6 @@ namespace Nadhemni_2020
             bunifuCards5.Hide();
             bunifuCustomDataGrid1.Refresh();
 
-            if (bunifuCheckbox1.Checked == true)
-            {
-                Choices commands = new Choices();
-                commands.Add(new string[] { "Normale", "Urgente", "Habituelle", "Inhabituelle", "Titre", "Description", "Durée", "Type", "Debut", "Fin", "Emplacement" });
-                GrammarBuilder b = new GrammarBuilder();
-                b.Append(commands);
-                Grammar gr = new Grammar(b);
-                rec.LoadGrammarAsync(gr);
-                rec.SetInputToDefaultAudioDevice();
-
-                rec.RecognizeAsync(RecognizeMode.Multiple);
-
-                rec.SpeechRecognized += Rec_SpeechRecognized1;
-            }
 
         }
 
@@ -413,15 +398,16 @@ namespace Nadhemni_2020
             bunifuCards2.Hide();
             bunifuCards3.Hide();
             bunifuCards4.Hide();
+
             //jour
             var r = from s in dtb.plan
-                    join rf in dtb.tache on s.accomplie equals 1
-                    where  s.personne.id_personne == idp && s.date_heure_fin == DateTime.Today
+                    join rf in dtb.tache on s.accomplie equals '1'
+                    where  s.personne.id_personne == idp && s.date_heure_fin == DateTime.Today && s.accomplie == 1
                     select s.personne;
-
             var all = from s in dtb.plan
-                      where s.personne.id_personne == idp
+                      where s.personne.id_personne == idp && s.date_heure_fin.Value.Day == DateTime.Today.Day
                       select s.id_taches;
+
 
             int ri = r.Count();
             int alli = all.Count();
@@ -429,22 +415,44 @@ namespace Nadhemni_2020
             label27.Text = (alli - ri).ToString();
             label29.Text = alli.ToString();
 
-            MessageBox.Show(ri.ToString(),alli.ToString());
+           
+            if (alli != 0)
+            {
+                int gaugej = ((alli - ri) / alli * 100);
+                bunifuGauge1.Value = gaugej;
+            }
+            else
+                bunifuGauge1.Value = 0;
             
-            int gauge = ((alli - ri) / alli * 100);
-            MessageBox.Show(gauge.ToString());
-
-
             
-            bunifuGauge1.Value = gauge;
             
             //mois
             var rm = from s in dtb.plan
                     join rf in dtb.tache on s.accomplie equals 1
-                    where s.personne.id_personne == idp 
-                    select s.personne;
+                    where s.personne.id_personne == idp && s.date_heure_fin.Value.Month == DateTime.Today.Month
+                     select s.personne;
+            var allm = from s in dtb.plan
+                      where s.personne.id_personne == idp && s.date_heure_fin.Value.Month == DateTime.Today.Month
+                      select s.id_taches;
+            int alm = allm.Count();
 
-            bunifuGauge2.Value = ((alli - rm.Count()) / alli * 100);
+            int gaugem = ((alm - rm.Count()) / alm * 100);
+            bunifuGauge1.Value = gaugem;
+            
+
+            //année
+            var ra = from s in dtb.plan
+                     join rf in dtb.tache on s.accomplie equals 1
+                     where s.personne.id_personne == idp && s.date_heure_fin.Value.Year == DateTime.Today.Year
+                     select s.personne;
+            var alla = from s in dtb.plan
+                      where s.personne.id_personne == idp && s.date_heure_fin.Value.Year == DateTime.Today.Year
+                      select s.id_taches;
+            int ala = alla.Count();
+            int gaugea = ((ala - ra.Count()) / ala * 100);
+            bunifuGauge1.Value = gaugea;
+            
+            
         }
 
         public String stt(Grammar gr, SpeechRecognitionEngine en)
@@ -453,8 +461,9 @@ namespace Nadhemni_2020
             en.LoadGrammar(gr);
             en.SetInputToDefaultAudioDevice();
             RecognitionResult res = en.Recognize();
-            String a = res.Text;
-            en.UnloadAllGrammars();
+            String a = "";
+            a = res.Text;
+            en.UnloadGrammar(gr);
 
             return a;
         }
@@ -463,33 +472,49 @@ namespace Nadhemni_2020
 
         private void Rec_SpeechRecognized1(object sender, SpeechRecognizedEventArgs e)
         {
-            
 
-            if (bunifuCheckbox1.Checked == true)
-            {
+
                 pictureBox5.Show();
                 switch (e.Result.Text)
                 {
                     case "Titre":
-                        pictureBox5.Location = new Point(443, 57);
+                        pictureBox5.Location = new Point(336, 44);
                         bunifuMaterialTextbox3.Text = stt(words, s).ToString();
                         break;
 
                     case "Description":
-                        pictureBox5.Location = new Point(442, 108);
-                        bunifuMaterialTextbox4.Text = stt(words, s).ToString();
+                    pictureBox5.Location = new Point(336, 88);
+                    bunifuMaterialTextbox4.Text = stt(words, s).ToString();
                         break;
 
                     case "Durée":
-                        pictureBox5.Location = new Point(509, 165);
-                        bunifuMaterialTextbox4.Text = stt(words, s).ToString();
+                    pictureBox5.Location = new Point(378, 134);
+                    switch (e.Result.Text)
+                        {
+                            case "un":
+                                bunifuDropdown2.selectedIndex = 0 ;
+                                break;
+                            case "deux":
+                                bunifuDropdown2.selectedIndex = 1;
+                                break;
+                            case "trois":
+                                bunifuDropdown2.selectedIndex = 2;
+                                break;
+                            case "quatre":
+                                bunifuDropdown2.selectedIndex = 3;
+                                break;
+                            case "cinq":
+                                bunifuDropdown2.selectedIndex = 4;
+                                break;
+
+                    }
                         break;
 
                     case "Type":
-                        pictureBox5.Location = new Point(440, 216);
-                        switch (e.Result.Text)
+                    pictureBox5.Location = new Point(336, 172);
+                    switch (e.Result.Text)
                         {
-                            case "Normale" :
+                            case "Normale":
                                 bunifuDropdown1.selectedIndex = 0;
                                 break;
                             case "Habituelle":
@@ -509,8 +534,6 @@ namespace Nadhemni_2020
                         mf.Show();
                         break;
                 }
-
-            }
 
 
         }
@@ -564,6 +587,32 @@ namespace Nadhemni_2020
         private void bunifuFlatButton9_Click(object sender, EventArgs e)
         {
             datagridtachewait();
+        }
+
+        public int quest (DateTime date )
+        {
+            var all = from s in dtb.plan
+                      where s.personne.id_personne == idp && s.date_heure_fin == date
+                      select s.id_taches;
+
+            int fin = all.Count();
+
+            return  fin;
+        }
+
+        private void metroToggle1_CheckedChanged(object sender, EventArgs e)
+        {
+            Choices commands = new Choices();
+            commands.Add(new string[] { "Normale", "Urgente", "Habituelle", "Inhabituelle", "Titre", "Description", "Durée", "Type", "Debut", "Fin", "Emplacement","un","deux","trois","quatre" });
+            GrammarBuilder b = new GrammarBuilder();
+            b.Append(commands);
+            Grammar gr = new Grammar(b);
+            rec.LoadGrammarAsync(gr);
+            rec.SetInputToDefaultAudioDevice();
+            rec.RecognizeAsync(RecognizeMode.Multiple);
+            rec.SpeechRecognized += Rec_SpeechRecognized1;
+            
+            
         }
     }    
 }

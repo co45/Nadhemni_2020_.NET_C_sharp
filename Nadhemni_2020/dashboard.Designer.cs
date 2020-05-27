@@ -46,6 +46,9 @@
             this.label1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGauge1 = new Bunifu.Framework.UI.BunifuGauge();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Tache = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Date_fin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -69,8 +72,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.label24 = new System.Windows.Forms.Label();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -89,6 +92,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuFlatButton11 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
             this.bunifuFlatButton10 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -119,8 +125,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -136,6 +140,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             this.bunifuCards3.SuspendLayout();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.bunifuCards4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -143,7 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -247,12 +251,24 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Indigo;
+            this.bunifuCards1.Controls.Add(this.listView1);
             this.bunifuCards1.Controls.Add(this.monthCalendar1);
             this.bunifuCards1.LeftSahddow = false;
             resources.ApplyResources(this.bunifuCards1, "bunifuCards1");
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Tache,
+            this.Date_fin});
+            this.listView1.HideSelection = false;
+            resources.ApplyResources(this.listView1, "listView1");
+            this.listView1.Name = "listView1";
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
             // 
             // monthCalendar1
             // 
@@ -477,8 +493,8 @@
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.Indigo;
+            this.bunifuCards2.Controls.Add(this.metroToggle1);
             this.bunifuCards2.Controls.Add(this.label24);
-            this.bunifuCards2.Controls.Add(this.bunifuCheckbox1);
             this.bunifuCards2.Controls.Add(this.bunifuFlatButton3);
             this.bunifuCards2.Controls.Add(this.groupBox2);
             this.bunifuCards2.LeftSahddow = false;
@@ -487,22 +503,20 @@
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
             // 
+            // metroToggle1
+            // 
+            resources.ApplyResources(this.metroToggle1, "metroToggle1");
+            this.metroToggle1.BackColor = System.Drawing.Color.Indigo;
+            this.metroToggle1.Name = "metroToggle1";
+            this.metroToggle1.UseSelectable = true;
+            this.metroToggle1.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
+            // 
             // label24
             // 
             resources.ApplyResources(this.label24, "label24");
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label24.Name = "label24";
-            // 
-            // bunifuCheckbox1
-            // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.Indigo;
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox1.Checked = true;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.Indigo;
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.bunifuCheckbox1, "bunifuCheckbox1");
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
             // 
             // bunifuFlatButton3
             // 
@@ -706,6 +720,7 @@
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = true;
             this.bunifuCards3.color = System.Drawing.Color.Indigo;
+            this.bunifuCards3.Controls.Add(this.bunifuFlatButton11);
             this.bunifuCards3.Controls.Add(this.panel8);
             this.bunifuCards3.Controls.Add(this.bunifuFlatButton10);
             this.bunifuCards3.Controls.Add(this.bunifuFlatButton9);
@@ -720,6 +735,49 @@
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
+            // 
+            // bunifuFlatButton11
+            // 
+            this.bunifuFlatButton11.Activecolor = System.Drawing.Color.Indigo;
+            this.bunifuFlatButton11.BackColor = System.Drawing.Color.Indigo;
+            resources.ApplyResources(this.bunifuFlatButton11, "bunifuFlatButton11");
+            this.bunifuFlatButton11.BorderRadius = 0;
+            this.bunifuFlatButton11.ButtonText = "Imprimer";
+            this.bunifuFlatButton11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton11.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton11.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton11.Iconimage = global::Nadhemni_2020.Properties.Resources.print_100px;
+            this.bunifuFlatButton11.Iconimage_right = null;
+            this.bunifuFlatButton11.Iconimage_right_Selected = null;
+            this.bunifuFlatButton11.Iconimage_Selected = null;
+            this.bunifuFlatButton11.IconMarginLeft = 0;
+            this.bunifuFlatButton11.IconMarginRight = 0;
+            this.bunifuFlatButton11.IconRightVisible = true;
+            this.bunifuFlatButton11.IconRightZoom = 0D;
+            this.bunifuFlatButton11.IconVisible = true;
+            this.bunifuFlatButton11.IconZoom = 65D;
+            this.bunifuFlatButton11.IsTab = false;
+            this.bunifuFlatButton11.Name = "bunifuFlatButton11";
+            this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.Indigo;
+            this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.BlueViolet;
+            this.bunifuFlatButton11.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton11.selected = false;
+            this.bunifuFlatButton11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton11.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton11.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.DarkMagenta;
+            this.panel8.Controls.Add(this.label28);
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
+            // 
+            // label28
+            // 
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.ForeColor = System.Drawing.SystemColors.Control;
+            this.label28.Name = "label28";
             // 
             // bunifuFlatButton10
             // 
@@ -1237,19 +1295,6 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.DarkMagenta;
-            this.panel8.Controls.Add(this.label28);
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
-            // label28
-            // 
-            resources.ApplyResources(this.label28, "label28");
-            this.label28.ForeColor = System.Drawing.SystemColors.Control;
-            this.label28.Name = "label28";
-            // 
             // dashboard
             // 
             resources.ApplyResources(this, "$this");
@@ -1261,11 +1306,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.bunifuCards5);
-            this.Controls.Add(this.bunifuCards3);
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.bunifuCards4);
             this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.bunifuCards5);
+            this.Controls.Add(this.bunifuCards3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dashboard";
             this.Load += new System.EventHandler(this.dashboard_Load);
@@ -1292,6 +1337,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             this.bunifuCards3.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.bunifuCards4.ResumeLayout(false);
             this.bunifuCards4.PerformLayout();
@@ -1301,8 +1348,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1369,7 +1414,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -1402,5 +1446,10 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label28;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton11;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Tache;
+        private System.Windows.Forms.ColumnHeader Date_fin;
+        private MetroFramework.Controls.MetroToggle metroToggle1;
     }
 }
