@@ -63,6 +63,16 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5566 {
+            get {
+                object obj = ResourceManager.GetObject("5566", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_50px {
             get {
                 object obj = ResourceManager.GetObject("add_50px", resourceCulture);
@@ -323,6 +333,16 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HD_purple_wallpaper_image_to_use_as_background_111_640x400 {
+            get {
+                object obj = ResourceManager.GetObject("HD-purple-wallpaper-image-to-use-as-background-111-640x400", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_50px {
             get {
                 object obj = ResourceManager.GetObject("home_50px", resourceCulture);
@@ -346,6 +366,16 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap home_96px {
             get {
                 object obj = ResourceManager.GetObject("home_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,19 +423,9 @@ namespace Nadhemni_2020.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap notebook_1226398 {
+        internal static System.Drawing.Bitmap notification_52px {
             get {
-                object obj = ResourceManager.GetObject("notebook-1226398", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap notebook_12263981 {
-            get {
-                object obj = ResourceManager.GetObject("notebook-12263981", resourceCulture);
+                object obj = ResourceManager.GetObject("notification_52px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -536,16 +556,6 @@ namespace Nadhemni_2020.Properties {
         internal static System.Drawing.Bitmap user_64px {
             get {
                 object obj = ResourceManager.GetObject("user_64px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap writings_in_a_planner_636246 {
-            get {
-                object obj = ResourceManager.GetObject("writings-in-a-planner-636246", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

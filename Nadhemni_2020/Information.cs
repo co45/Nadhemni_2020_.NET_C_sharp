@@ -68,11 +68,6 @@ namespace Nadhemni_2020
 
         }
 
-        private void Information_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
             try
@@ -102,7 +97,7 @@ namespace Nadhemni_2020
                 u.personne = pers;
                 u.login = bunifuMaterialTextbox1.Text;
                 u.pass = bunifuMaterialTextbox2.Text;
-                idd = u.id_pers.ToString();
+                
                 db.user.InsertOnSubmit(u);
                 ad.personne = pers;
                 ad.numero = bunifuMaterialTextbox6.Text;
@@ -113,7 +108,7 @@ namespace Nadhemni_2020
                 db.adresse.InsertOnSubmit(ad);
 
                 db.SubmitChanges();
-
+                idd = pers.id_personne.ToString();
 
                 this.Close();
                 dashboard a = new dashboard();
