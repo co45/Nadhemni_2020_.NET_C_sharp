@@ -167,7 +167,7 @@
     <value>55</value>
   </data>
   <data name="Quit_btn.Text" xml:space="preserve">
-    <value>    Quitter</value>
+    <value>Quitter</value>
   </data>
   <data name="&gt;&gt;Quit_btn.Name" xml:space="preserve">
     <value>Quit_btn</value>
@@ -230,7 +230,7 @@
     <value>54</value>
   </data>
   <data name="Stat_btn.Text" xml:space="preserve">
-    <value>    Statistiques</value>
+    <value>Statistiques</value>
   </data>
   <data name="&gt;&gt;Stat_btn.Name" xml:space="preserve">
     <value>Stat_btn</value>
@@ -263,7 +263,7 @@
     <value>52</value>
   </data>
   <data name="Acceuil_btn.Text" xml:space="preserve">
-    <value>    Acceuil</value>
+    <value>Acceuil</value>
   </data>
   <data name="&gt;&gt;Acceuil_btn.Name" xml:space="preserve">
     <value>Acceuil_btn</value>
@@ -296,7 +296,7 @@
     <value>53</value>
   </data>
   <data name="Taches_btn.Text" xml:space="preserve">
-    <value>    Taches</value>
+    <value>Taches</value>
   </data>
   <data name="&gt;&gt;Taches_btn.Name" xml:space="preserve">
     <value>Taches_btn</value>
@@ -593,13 +593,13 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 96</value>
+    <value>9, 105</value>
   </data>
   <data name="pictureBox9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="pictureBox9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 72</value>
+    <value>162, 61</value>
   </data>
   <data name="pictureBox9.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -642,157 +642,6 @@
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="bunifuCustomDataGrid3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 64</value>
-  </data>
-  <data name="bunifuCustomDataGrid3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="bunifuCustomDataGrid3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>639, 262</value>
-  </data>
-  <data name="bunifuCustomDataGrid3.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;bunifuCustomDataGrid3.Name" xml:space="preserve">
-    <value>bunifuCustomDataGrid3</value>
-  </data>
-  <data name="&gt;&gt;bunifuCustomDataGrid3.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bunifuCustomDataGrid3.Parent" xml:space="preserve">
-    <value>bunifuCards6</value>
-  </data>
-  <data name="&gt;&gt;bunifuCustomDataGrid3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVChTY/BmaPofyNj0P5yp6X8sc9P/FJam/1mszf8L
-        2Jr/l7E3/6/haP7fzNn8f1QhXRU2/wcAWHLAd7pmW7oAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="bunifuGradientPanel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>AdamGorry-Inline, 20pt, style=Bold</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 13</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 31</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>bunifuGradientPanel1</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, -2</value>
-  </data>
-  <data name="pictureBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 24</value>
-  </data>
-  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
-    <value>pictureBox4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
-    <value>bunifuGradientPanel1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="bunifuGradientPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 4</value>
-  </data>
-  <data name="bunifuGradientPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="bunifuGradientPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>687, 52</value>
-  </data>
-  <data name="bunifuGradientPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="&gt;&gt;bunifuGradientPanel1.Name" xml:space="preserve">
-    <value>bunifuGradientPanel1</value>
-  </data>
-  <data name="&gt;&gt;bunifuGradientPanel1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuGradientPanel, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bunifuGradientPanel1.Parent" xml:space="preserve">
-    <value>bunifuCards6</value>
-  </data>
-  <data name="&gt;&gt;bunifuGradientPanel1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="bunifuCards6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 130</value>
-  </data>
-  <data name="bunifuCards6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="bunifuCards6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>661, 341</value>
-  </data>
-  <data name="bunifuCards6.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="bunifuCards6.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;bunifuCards6.Name" xml:space="preserve">
-    <value>bunifuCards6</value>
-  </data>
-  <data name="&gt;&gt;bunifuCards6.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuCards, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;bunifuCards6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bunifuCards6.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="bunifuFlatButton14.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -888,7 +737,7 @@
     <value>0, 29</value>
   </data>
   <data name="metroDateTime1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 29</value>
+    <value>155, 30</value>
   </data>
   <data name="metroDateTime1.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -1054,7 +903,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="bunifuFlatButton12.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -1876,7 +1725,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="button2.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -2315,7 +2164,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="metroToggle1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2867,7 +2716,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3404,6 +3253,157 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bunifuCards4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="bunifuCustomDataGrid3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 64</value>
+  </data>
+  <data name="bunifuCustomDataGrid3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="bunifuCustomDataGrid3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>639, 262</value>
+  </data>
+  <data name="bunifuCustomDataGrid3.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;bunifuCustomDataGrid3.Name" xml:space="preserve">
+    <value>bunifuCustomDataGrid3</value>
+  </data>
+  <data name="&gt;&gt;bunifuCustomDataGrid3.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuCustomDataGrid3.Parent" xml:space="preserve">
+    <value>bunifuCards6</value>
+  </data>
+  <data name="&gt;&gt;bunifuCustomDataGrid3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVChTY/BmaPofyNj0P5yp6X8sc9P/FJam/1mszf8L
+        2Jr/l7E3/6/haP7fzNn8f1QhXRU2/wcAWHLAd7pmW7oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuGradientPanel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>AdamGorry-Inline, 20pt, style=Bold</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 13</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 31</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>bunifuGradientPanel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>704, -2</value>
+  </data>
+  <data name="pictureBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 24</value>
+  </data>
+  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
+    <value>pictureBox4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
+    <value>bunifuGradientPanel1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="bunifuGradientPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 4</value>
+  </data>
+  <data name="bunifuGradientPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="bunifuGradientPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>687, 52</value>
+  </data>
+  <data name="bunifuGradientPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;bunifuGradientPanel1.Name" xml:space="preserve">
+    <value>bunifuGradientPanel1</value>
+  </data>
+  <data name="&gt;&gt;bunifuGradientPanel1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuGradientPanel, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuGradientPanel1.Parent" xml:space="preserve">
+    <value>bunifuCards6</value>
+  </data>
+  <data name="&gt;&gt;bunifuGradientPanel1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="bunifuCards6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>178, 130</value>
+  </data>
+  <data name="bunifuCards6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="bunifuCards6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>661, 341</value>
+  </data>
+  <data name="bunifuCards6.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="bunifuCards6.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards6.Name" xml:space="preserve">
+    <value>bunifuCards6</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards6.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCards, Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bunifuCards6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">

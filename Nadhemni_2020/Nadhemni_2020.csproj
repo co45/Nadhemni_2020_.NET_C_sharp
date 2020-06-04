@@ -201,12 +201,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Information_membre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Information_membre.Designer.cs">
-      <DependentUpon>Information_membre.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,9 +229,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Information_membre.resx">
-      <DependentUpon>Information_membre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_form.resx">
       <DependentUpon>Main_form.cs</DependentUpon>

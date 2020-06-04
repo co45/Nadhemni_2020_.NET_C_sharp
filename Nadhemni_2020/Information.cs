@@ -87,8 +87,8 @@ namespace Nadhemni_2020
                 pers.mail = bunifuMaterialTextbox8.Text;
                 pers.etat_sante = bunifuDropdown1.selectedValue.ToString();
                 pers.nbre_enfant = int.Parse(bunifuDropdown2.selectedValue);
-                /* insertion de l'image 
-                MemoryStream ms = new MemoryStream();
+                //insertion de l'image 
+                /*MemoryStream ms = new MemoryStream();
                 pictureBox3.Image.Save(ms,pictureBox3.Image.RawFormat);
                 byte[] photo_aray = ms.ToArray();
                 pers.photo = photo_aray;*/

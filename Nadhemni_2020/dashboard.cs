@@ -849,12 +849,14 @@ namespace Nadhemni_2020
 
         private void bunifuFlatButton14_Click(object sender, EventArgs e)
         {
-            
+            bunifuCards6.Show();
+            bunifuCards6.BringToFront();
             System.Drawing.Printing.PrintDocument dc = new System.Drawing.Printing.PrintDocument();
             dc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPageplan);
             printPreviewDialog1.Document = dc;
             printPreviewDialog1.PrintPreviewControl.Zoom = 1;
             printPreviewDialog1.ShowDialog();
+            bunifuCards6.SendToBack();
         }
 
         private void bunifuFlatButton12_Click(object sender, EventArgs e)
