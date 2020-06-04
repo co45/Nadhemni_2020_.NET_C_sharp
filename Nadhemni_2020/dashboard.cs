@@ -12,6 +12,7 @@ using System.Speech.Recognition;
 using System.Globalization;
 using System.IO;
 using System.Timers;
+using System.Drawing;
 
 
 namespace Nadhemni_2020
@@ -29,7 +30,8 @@ namespace Nadhemni_2020
         DataClassesDataContext dtb = new DataClassesDataContext();
         Main_form main = new Main_form();
 
-       
+
+
         //recuperer id personne
         public dashboard()
         {
@@ -117,7 +119,7 @@ namespace Nadhemni_2020
 
         private void dashboard_Load(object sender, EventArgs e)
         {
-
+            
             bunifuCards5.Hide();
             bunifuCards4.Hide();
             bunifuCards3.Hide();
@@ -141,7 +143,7 @@ namespace Nadhemni_2020
         }
 
         //afficher les taches selon les parametres : (acc==1) => taches accomplies / (acc==0) => taches non accomplies / (acc==2) => toutes les taches 
-        public void datagridtache(int acc)
+        public void datagridtache(int acc )
         {
             
             if (acc == 2)
@@ -196,7 +198,26 @@ namespace Nadhemni_2020
 
         }
         
+        public void tache_date (DateTime d)
+        {
+            var result = (from g in dtb.personne
+                          join tr in dtb.plan on g.id_personne equals tr.id_prop
+                          join t in dtb.tache on tr.id_taches equals t.id_tache
+                          where g.id_personne == idp && tr.accomplie == 0 && tr.date_heure_debut.Value.DayOfYear == d.DayOfYear
+                          orderby tr.date_heure_debut ascending
+                          select new
+                          {
+                              Debutj = tr.date_heure_debut,
+                              Fin = tr.date_heure_fin,
+                              Titre = t.titre,
+                              Description = t.description
 
+                          }
+                       ).ToList();
+
+            bunifuCustomDataGrid2.DataSource = result;
+            bunifuCustomDataGrid3.DataSource = result;
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             bunifuCards1.Hide();
@@ -395,7 +416,7 @@ namespace Nadhemni_2020
             bunifuCards2.Hide();
             bunifuCards3.Hide();
             bunifuCards4.Hide();
-
+            
             //jour
             var r = from g in dtb.personne
                     join tr in dtb.plan on g.id_personne equals tr.id_prop
@@ -701,6 +722,153 @@ namespace Nadhemni_2020
             mapform mf = new mapform();
             mf.Show();
         }
- 
+
+        //planing de cette semaine
+        public Array getplan()
+        {
+            string[,] tableplan = new string[15, 7];
+            int nhour = 7;
+            int nday = 1;
+
+            try
+            {
+                var rar = (from g in dtb.personne
+                           join tr in dtb.plan on g.id_personne equals tr.id_prop
+                           join t in dtb.tache on tr.id_taches equals t.id_tache
+                           where tr.id_prop == idp && tr.date_heure_debut.Value.Month == DateTime.Now.Month && tr.date_heure_debut.Value.DayOfYear / 7 == DateTime.Now.DayOfYear / 7 && tr.accomplie == 0
+                           orderby tr.date_heure_debut
+                           select new
+                           {
+                               titre = tr.tache,
+                               date = tr.date_heure_debut.Value,
+                               dure = t.duree
+
+                           }).ToList();
+
+
+                for (int i = 0; i < 15; i++)
+                {
+                    for (int j = 0; j < 7; i++)
+                    {
+                        foreach (var a in rar)
+                        {
+                            if (Convert.ToInt32(a.date.Hour) == nhour && a.date.DayOfYear / 7 == DateTime.Now.DayOfYear / 7 && Convert.ToInt32(a.date.DayOfWeek) == nday)
+                            {
+                                tableplan[i,j] = a.titre.ToString();
+                            }
+                        }
+                        nday++;
+                    }
+                    nhour++;
+
+                }
+                MessageBox.Show("Done !");
+            }
+            catch (Exception c)
+            {
+                MessageBox.Show(c.ToString());
+            }
+
+            return tableplan;
+        }
+
+        private void bunifuFlatButton11_Click(object sender, EventArgs e)
+        {
+
+            //getplan();
+            
+            
+        }
+
+        private void doc_PrintPageplan(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            Bitmap bbp = new Bitmap(bunifuCards6.Width, bunifuCards6.Height, bunifuCards6.CreateGraphics());
+            bunifuCards6.DrawToBitmap(bbp, new Rectangle(0, 0, bunifuCards6.Width, bunifuCards6.Height));
+            RectangleF bounds = e.PageSettings.PrintableArea;
+            float factor = ((float)bbp.Height / (float)bbp.Width);
+            e.Graphics.DrawImage(bbp, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
+        }
+
+        private void doc_PrintPagestat(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+
+            Bitmap bmp = new Bitmap(bunifuCards5.Width, bunifuCards5.Height, bunifuCards5.CreateGraphics());
+            bunifuCards5.DrawToBitmap(bmp, new Rectangle(0, 0, bunifuCards5.Width, bunifuCards5.Height));
+            RectangleF bounds = e.PageSettings.PrintableArea;
+            float factor = ((float)bmp.Height / (float)bmp.Width);
+            e.Graphics.DrawImage(bmp, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
+        }
+
+       
+
+   
+        private void Stat_btn_Click(object sender, EventArgs e)
+        {
+            bunifuCards5.Show();
+            bunifuCards5.BringToFront();
+            stat();
+        }
+
+        private void Taches_btn_Click(object sender, EventArgs e)
+        {
+            bunifuCards3.Show();
+            bunifuCards3.BringToFront();
+        }
+
+        private void Acceuil_btn_Click(object sender, EventArgs e)
+        {
+            bunifuCards1.Show();
+            bunifuCards1.BringToFront();
+        }
+
+        private void Quit_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ActiveForm.Show();
+            
+        }
+        Bitmap bitmap;
+        private void printPreviewDialog1_Load(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bitmap, 0, 0);
+
+        }
+
+        private void metroDateTime1_ValueChanged(object sender, EventArgs e)
+        {
+            tache_date(metroDateTime1.Value);
+            bunifuFlatButton14.Enabled = true;
+            label1.Text = metroDateTime1.Value.ToString("MMM dd yyyy");
+        }
+
+        private void bunifuFlatButton13_Click(object sender, EventArgs e)
+        {
+            metroDateTime1.Value = DateTime.Today;
+        }
+
+        private void bunifuFlatButton14_Click(object sender, EventArgs e)
+        {
+            
+            System.Drawing.Printing.PrintDocument dc = new System.Drawing.Printing.PrintDocument();
+            dc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPageplan);
+            printPreviewDialog1.Document = dc;
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void bunifuFlatButton12_Click(object sender, EventArgs e)
+        {
+            bunifuFlatButton12.Visible = false;
+            panel3.Location = new System.Drawing.Point(288, 82);
+            System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+            doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPagestat);
+            printPreviewDialog1.Document = doc;
+            printPreviewDialog1.PrintPreviewControl.Zoom = 1;
+            printPreviewDialog1.ShowDialog();
+            bunifuFlatButton12.Visible = true;
+            panel3.Location = new System.Drawing.Point(288, 65);
+            
+        }
     }    
 }

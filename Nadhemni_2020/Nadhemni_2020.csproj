@@ -408,6 +408,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\2026783.jpg" />
     <None Include="Resources\5566.png" />
     <None Include="Resources\notification_52px.png" />
     <None Include="Resources\images.jpg" />
